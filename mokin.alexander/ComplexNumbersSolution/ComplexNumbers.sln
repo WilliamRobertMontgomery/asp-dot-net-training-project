@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexNumbers", "ComplexNumbers\ComplexNumbers.csproj", "{F6811854-2726-4D8F-8469-AB56B3E5B62C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6811854-2726-4D8F-8469-AB56B3E5B62C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6811854-2726-4D8F-8469-AB56B3E5B62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6811854-2726-4D8F-8469-AB56B3E5B62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6811854-2726-4D8F-8469-AB56B3E5B62C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
