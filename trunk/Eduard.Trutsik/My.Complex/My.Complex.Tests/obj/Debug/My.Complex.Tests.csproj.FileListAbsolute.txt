@@ -1,0 +1,13 @@
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\My.Complex.Tests.exe.config
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\My.Complex.Tests.exe
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\My.Complex.Tests.pdb
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\My.Complex.dll
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\nunit-console-runner.dll
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\nunit.framework.dll
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\nunit.util.dll
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\nunit.core.interfaces.dll
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\nunit.core.dll
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\bin\Debug\My.Complex.pdb
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\obj\Debug\My.Complex.Tests.exe
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex.Tests\obj\Debug\My.Complex.Tests.pdb
