@@ -11,3 +11,16 @@ d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin
 d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\obj\Debug\ResolveAssemblyReference.cache
 d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\obj\Debug\My.Calculator.Tests.exe
 d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\obj\Debug\My.Calculator.Tests.pdb
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.Tests.exe.config
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.Tests.exe
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.Tests.pdb
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.dll
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\nunit-console-runner.dll
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\nunit.framework.dll
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\nunit.util.dll
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\nunit.core.interfaces.dll
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\nunit.core.dll
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.pdb
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\obj\Debug\ResolveAssemblyReference.cache
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\obj\Debug\My.Calculator.Tests.exe
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator.Tests\obj\Debug\My.Calculator.Tests.pdb

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 namespace My.Calculator.ComplexNumbers
 {
@@ -25,13 +26,13 @@ namespace My.Calculator.ComplexNumbers
 
         public ComplexNumber Divide(ComplexNumber a, ComplexNumber b)
         {
-            try
+            if (b.im != 0 || b.re != 0)
             {
                 return new ComplexNumber((a.re * b.re + a.im * b.im) / (b.re * b.re + b.im * b.im), (a.im * b.re - a.re * b.im) / (b.re * b.re + b.im * b.im));
             }
-            catch (DivideByZeroException ex)
+            else
             {
-                throw new DivideByZeroException(ex.Message);
+                throw new DivideByZeroException();
             }
         }
     }

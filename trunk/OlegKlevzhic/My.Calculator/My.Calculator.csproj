@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.cs" />
     <Compile Include="ComplexNumbers\Calculator.cs" />
     <Compile Include="ComplexNumbers\ComplexNumber.cs" />
     <Compile Include="ICalculator.cs" />
