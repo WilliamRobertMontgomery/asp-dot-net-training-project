@@ -1,0 +1,13 @@
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.Tests.exe.config
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.Tests.exe
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.Tests.pdb
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.dll
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\nunit-console-runner.dll
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\nunit.framework.dll
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\nunit.util.dll
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\nunit.core.interfaces.dll
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\nunit.core.dll
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.pdb
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\obj\Debug\ResolveAssemblyReference.cache
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\obj\Debug\My.Calculator.Tests.exe
+d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\obj\Debug\My.Calculator.Tests.pdb
