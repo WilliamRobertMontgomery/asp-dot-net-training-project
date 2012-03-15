@@ -1,0 +1,5 @@
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex\bin\Debug\My.Complex.dll
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex\bin\Debug\My.Complex.pdb
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex\obj\Debug\ResolveAssemblyReference.cache
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex\obj\Debug\My.Complex.dll
+D:\Программирование\Epam\DOT.net\Test\Test3\My.Complex\My.Complex\obj\Debug\My.Complex.pdb
