@@ -8,7 +8,7 @@ using My.Calculator.ComplexNumbers;
 namespace My.Calculator.Tests.CalculatorComplex
 {
     [TestFixture]
-    class CalculatorTests
+    class Tests
     {
         private ICalculator<ComplexNumber> calculator;
 
@@ -18,8 +18,7 @@ namespace My.Calculator.Tests.CalculatorComplex
             calculator = new ComplexNumbers.Calculator();
             ComplexNumber actual = calculator.Subtracht(new ComplexNumber(4, 5), new ComplexNumber(6, 7));
             ComplexNumber expected = new ComplexNumber(4 - 6, 5 - 7);
-            Assert.AreEqual(actual.re, expected.re);
-            Assert.AreEqual(actual.im, expected.im);
+            Assert.True(actual.Equals(expected));
         }
 
         [Test]
@@ -28,8 +27,7 @@ namespace My.Calculator.Tests.CalculatorComplex
             calculator = new ComplexNumbers.Calculator();
             ComplexNumber actual = calculator.Multiply(new ComplexNumber(4, 5), new ComplexNumber(6, 7));
             ComplexNumber expected = new ComplexNumber(4 * 6 - 5 * 7, 5 * 6 + 4 * 7);
-            Assert.AreEqual(actual.re, expected.re);
-            Assert.AreEqual(actual.im, expected.im);
+            Assert.True(actual.Equals(expected));
         }
 
         [Test]
@@ -38,8 +36,7 @@ namespace My.Calculator.Tests.CalculatorComplex
             calculator = new ComplexNumbers.Calculator();
             ComplexNumber actual = calculator.Divide(new ComplexNumber(4, 5), new ComplexNumber(6, 7));
             ComplexNumber expected = new ComplexNumber((4.0 * 6.0 + 5.0 * 7.0) / (6.0 * 6.0 + 7.0 * 7.0), (5.0 * 6.0 - 4.0 * 7.0) / (6.0 * 6.0 + 7.0 * 7.0));
-            Assert.AreEqual(actual.re, expected.re);
-            Assert.AreEqual(actual.im, expected.im);
+            Assert.True(actual.Equals(expected));
         }
 
         [Test]
@@ -48,8 +45,7 @@ namespace My.Calculator.Tests.CalculatorComplex
             calculator = new ComplexNumbers.Calculator();
             ComplexNumber actual = calculator.Add(new ComplexNumber(4, 5), new ComplexNumber(6, 7));
             ComplexNumber expected = new ComplexNumber(4 + 6, 5 + 7);
-            Assert.AreEqual(actual.re, expected.re);
-            Assert.AreEqual(actual.im, expected.im);
+            Assert.True(actual.Equals(expected));
         }
 
         [Test]
@@ -58,6 +54,15 @@ namespace My.Calculator.Tests.CalculatorComplex
         {
             calculator = new ComplexNumbers.Calculator();
             ComplexNumber actual = calculator.Divide(new ComplexNumber(4, 5), new ComplexNumber(0, 0));
+        }
+
+        [Test]
+        public void Equals()
+        {
+            ComplexNumber actual = new ComplexNumber(1,2);
+            ComplexNumber expected = new ComplexNumber(2, 3);
+            Assert.True(actual.Equals(actual));
+            Assert.AreEqual(actual.Equals(expected),expected.Equals(actual));
         }
     }
 }

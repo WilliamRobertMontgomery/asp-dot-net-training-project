@@ -3,3 +3,8 @@ d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator\bin\Debug
 d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator\obj\Debug\ResolveAssemblyReference.cache
 d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator\obj\Debug\My.Calculator.dll
 d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator\obj\Debug\My.Calculator.pdb
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator\bin\Debug\My.Calculator.dll
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator\bin\Debug\My.Calculator.pdb
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator\obj\Debug\ResolveAssemblyReference.cache
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator\obj\Debug\My.Calculator.dll
+e:\#Worckspace\#Training\OlegKlevzhic\My.Calculator\My.Calculator\obj\Debug\My.Calculator.pdb
