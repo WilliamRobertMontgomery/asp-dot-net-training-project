@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.Tests.exe" total="10" errors="0" failures="2" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-03-15" time="11:14:54">
+  <environment nunit-version="2.6.0.12051" clr-version="4.0.30319.239" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug" machine-name="PC-ASSASSIN" user="Assassin" user-domain="PC-Assassin" />
+  <culture-info current-culture="ru-RU" current-uiculture="ru-RU" />
+  <test-suite type="Assembly" name="d:\.worckspace\.VisualStudio 2010\Projects\My.Calculator\My.Calculator.Tests\bin\Debug\My.Calculator.Tests.exe" executed="True" result="Failure" success="False" time="0.101" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="My" executed="True" result="Failure" success="False" time="0.094" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Calculator" executed="True" result="Failure" success="False" time="0.093" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="0.093" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="CalculatorComplex" executed="True" result="Failure" success="False" time="0.085" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="CalculatorTests" executed="True" result="Failure" success="False" time="0.085" asserts="0">
+                        <results>
+                          <test-case name="My.Calculator.Tests.CalculatorComplex.CalculatorTests.AddTest" executed="True" result="Success" success="True" time="0.070" asserts="2" />
+                          <test-case name="My.Calculator.Tests.CalculatorComplex.CalculatorTests.DivideByZeroTest" executed="True" result="Failure" success="False" time="0.002" asserts="0">
+                            <failure>
+                              <message><![CDATA[System.DivideByZeroException was expected]]></message>
+                              <stack-trace />
+                            </failure>
+                          </test-case>
+                          <test-case name="My.Calculator.Tests.CalculatorComplex.CalculatorTests.DivideTest" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="My.Calculator.Tests.CalculatorComplex.CalculatorTests.MultiplyTest" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="My.Calculator.Tests.CalculatorComplex.CalculatorTests.SubtrachtTest" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="CalculatorTests" executed="True" result="Failure" success="False" time="0.004" asserts="0">
+                    <results>
+                      <test-case name="My.Calculator.Tests.CalculatorTests.AddTest" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-case name="My.Calculator.Tests.CalculatorTests.DivideByZeroTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.DivideByZeroException was expected]]></message>
+                          <stack-trace />
+                        </failure>
+                      </test-case>
+                      <test-case name="My.Calculator.Tests.CalculatorTests.DivideTest" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="My.Calculator.Tests.CalculatorTests.MultiplyTest" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="My.Calculator.Tests.CalculatorTests.SubtrachtTest" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
