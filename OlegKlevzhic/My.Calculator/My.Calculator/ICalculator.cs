@@ -5,11 +5,11 @@ using System.Text;
 
 namespace My.Calculator
 {
-    public interface ICalculator<Type>
+    public interface ICalculator<T>
     {
-        Type Add(Type a, Type b);
-        Type Subtracht(Type a, Type b);
-        Type Multiply(Type a, Type b);
-        Type Divide(Type a, Type b);
+        T Add(T a, T b);
+        T Subtracht(T a, T b);
+        T Multiply(T a, T b);
+        T Divide(T a, T b);
     }
 }
