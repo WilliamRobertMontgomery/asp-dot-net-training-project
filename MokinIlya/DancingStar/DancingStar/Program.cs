@@ -89,6 +89,8 @@ namespace DancingStar
     {
         static Random rand = new Random(4);
         static object locker=new object();
+
+        //this method is locked 
         private static void outConsole(DancingStar star, string s)
         {
             Console.SetCursorPosition(star.x, star.y);
@@ -101,10 +103,10 @@ namespace DancingStar
             {
                 lock (locker)
                 {
-                    outConsole(star, " ");
+                    outConsole(star, " "); //cleaning old *
                 }
 
-                int h = rand.Next(4);
+                int h = rand.Next(4);   //generate the direction
 
                 switch (h)
                 {
@@ -124,7 +126,7 @@ namespace DancingStar
 
                 lock (locker)
                 {
-                    outConsole(star, "*");
+                    outConsole(star, "*");      //out
                 }
                 Thread.Sleep(100); 
             }
