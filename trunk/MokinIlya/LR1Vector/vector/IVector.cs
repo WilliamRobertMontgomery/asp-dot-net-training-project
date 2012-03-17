@@ -8,11 +8,15 @@ namespace MathematicalObj
     public interface IVector
     {
         double Module();
-        double[] Multiply(double[] a);
-        double[] Multiply(double a);
-        double[] Sum(double[] a);
-        double[] Sum(double a);
-        double[] Divide(double[] a);
-        double[] Divide(double a);
+        vector Multiply(vector a);
+        vector Multiply(double a);
+        vector Divide(double a);
+        vector Sum(vector a);
+        vector Minus(vector a);
+
+        bool Equals(Object a);
+        vector Clone();
+        string ToString();
+        int GetHashCode();
     }
 }
