@@ -46,7 +46,7 @@ namespace MathematicalObj
                 //formula(example): (a1,a2,a3)*(b1,b2,b3)=(a2b3-a3b2,a3b1-a1b3,a1b2-a2b1)
                 for (int i = 0; i < Len; i++)
                 {
-                    //[i+n] ?? - seen overriding of indexer
+                    //[i+n] ?? - see overriding of indexer
                     outPerem[i] = this[i+1]*a[i+2]-this[i+2]*a[i+1];
                 }
                 return outPerem;
@@ -136,7 +136,6 @@ namespace MathematicalObj
             {
                 x[idx]= value;
             }
-
         }
 
         public override bool Equals(Object a) //overriding of Equals
@@ -149,6 +148,8 @@ namespace MathematicalObj
                 }
             }
             return false;
+
+            throw new NotImplementedException();
         }
 
         public vector Clone() //determining of Clone
@@ -156,6 +157,8 @@ namespace MathematicalObj
             double[] cloneX = (double[]) x.Clone();
             vector clone = new vector(cloneX);
             return clone;
+
+            throw new NotImplementedException();
         }
 
         public override string ToString() //overriding of ToString
@@ -163,7 +166,7 @@ namespace MathematicalObj
 
             if (Len > 0)
             {
-                //example of output: "( 0.50, 4.20, 5.49 )"
+                //example of output: "( 0.50; 4.20; 5.49 )"
                 string resultString = "( ";
                 for (int i = 0; i < this.Len; i++)
                 {
@@ -181,6 +184,7 @@ namespace MathematicalObj
             }
             else return "";
 
+            throw new NotImplementedException();
         }
 
         public override int GetHashCode() //overriding of GetHashCode
@@ -191,6 +195,8 @@ namespace MathematicalObj
                 hashCode = hashCode ^ ((int) x[i]);
             }
             return hashCode;
+
+            throw new NotImplementedException();
         }
 
         //overloads
