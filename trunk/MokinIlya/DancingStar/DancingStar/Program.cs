@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Runtime.CompilerServices;
 
 namespace DancingStar
 {
-    class DancingStar 
+    class DancingStar
     {
         public DancingStar(int X, int Y)
         {
-            x=X;
-            y=Y;
+            x = X;
+            y = Y;
         }
         private int _x;
         private int _y;
@@ -88,9 +89,9 @@ namespace DancingStar
     class Program
     {
         static Random rand = new Random(4);
-        static object locker=new object();
 
         //this method is locked 
+        [MethodImpl(MethodImplOptions.Synchronized)]
         private static void outConsole(DancingStar star, string s)
         {
             Console.SetCursorPosition(star.x, star.y);
@@ -98,13 +99,10 @@ namespace DancingStar
         }
         private static void goStar(int X, int Y)
         {
-            DancingStar star=new DancingStar(X,Y);
+            DancingStar star = new DancingStar(X, Y);
             while (true)
             {
-                lock (locker)
-                {
-                    outConsole(star, " "); //cleaning old *
-                }
+                outConsole(star, " "); //cleaning old *
 
                 int h = rand.Next(4);   //generate the direction
 
@@ -124,11 +122,8 @@ namespace DancingStar
                         break;
                 }
 
-                lock (locker)
-                {
-                    outConsole(star, "*");      //out
-                }
-                Thread.Sleep(100); 
+                outConsole(star, "*");      //out
+                Thread.Sleep(100);
             }
         }
 
