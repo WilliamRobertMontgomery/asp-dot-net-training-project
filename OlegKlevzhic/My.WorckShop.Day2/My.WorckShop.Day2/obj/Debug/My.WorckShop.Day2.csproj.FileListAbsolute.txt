@@ -1,0 +1,5 @@
+D:\.worckspace\.VisualStudio 2010\Projects\My.WorckShop.Day2\My.WorckShop.Day2\bin\Debug\My.WorckShop.Day2.dll
+D:\.worckspace\.VisualStudio 2010\Projects\My.WorckShop.Day2\My.WorckShop.Day2\bin\Debug\My.WorckShop.Day2.pdb
+D:\.worckspace\.VisualStudio 2010\Projects\My.WorckShop.Day2\My.WorckShop.Day2\obj\Debug\ResolveAssemblyReference.cache
+D:\.worckspace\.VisualStudio 2010\Projects\My.WorckShop.Day2\My.WorckShop.Day2\obj\Debug\My.WorckShop.Day2.dll
+D:\.worckspace\.VisualStudio 2010\Projects\My.WorckShop.Day2\My.WorckShop.Day2\obj\Debug\My.WorckShop.Day2.pdb
