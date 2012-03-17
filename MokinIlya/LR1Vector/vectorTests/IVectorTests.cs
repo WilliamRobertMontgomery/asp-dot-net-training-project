@@ -25,59 +25,138 @@ namespace vectorTests
         public void TestMultiply()
         {
             {
-                double[] TV = { 2.0, 3.0, 4.0 }; //TesVar
-                vector vec = new vector(TV);
-                double[] actual1 = vec.Multiply(5.0);
-                double[] expected1 = { (double)(2.0 * 5.0), (double)(3.0 * 5.0), (double)(4.0 * 5.0) };
-                Assert.AreEqual(expected1, actual1);
+                //multiplication by a scalar TEST
+                double[] TV1 = { 2.0, 3.0, 4.0 }; //TesVar1 (for actual vec)
+                vector vec = new vector(TV1);
+                vector actual = vec.Multiply(5.0);
+                vector actual_2 = 5.0*vec;
+                vector actual_3 = vec * 5.0;
+                object actualObj = (object)actual;
+                object actualObj_2 = (object)actual_2;
+                object actualObj_3 = (object)actual_3;
+
+                double[] TV2 = { 2.0 * 5.0, 3.0 * 5.0, 4.0 * 5.0 }; //TesVar2 (for expected vec)
+                vector expected = new vector(TV2);
+                object expectedObj = (object)expected;
+
+                Assert.AreEqual(actualObj.GetHashCode(), expectedObj.GetHashCode());
+                Assert.AreEqual(actualObj_2.GetHashCode(), expectedObj.GetHashCode());
+                Assert.AreEqual(actualObj_3.GetHashCode(), expectedObj.GetHashCode());    
             }
             {
-                double[] TV = { 2.0, 3.0, 4.0 }; //TesVar
-                vector vec = new vector(TV);
-                double[] actual2 = vec.Multiply(TV);
-                double[] expected2 = { 4.0, 9.0, 16.0 };
-                Assert.AreEqual(expected2, actual2);
+                //multiplication by a vector TEST
+                double[] TV1 = { 2.0, 3.0, 4.0 }; //TesVar1 (for actual vec)
+                vector vec = new vector(TV1);
+                vector actual = vec.Multiply(vec);
+                vector actual_2 = vec * vec;
+                object actualObj = (object)actual;
+                object actualObj_2 = (object)actual_2;
+
+                double[] TV2 = { 0.0, 0.0, 0.0 }; //TesVar2 (for expected vec)
+                vector expected = new vector(TV2);
+                object expectedObj = (object)expected;
+
+                Assert.AreEqual(actualObj.GetHashCode(), expectedObj.GetHashCode());
+                Assert.AreEqual(actualObj_2.GetHashCode(), expectedObj.GetHashCode());
             }
         }
- 
+
+        [Test]
+        public void Divide()
+        {
+            //dividing by a scalar TEST
+            double[] TV1 = { 2.0, 3.0, 4.0 }; //TesVar1 (for actual vec)
+            vector vec = new vector(TV1);
+            vector actual = vec.Divide(5.0);
+            vector actual_2 = vec / 5.0;
+            object actualObj = (object)actual;
+            object actualObj_2 = (object)actual_2;
+
+            double[] TV2 = { 2.0 / 5.0, 3.0 / 5.0, 4.0 / 5.0 }; //TesVar2 (for expected vec)
+            vector expected = new vector(TV2);
+            object expectedObj = (object)expected;
+
+            Assert.AreEqual(actualObj.GetHashCode(), expectedObj.GetHashCode());
+            Assert.AreEqual(actualObj_2.GetHashCode(), expectedObj.GetHashCode());
+        }
+
         [Test]
         public void TestSum()
         {
-            {
-                double[] TV = { 2.0, 3.0, 4.0 }; //TesVar
-                vector vec = new vector(TV);
-                double[] actual = vec.Sum(12.0);
-                double[] expected = {14.0,15.0,16.0};
-                Assert.AreEqual(expected, actual);
-            }
-            {
-                double[] TV = { 2.0, 3.0, 4.0 }; //TesVar
-                vector vec = new vector(TV);
-                double[] S = { 5.0, 3.0, 1.0 };
-                double[] actual = vec.Sum(S);
-                double[] expected = { 7.0, 6.0, 5.0 };
-                Assert.AreEqual(expected, actual);
-            }
+            //vector + vector TEST
+            double[] TV1 = { 2.0, 3.0, 4.0 }; //TesVar1 (for actual vec)
+            vector vec = new vector(TV1);
+            vector actual = vec.Sum(vec);
+            vector actual_2 = vec + vec;
+            object actualObj = (object)actual;
+            object actualObj_2 = (object)actual_2;
+
+            double[] TV2 = { 4.0, 6.0, 8.0 }; //TesVar2 (for expected vec)
+            vector expected = new vector(TV2);
+            object expectedObj = (object)expected;
+
+            Assert.AreEqual(actualObj.GetHashCode(), expectedObj.GetHashCode());
+            Assert.AreEqual(actualObj_2.GetHashCode(), expectedObj.GetHashCode());
         }
-        
+
         [Test]
-        public void TestDivide()
+        public void TestMinus()
         {
-            {
-                double[] TV = { 2.0, 3.0, 4.0 }; //TesVar
-                vector vec = new vector(TV);
-                double[] actual1 = vec.Divide(5.0);
-                double[] expected1 = { (double)(2.0 / 5.0), (double)(3.0 / 5.0), (double)(4.0 / 5.0) };
-                Assert.AreEqual(expected1, actual1);
-            }
-            {
-                double[] TV = { 2.0, 3.0, 4.0 }; //TesVar
-                vector vec = new vector(TV);
-                double[] actual2 = vec.Divide(TV);
-                double[] expected2 = { 1.0, 1.0, 1.0 };
-                Assert.AreEqual(expected2, actual2);
-            }
+            //vector - vector TEST
+            double[] TV1 = { 2.0, 3.0, 4.0 }; //TesVar1 (for actual vec)
+            vector vec = new vector(TV1);
+            vector actual = vec.Minus(vec);
+            vector actual_2 = vec - vec;
+            object actualObj = (object)actual;
+            object actualObj_2 = (object)actual_2;
+
+            double[] TV2 = { 0.0, 0.0, 0.0 }; //TesVar2 (for expected vec)
+            vector expected = new vector(TV2);
+            object expectedObj = (object)expected;
+
+            Assert.AreEqual(actualObj.GetHashCode(), expectedObj.GetHashCode());
+            Assert.AreEqual(actualObj_2.GetHashCode(), expectedObj.GetHashCode());
         }
-        
+
+        [Test]
+        public void TestEquals()
+        {
+            //vector == vector TEST
+            double[] TV1 = { 2.0, 3.0, 4.0 }; //TesVar1 (for actual vec1)
+            double[] TV2 = { 2.0, 3.0, 4.0 }; //TesVar2 (for actual vec2)
+            vector vec1 = new vector(TV1);
+            vector vec2 = new vector(TV2);
+            bool actual = vec2.Equals(vec1);
+            bool actual_2 = (vec1 == vec2);
+
+            Assert.AreEqual(true, actual);
+            Assert.AreEqual(true, actual_2);
+        }
+
+        [Test]
+        public void TestToString()
+        {
+            //vector.ToString TEST
+            double[] TV = { 2.0, 3.0, 4.0 }; //TesVar (for actual vec)
+            vector vec = new vector(TV);
+            string actual = vec.ToString();
+
+            string expected = "( 2,00; 3,00; 4,00 )";
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void TestGetHashCode()
+        {
+            //vector.GetHashCode TEST
+            double[] TV = { 2.0, 3.0, 4.0 }; //TesVar (for actual vec)
+            vector vec = new vector(TV);
+            int actual = vec.GetHashCode();
+
+            int expected = 4;
+
+            Assert.AreEqual(expected, actual);
+        }     
     }
 }
