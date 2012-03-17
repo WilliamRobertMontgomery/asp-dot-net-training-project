@@ -35,11 +35,10 @@ namespace My.Complex
 
         public Complex Divide(Complex number)
         {
-            
-            if (number.re == 0 && number.im == 0)
-            {
-                throw new DivideByZeroException();
-            }
+			if (number.re == 0 && number.im == 0)
+			{
+				throw new DivideByZeroException();
+			}            
             try
             {
                 return new Complex((this.re * number.re + this.im * number.im) / (number.re * number.re + number.im * number.im), (this.im * number.re - this.re * number.im) / (number.re * number.re + number.im * number.im));
@@ -95,5 +94,10 @@ namespace My.Complex
                 return "null";
             }
         }
+
+		public override int GetHashCode()
+		{
+			return re.GetHashCode() ^ im.GetHashCode();
+		}
     }
 }
