@@ -1,0 +1,10 @@
+F:\учеба\ASP_EPAM\practice\hometask\Technics\Technics\Technics\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\учеба\ASP_EPAM\practice\hometask\Technics\Technics\Technics\bin\Debug\Technics.exe
+F:\учеба\ASP_EPAM\practice\hometask\Technics\Technics\Technics\bin\Debug\Technics.pdb
+F:\учеба\ASP_EPAM\practice\hometask\Technics\Technics\Technics\obj\x86\Debug\Technics.exe
+F:\учеба\ASP_EPAM\practice\hometask\Technics\Technics\Technics\obj\x86\Debug\Technics.pdb
+f:\учеба\ASP_EPAM\practice\hometask\Technics\Lab1.Technics\Technics\obj\x86\Debug\Technics.exe
+f:\учеба\ASP_EPAM\practice\hometask\Technics\Lab1.Technics\Technics\obj\x86\Debug\Technics.pdb
+f:\учеба\ASP_EPAM\practice\hometask\Technics\Lab1.Technics\Technics\bin\Debug\Technics.exe
+f:\учеба\ASP_EPAM\practice\hometask\Technics\Lab1.Technics\Technics\bin\Debug\Technics.pdb
+f:\учеба\ASP_EPAM\practice\hometask\Technics\Lab1.Technics\Technics\obj\x86\Debug\ResolveAssemblyReference.cache
