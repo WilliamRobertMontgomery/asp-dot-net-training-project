@@ -13,7 +13,7 @@ namespace Bird
         public Duck()
         {
             weight = 20;
-            age = 3;
+            age = 4;
         }
 
         public Duck(double weight, int age)
