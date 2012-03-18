@@ -8,11 +8,19 @@ namespace ComplexNumbers
     public class Complex : IComplex
     {
         private double Re,Im;
+
+        public Complex()
+        {
+            Re = 0.0;
+            Im = 0.0;
+        }
+
         public Complex(double Re, double Im)
         {
             this.Re = re;
             this.Im = im;
         }
+
         public double re
         {
             get;
