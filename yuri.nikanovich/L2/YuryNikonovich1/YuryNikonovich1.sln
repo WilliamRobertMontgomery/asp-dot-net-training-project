@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uriah", "Uriah\Uriah.csproj", "{D18B5343-3AA8-4AB6-A91A-2559C0732074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectors.Test", "Vectors.Test\Vectors.Test.csproj", "{8FF556CD-7D09-4D6D-9F00-DE54C7EB4F86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D18B5343-3AA8-4AB6-A91A-2559C0732074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18B5343-3AA8-4AB6-A91A-2559C0732074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18B5343-3AA8-4AB6-A91A-2559C0732074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18B5343-3AA8-4AB6-A91A-2559C0732074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FF556CD-7D09-4D6D-9F00-DE54C7EB4F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FF556CD-7D09-4D6D-9F00-DE54C7EB4F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF556CD-7D09-4D6D-9F00-DE54C7EB4F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FF556CD-7D09-4D6D-9F00-DE54C7EB4F86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
