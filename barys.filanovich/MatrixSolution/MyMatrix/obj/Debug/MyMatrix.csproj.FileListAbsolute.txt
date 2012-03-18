@@ -1,0 +1,5 @@
+C:\Users\Edinolichnik\documents\visual studio 2010\Projects\Matrix\MyMatrix\bin\Debug\MyMatrix.dll
+C:\Users\Edinolichnik\documents\visual studio 2010\Projects\Matrix\MyMatrix\bin\Debug\MyMatrix.pdb
+C:\Users\Edinolichnik\documents\visual studio 2010\Projects\Matrix\MyMatrix\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Edinolichnik\documents\visual studio 2010\Projects\Matrix\MyMatrix\obj\Debug\MyMatrix.dll
+C:\Users\Edinolichnik\documents\visual studio 2010\Projects\Matrix\MyMatrix\obj\Debug\MyMatrix.pdb
