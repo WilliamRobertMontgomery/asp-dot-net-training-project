@@ -81,7 +81,7 @@ namespace TestComplex
             Complex TestComplexResultExpected = new Complex(1.1756974940177, 0.74227037261038);
             Assert.AreEqual(TestComplexResult, TestComplexResultExpected);
             //test: Complex operator /(Complex, double)
-            TestComplexResult = TestComplex1 / 2;
+            TestComplexResult = TestComplex1 / 2.0;
             TestComplexResultExpected.re = 11.25;
             TestComplexResultExpected.im = 28.15;
             Assert.AreEqual(TestComplexResult, TestComplexResultExpected);
