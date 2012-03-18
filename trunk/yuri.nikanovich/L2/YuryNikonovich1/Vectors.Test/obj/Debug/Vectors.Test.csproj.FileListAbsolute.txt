@@ -1,0 +1,5 @@
+F:\c-sharp\L1\YuryNikonovich1\Vectors.Test\bin\Debug\Vectors.Test.dll
+F:\c-sharp\L1\YuryNikonovich1\Vectors.Test\bin\Debug\Vectors.Test.pdb
+F:\c-sharp\L1\YuryNikonovich1\Vectors.Test\obj\Debug\ResolveAssemblyReference.cache
+F:\c-sharp\L1\YuryNikonovich1\Vectors.Test\obj\Debug\Vectors.Test.dll
+F:\c-sharp\L1\YuryNikonovich1\Vectors.Test\obj\Debug\Vectors.Test.pdb
