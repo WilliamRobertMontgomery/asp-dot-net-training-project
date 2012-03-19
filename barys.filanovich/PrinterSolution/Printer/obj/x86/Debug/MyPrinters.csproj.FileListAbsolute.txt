@@ -1,0 +1,5 @@
+C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\bin\Debug\Printer.exe
+C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\bin\Debug\Printer.pdb
+C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\obj\x86\Debug\Printer.exe
+C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\obj\x86\Debug\Printer.pdb
