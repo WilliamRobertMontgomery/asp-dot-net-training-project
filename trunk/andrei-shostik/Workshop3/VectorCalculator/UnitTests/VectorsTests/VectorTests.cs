@@ -135,7 +135,7 @@ namespace UnitTests.VectorsTests
         /// Test of the scalar multiply of two vectors
         /// </summary>
         [Test]
-        public void TestScalarMyltiply()
+        public void TestScalarMyltiplication()
         {
             double result = this.firstVector.MultiplyScalar(this.secondVectorOfDouble);
             Assert.AreEqual(this.firstVector.DataVector.Select((value, i) => value * this.secondVectorOfDouble[i]).Sum(), result);
