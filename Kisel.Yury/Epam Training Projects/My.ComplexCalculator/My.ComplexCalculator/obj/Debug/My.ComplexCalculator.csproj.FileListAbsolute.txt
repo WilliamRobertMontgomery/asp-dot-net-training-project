@@ -1,0 +1,10 @@
+C:\Education\Projects\My.ComplexCalculator\My.ComplexCalculator\obj\Debug\ResolveAssemblyReference.cache
+C:\Education\Projects\My.ComplexCalculator\My.ComplexCalculator\bin\Debug\My.ComplexCalculator.dll
+C:\Education\Projects\My.ComplexCalculator\My.ComplexCalculator\bin\Debug\My.ComplexCalculator.pdb
+C:\Education\Projects\My.ComplexCalculator\My.ComplexCalculator\obj\Debug\My.ComplexCalculator.dll
+C:\Education\Projects\My.ComplexCalculator\My.ComplexCalculator\obj\Debug\My.ComplexCalculator.pdb
+D:\Education\Epam Training Projects\My.ComplexCalculator\My.ComplexCalculator\bin\Debug\My.ComplexCalculator.dll
+D:\Education\Epam Training Projects\My.ComplexCalculator\My.ComplexCalculator\bin\Debug\My.ComplexCalculator.pdb
+D:\Education\Epam Training Projects\My.ComplexCalculator\My.ComplexCalculator\obj\Debug\ResolveAssemblyReference.cache
+D:\Education\Epam Training Projects\My.ComplexCalculator\My.ComplexCalculator\obj\Debug\My.ComplexCalculator.dll
+D:\Education\Epam Training Projects\My.ComplexCalculator\My.ComplexCalculator\obj\Debug\My.ComplexCalculator.pdb
