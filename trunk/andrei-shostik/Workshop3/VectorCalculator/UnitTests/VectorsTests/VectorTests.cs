@@ -241,7 +241,7 @@ namespace UnitTests.VectorsTests
                 Assert.AreEqual(this.firstVector[i] / yVector[i], result[i]);
             }
         }
-
+        
         /// <summary>
         /// Test for implicit conversion to double
         /// </summary>

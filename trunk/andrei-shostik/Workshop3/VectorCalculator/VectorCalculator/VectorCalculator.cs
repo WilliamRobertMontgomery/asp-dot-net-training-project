@@ -5,7 +5,7 @@ namespace VectorCalculator
     using System.Text;
 
     public class Vector : ICalculator<double[]>
-    {        
+    {
         private Vector() {}
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace VectorCalculator
         {
             if (DataVector == null)
             {
-                throw new ArgumentNullException(string.Format("Vector is not defined"));
+                throw new ArgumentNullException("Vector is not defined");
             }
 
             var result = new double[DataVector.Length];
@@ -271,8 +271,8 @@ namespace VectorCalculator
             CheckVectors(DataVector, tempV);
             
             return this.DataVector
-                .Select((vector, i) => Equals(vector, tempV[i]))
-                .Count(elem => elem == false) == 0;
+                .Select((vector, i) => !Equals(vector, tempV[i]))
+                .Any(elem => false);
         }
 
         /// <summary>
@@ -281,7 +281,8 @@ namespace VectorCalculator
         /// <returns>new mega-supper-pupper hashcode</returns>
         public override int GetHashCode()
         {
-            return this.DataVector.Aggregate(0, (current, value) => current ^ value.GetHashCode());
+            return this.DataVector
+                .Aggregate(0, (current, value) => current ^ value.GetHashCode());
         }
 
         #endregion
