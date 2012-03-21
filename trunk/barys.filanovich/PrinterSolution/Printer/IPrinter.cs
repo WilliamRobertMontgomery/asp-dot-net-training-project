@@ -11,9 +11,9 @@ namespace MyPrinters
         void Print();
         void ReplaceCartrige(int capacityCartridge = 1000);
         void Capacity();
-        void GetPrintTechnology();
         void GetPrinterInfo();
         void GetPrintQueue();
+        void ClearPrintQueue();
         bool IsColor { get; }
     }
 }

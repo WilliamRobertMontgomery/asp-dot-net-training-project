@@ -3,3 +3,5 @@ C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\bin\
 C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\obj\x86\Debug\Printer.exe
 C:\Users\Edinolichnik\Documents\Visual Studio 2010\Projects\Printer\Printer\obj\x86\Debug\Printer.pdb
+D:\ASPTraining\barys.filanovich\PrinterSolution\Printer\obj\x86\Debug\Printer.exe
+D:\ASPTraining\barys.filanovich\PrinterSolution\Printer\obj\x86\Debug\Printer.pdb
