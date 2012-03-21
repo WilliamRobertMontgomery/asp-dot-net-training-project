@@ -55,6 +55,7 @@ namespace MyPrinters
         protected string name;
         protected int printedPages;
         protected int capacityCartridge;
+        protected int tempCapacity;
         protected bool color;
         protected PrintTechnology technology;
 
@@ -62,18 +63,18 @@ namespace MyPrinters
         {
             printerCount++;
             this.name = string.Format("Printer #{0}", printerCount);
-            this.capacityCartridge = 1000;
+            this.capacityCartridge = this.tempCapacity = 1000;
         }
 
-        public Printer(string printerName, PrintTechnology technology, bool color)
+        public Printer(string printerName, int capacityCartridge, PrintTechnology technology, bool color)
             : this()
         {
             this.name = printerName;
+            this.capacityCartridge = this.tempCapacity = capacityCartridge;
             this.technology = technology;
             this.color = color;
         }
 
-        //static ArrayList printersList = new ArrayList();
         ArrayList printQueue = new ArrayList();
 
         public void AddDoc (Document newDoc)
@@ -83,7 +84,13 @@ namespace MyPrinters
                 if (IsCapacityCartridgeOk(newDoc.GetPages))
                 {
                     printQueue.Add(newDoc);
-                    capacityCartridge -= newDoc.GetPages;
+                    //capacityCartridge -= newDoc.GetPages;
+                    tempCapacity -= newDoc.GetPages;
+                    Console.WriteLine("Document {0} has been added.", newDoc.GetName);
+                }
+                else
+                {
+                    Console.WriteLine("Document {0} has not been added.\nThe pages more than cartridge's capacity", newDoc.GetName);
                 }
             }
         }
@@ -94,19 +101,31 @@ namespace MyPrinters
             {
                 Document printedDoc = (Document)printQueue[i];
                 printedPages += printedDoc.GetPages;
-                Console.WriteLine("The document: {0} is printed.", printedDoc.GetName);
+                capacityCartridge -= printedDoc.GetPages;
+                Console.WriteLine("The document {0} has been printed.", printedDoc.GetName);
             }
             printQueue.Clear();
         }
 
         public void ReplaceCartrige(int capacityCartridge = 1000)
         {
-            this.capacityCartridge = capacityCartridge;
+            this.tempCapacity = this.capacityCartridge = capacityCartridge;
+            RefresPrintQueue();
+            Console.WriteLine("The cartridge has been replaced.");
+        }
+        
+        protected void RefresPrintQueue()
+        {
+            for (int i = 0; i < printQueue.Count; i++)
+            {
+                Document doc = (Document)printQueue[i];
+                tempCapacity -= doc.GetPages;
+            }
         }
 
         bool IsCapacityCartridgeOk (int pagesDoc)
         {
-            int balance = capacityCartridge - pagesDoc;
+            int balance = tempCapacity - pagesDoc;
             if (balance >= 0)
             {
                 return true;
@@ -122,13 +141,9 @@ namespace MyPrinters
             Console.WriteLine("{0} page(-s) is left.", capacityCartridge);
         }
 
-        public void GetPrintTechnology()
+        public virtual void GetPrinterInfo()
         {
-            Console.WriteLine(this.technology);
-        }
-
-        virtual public void GetPrinterInfo()
-        {
+            Console.WriteLine("Test-page:");
             string result = string.Format(
                 "Printer's name: {0}\nPages was printed: {1}\n" +
                 "Capacity: {2} page(-s) is left\nColor: {3}\n" +
@@ -146,11 +161,25 @@ namespace MyPrinters
 
         public void GetPrintQueue()
         {
-            for (int i = 0; i < printQueue.Count; i++)
+            if (printQueue.Count != 0)
             {
-                Document doc = (Document)printQueue[i];
-                Console.WriteLine("{0}: {1} page(-s)", doc.GetName, doc.GetPages);
+                Console.WriteLine("Print queue:");
+                for (int i = 0; i < printQueue.Count; i++)
+                {
+                    Document doc = (Document)printQueue[i];
+                    Console.WriteLine("{2}) {0}: {1} page(-s)", doc.GetName, doc.GetPages, i + 1);
+                }
             }
+            else
+            {
+                Console.WriteLine("The print queue is empty.");
+            }
+        }
+
+        public void ClearPrintQueue()
+        {
+            printQueue.Clear();
+            Console.WriteLine("The print queue has been cleared.");
         }
     }
 }
