@@ -21,26 +21,26 @@ namespace Workshop.Day4.MyRegexp.Test
 		}
 
 		[Test]
-		public void CountMatchesAllStringsOfListTest()
+		public void GetMatchesAllStringsOfListTest()
 		{
 			string str = "2. В заданном тексте подсчитать частоту использования каждого буквосочетания, слова и словосочетания из заданного списка";
 			string[] patterns = new string[] { "текст", "ка", "с", " ", "каждого буквосочетания", "та", "ща" };
 			int[] counts = new int[] { 1, 2, 10, 14, 1, 3, 0};
-			Assert.AreEqual(counts, MyRegexp.CountMatchesAllStringsOfList(str, patterns));
+			Assert.AreEqual(counts, MyRegexp.GetMatchesAllStringsOfList(str, patterns));
 		}
 
 		[Test]
-		public void CountNumberOfWordsTest()
+		public void GetNumberOfWordsTest()
 		{
 			string str = "3. Подсчитать в тексте число слов.";
-			Assert.AreEqual(6, MyRegexp.CountNumberOfWords(str));
+			Assert.AreEqual(6, MyRegexp.GetNumberOfWords(str));
 		}
 
 		[Test]
-		public void CountNumberOfSentencesTest()
+		public void GetNumberOfSentencesTest()
 		{
 			string str = "Подсчитать количество предложений в тексте. Подсчитать количество (например 4.3) предложений в тексте. Подсчитать количество предложений в тексте.";
-			Assert.AreEqual(3, MyRegexp.CountNumberOfSentences(str));
+			Assert.AreEqual(3, MyRegexp.GetNumberOfSentences(str));
 		}
 		
 		[Test]
