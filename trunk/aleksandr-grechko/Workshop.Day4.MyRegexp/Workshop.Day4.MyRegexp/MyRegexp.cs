@@ -13,7 +13,7 @@ namespace Workshop.Day4.MyRegexp
 			return Regex.Replace(str, @"\b("+Regex.Escape(pattern)+@")\b", "<b>$1<\b>");
 		}
 
-		public static int[] CountMatchesAllStringsOfList(string str, string[] patterns)
+		public static int[] GetMatchesAllStringsOfList(string str, string[] patterns)
 		{
 			int[] result = new int[patterns.Length];
 			for (int i = 0; i < patterns.Length; i++)
@@ -23,12 +23,12 @@ namespace Workshop.Day4.MyRegexp
 			return result;
 		}
 
-		public static int CountNumberOfWords(string str)
+		public static int GetNumberOfWords(string str)
 		{
 			return Regex.Matches(str, @"\w+").Count;
 		}
 
-		public static int CountNumberOfSentences(string str)
+		public static int GetNumberOfSentences(string str)
 		{
 			return Regex.Matches(str, @"\.(\s+|$)").Count;
 		}
