@@ -333,8 +333,11 @@ namespace EnumerableTask
         /// </example>
         public int[] GetQuarterSales(IEnumerable<Tuple<DateTime, int>> sales)
         {
-            return new int[4].Select((x, index) => sales.Where(y => ((y.Item1.Month - 1) / 3) == index).Sum(z => z.Item2)).ToArray();
-            // Better to use foreach.
+            return new int[] { 0, 1, 2, 3 }.GroupJoin(sales, 
+                                                      quater => quater, 
+                                                      sale => (sale.Item1.Month - 1) / 3, 
+                                                      (quater, quaterSales) => quaterSales.Sum(sale => sale.Item2)
+                                                      ).ToArray();
         }
 
 
