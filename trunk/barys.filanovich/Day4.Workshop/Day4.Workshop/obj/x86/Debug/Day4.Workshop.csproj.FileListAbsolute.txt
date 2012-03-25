@@ -1,0 +1,11 @@
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\bin\Debug\Day4.Workshop.exe
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\bin\Debug\Day4.Workshop.pdb
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\obj\x86\Debug\Day4.Workshop.Form1.resources
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\obj\x86\Debug\Day4.Workshop.Properties.Resources.resources
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\obj\x86\Debug\Day4.Workshop.exe
+c:\users\edinolichnik\documents\visual studio 2010\Projects\Day4.Workshop\Day4.Workshop\obj\x86\Debug\Day4.Workshop.pdb
+D:\ASPTraining\barys.filanovich\Day4.Workshop\Day4.Workshop\obj\x86\Debug\Day4.Workshop.exe
+D:\ASPTraining\barys.filanovich\Day4.Workshop\Day4.Workshop\obj\x86\Debug\Day4.Workshop.pdb
