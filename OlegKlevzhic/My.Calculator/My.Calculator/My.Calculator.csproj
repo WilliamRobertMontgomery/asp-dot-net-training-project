@@ -44,8 +44,6 @@
     <Compile Include="ComplexNumbers\Calculator.cs" />
     <Compile Include="ComplexNumbers\Complex.cs" />
     <Compile Include="ICalculator.cs" />
-    <Compile Include="Matrices\Calculator.cs" />
-    <Compile Include="Matrices\Matrix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
