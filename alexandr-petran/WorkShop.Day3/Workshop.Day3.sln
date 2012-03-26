@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop.Day3", "Workshop.Day3\Workshop.Day3.csproj", "{D0F9B4CB-99AE-45E6-909D-332B07235D24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexTests", "ComplexTests.cs\ComplexTests.csproj", "{E76F5E2A-053E-4916-A292-527706D419DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0F9B4CB-99AE-45E6-909D-332B07235D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F9B4CB-99AE-45E6-909D-332B07235D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F9B4CB-99AE-45E6-909D-332B07235D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F9B4CB-99AE-45E6-909D-332B07235D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76F5E2A-053E-4916-A292-527706D419DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76F5E2A-053E-4916-A292-527706D419DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76F5E2A-053E-4916-A292-527706D419DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76F5E2A-053E-4916-A292-527706D419DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
