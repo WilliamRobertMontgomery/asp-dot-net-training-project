@@ -1,0 +1,5 @@
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions\bin\Debug\RegularExpressions.dll
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions\bin\Debug\RegularExpressions.pdb
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions\obj\Debug\ResolveAssemblyReference.cache
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions\obj\Debug\RegularExpressions.dll
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions\obj\Debug\RegularExpressions.pdb
