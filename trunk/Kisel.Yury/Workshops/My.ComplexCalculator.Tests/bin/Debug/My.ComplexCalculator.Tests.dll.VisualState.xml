@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1009]D:\Education\Epam Training Projects\My.ComplexCalculator\My.ComplexCalculator.Tests\bin\Debug\My.ComplexCalculator.Tests.dll</TopNode>
+  <SelectedNode>[0-1000]My.ComplexCalculator.Tests.Tests</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1009]D:\Education\Epam Training Projects\My.ComplexCalculator\My.ComplexCalculator.Tests\bin\Debug\My.ComplexCalculator.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1010]My" Expanded="true" />
+    <Node UniqueName="[0-1011]My.ComplexCalculator" Expanded="true" />
+    <Node UniqueName="[0-1012]My.ComplexCalculator.Tests" Expanded="true" />
+    <Node UniqueName="[0-1000]My.ComplexCalculator.Tests.Tests" Expanded="true" />
+  </Nodes>
+</VisualState>
