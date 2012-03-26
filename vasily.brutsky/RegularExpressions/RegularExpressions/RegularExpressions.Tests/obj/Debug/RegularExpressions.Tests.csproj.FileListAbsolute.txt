@@ -1,0 +1,8 @@
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\bin\Debug\RegularExpressions.Tests.dll
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\bin\Debug\RegularExpressions.Tests.pdb
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\bin\Debug\nunit.framework.dll
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\bin\Debug\RegularExpressions.dll
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\bin\Debug\RegularExpressions.pdb
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\obj\Debug\ResolveAssemblyReference.cache
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\obj\Debug\RegularExpressions.Tests.dll
+F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\obj\Debug\RegularExpressions.Tests.pdb

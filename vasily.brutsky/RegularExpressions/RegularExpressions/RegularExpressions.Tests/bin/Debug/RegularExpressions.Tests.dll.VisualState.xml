@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1010]F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\bin\Debug\RegularExpressions.Tests.dll</TopNode>
+  <SelectedNode>[0-1010]F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\bin\Debug\RegularExpressions.Tests.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1010]F:\учеба\ASP_EPAM\practice\hometask\RegularExpressions\RegularExpressions\RegularExpressions.Tests\bin\Debug\RegularExpressions.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1011]RegularExpressions" Expanded="true" />
+    <Node UniqueName="[0-1012]RegularExpressions.Tests" Expanded="true" />
+    <Node UniqueName="[0-1000]RegularExpressions.Tests.RegularExpressionsTests" Expanded="true" />
+  </Nodes>
+</VisualState>
