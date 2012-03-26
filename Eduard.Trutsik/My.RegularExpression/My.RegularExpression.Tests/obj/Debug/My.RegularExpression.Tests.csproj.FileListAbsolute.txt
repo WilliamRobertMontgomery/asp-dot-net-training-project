@@ -1,0 +1,8 @@
+D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\bin\Debug\My.RegularExpression.Tests.dll
+D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\bin\Debug\My.RegularExpression.Tests.pdb
+D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\obj\Debug\My.RegularExpression.Tests.dll
+D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\obj\Debug\My.RegularExpression.Tests.pdb
+D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\bin\Debug\My.RegularExpression.dll
+D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\bin\Debug\nunit.framework.dll
+D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\bin\Debug\My.RegularExpression.pdb

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1016]D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\bin\Debug\My.RegularExpression.Tests.dll</TopNode>
+  <SelectedNode>[0-1016]D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\bin\Debug\My.RegularExpression.Tests.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1016]D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression.Tests\bin\Debug\My.RegularExpression.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1017]My" Expanded="true" />
+    <Node UniqueName="[0-1018]My.RegularExpression" Expanded="true" />
+    <Node UniqueName="[0-1019]My.RegularExpression.Tests" Expanded="true" />
+    <Node UniqueName="[0-1000]My.RegularExpression.Tests.RegularExpressionTest" Expanded="true" />
+  </Nodes>
+</VisualState>
