@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkShop.Day4.RegExp", "WorkShop.Day4.RegExp\WorkShop.Day4.RegExp.csproj", "{B6259B21-C49B-4786-8776-AFA607F0518E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkShop.Day4.RegExp.Tests", "WorkShop.Day4.RegExp.Tests\WorkShop.Day4.RegExp.Tests.csproj", "{E94F00FD-3273-40C1-A81A-D8A1842FBC5E}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6259B21-C49B-4786-8776-AFA607F0518E}.Debug|x86.ActiveCfg = Debug|x86
+		{B6259B21-C49B-4786-8776-AFA607F0518E}.Debug|x86.Build.0 = Debug|x86
+		{B6259B21-C49B-4786-8776-AFA607F0518E}.Release|x86.ActiveCfg = Release|x86
+		{B6259B21-C49B-4786-8776-AFA607F0518E}.Release|x86.Build.0 = Release|x86
+		{E94F00FD-3273-40C1-A81A-D8A1842FBC5E}.Debug|x86.ActiveCfg = Debug|x86
+		{E94F00FD-3273-40C1-A81A-D8A1842FBC5E}.Debug|x86.Build.0 = Debug|x86
+		{E94F00FD-3273-40C1-A81A-D8A1842FBC5E}.Release|x86.ActiveCfg = Release|x86
+		{E94F00FD-3273-40C1-A81A-D8A1842FBC5E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
