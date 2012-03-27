@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegExp", "RegExp\RegExp.csproj", "{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegExp.Test", "RegExp.Test\RegExp.Test.csproj", "{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{06B5C5FB-A3D1-4559-ACE3-684C94D4EF8C}.Release|x86.ActiveCfg = Release|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C15BBCEC-C51A-4487-9DE8-51FBBFD76822}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
