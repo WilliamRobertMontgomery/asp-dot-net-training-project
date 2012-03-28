@@ -1,0 +1,5 @@
+c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\RegEx\bin\Debug\RegEx.pdb
+c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\RegEx\obj\Debug\ResolveAssemblyReference.cache
+c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\RegEx\obj\Debug\RegEx.pdb
+c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\RegEx\bin\Debug\RegEx.exe
+c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\RegEx\obj\Debug\RegEx.exe
