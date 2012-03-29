@@ -37,7 +37,7 @@ namespace My.Ships
         //override methods
         public override void sailTo(string s)
         {
-            Console.WriteLine("Warship {0} with draft {1} ton sails to {2}. Number of crew - {3} чел. Number of guns - {4}", Name, Draft, s, NumberOfCrew, NumberOfGuns);
+            Console.WriteLine("Warship {0} with draft {1} ton sails to {2}. Number of crew - {3} . Number of guns - {4}", Name, Draft, s, NumberOfCrew, NumberOfGuns);
         }
 
         public override void action()
