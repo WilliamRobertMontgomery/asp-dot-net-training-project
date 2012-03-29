@@ -23,6 +23,13 @@ namespace My.Vector
             //scalar myltiplying
             double sclm = vect1 * vect2;
             Console.WriteLine("vect1*vect2 = " + sclm);
+            // comparison vectors
+            Vector vect4 = new Vector(3.0, 3.0, 1.0);
+            Console.WriteLine("vect4 = " + vect4);
+            Console.WriteLine("vect1 == vect4 returns " + (vect1==vect4));
+            Console.WriteLine("vect1 == vect2 returns " + (vect1 == vect2));
+            Console.WriteLine("vect1 != vect4 returns " + (vect1 != vect4));
+            Console.WriteLine("vect1 != vect2 returns " + (vect1 != vect2));
             Console.ReadKey();
         }
     }

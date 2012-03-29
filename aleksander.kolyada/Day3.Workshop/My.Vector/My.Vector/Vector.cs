@@ -75,6 +75,21 @@ namespace My.Vector
         {
             return a.X * b.X + a.Y * b.Y + a.Z * b.Z;
         }
+
+        //overloading comparison operators
+        public static bool operator ==(Vector a, Vector b)
+        {
+            if (a.X == b.X && a.Y == b.Y && a.Z == b.Z)
+                return true;
+            else 
+                return false;
+        }
+
+        public static bool operator !=(Vector a, Vector b)
+        {
+                return !(a == b);
+        }
+
     }
  
 }
