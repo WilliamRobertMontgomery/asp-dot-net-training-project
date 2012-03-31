@@ -179,7 +179,13 @@ namespace Workshop.Day3.Matrix
 			{
 				throw new System.InvalidOperationException("The number of columns of the left matrix should be the equal to the number of rows of the right matrix");
 			}
-			return MatrixOperation(a.rows, b.columns, (int i, int j) => { double x = 0; for (int k = 0; k < a.columns; k++) x += a.matrix[i, k] * b.matrix[k, j]; return x; });
+			return MatrixOperation(a.rows, b.columns, (int i, int j) => 
+				{ 
+					double x = 0; 
+					for (int k = 0; k < a.columns; k++) 
+						x += a.matrix[i, k] * b.matrix[k, j]; 
+					return x; 
+				});
 		}
 
 		public override int GetHashCode()

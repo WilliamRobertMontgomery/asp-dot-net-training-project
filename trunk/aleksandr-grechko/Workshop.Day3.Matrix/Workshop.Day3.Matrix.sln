@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop.Day3.Matrix", "Workshop.Day3.Matrix\Workshop.Day3.Matrix.csproj", "{42F3CAD2-F405-4162-99E6-BD0E9EC3438F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop.Day3.Matrix.Test", "Workshop.Day3.Matrix.Test\Workshop.Day3.Matrix.Test.csproj", "{47C7AB77-E44A-46EC-93F9-E18CCFD3956D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop.Day7.Reflection", "Workshop.Day7.Reflection\Workshop.Day7.Reflection.csproj", "{291BEA16-0324-4F8B-8E5D-32E36E1749D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,16 @@ Global
 		{47C7AB77-E44A-46EC-93F9-E18CCFD3956D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{47C7AB77-E44A-46EC-93F9-E18CCFD3956D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{47C7AB77-E44A-46EC-93F9-E18CCFD3956D}.Release|x86.ActiveCfg = Release|Any CPU
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Debug|x86.ActiveCfg = Debug|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Debug|x86.Build.0 = Debug|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Release|Any CPU.ActiveCfg = Release|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Release|Mixed Platforms.Build.0 = Release|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Release|x86.ActiveCfg = Release|x86
+		{291BEA16-0324-4F8B-8E5D-32E36E1749D2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
