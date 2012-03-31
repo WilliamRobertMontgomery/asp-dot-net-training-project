@@ -1,0 +1,9 @@
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\bin\Debug\RunTests.exe
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\bin\Debug\RunTests.pdb
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\bin\Debug\MyMatrix.dll
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\bin\Debug\nunit.framework.dll
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\bin\Debug\MyMatrix.pdb
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\bin\Debug\nunit.framework.xml
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\obj\x86\Debug\RunTests.exe
+D:\Dropbox\ASPTraining\Projects\Day7.Workshop\MatrixSolution\RunTests\obj\x86\Debug\RunTests.pdb
