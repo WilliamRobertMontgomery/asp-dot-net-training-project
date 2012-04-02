@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.WorckShop.Day2.Library", "My.WorckShop.Day2\My.WorckShop.Day2.Library.csproj", "{3E369D0E-7D38-4301-B608-B93518B9C835}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.WorkShop.Day2.Library", "My.WorckShop.Day2\My.WorkShop.Day2.Library.csproj", "{3E369D0E-7D38-4301-B608-B93518B9C835}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.WorckShop.Day2.Application", "My.WorckShop.Day2.Application\My.WorckShop.Day2.Application.csproj", "{56643682-20A4-4CD9-AFF5-F50EF924EE7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.WorkShop.Day2.Application", "My.WorckShop.Day2.Application\My.WorkShop.Day2.Application.csproj", "{56643682-20A4-4CD9-AFF5-F50EF924EE7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

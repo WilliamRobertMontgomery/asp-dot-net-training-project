@@ -47,9 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\My.WorckShop.Day2\My.WorckShop.Day2.Library.csproj">
+    <ProjectReference Include="..\My.WorckShop.Day2\My.WorkShop.Day2.Library.csproj">
       <Project>{3E369D0E-7D38-4301-B608-B93518B9C835}</Project>
-      <Name>My.WorckShop.Day2.Library</Name>
+      <Name>My.WorkShop.Day2.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
