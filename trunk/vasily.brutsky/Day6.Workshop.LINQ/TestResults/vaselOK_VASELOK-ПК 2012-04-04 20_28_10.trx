@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2c158404-92c6-453c-8a64-437d818b8e75" name="vaselOK@VASELOK-ПК 2012-04-04 20:28:10" runUser="vaselOK-ПК\vaselOK" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Параметры тестирования по умолчанию" id="9d0937fc-e572-461e-8e67-97a1321a2c01">
+    <Deployment runDeploymentRoot="vaselOK_VASELOK-ПК 2012-04-04 20_28_10">
+      <DeploymentItem filename="F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\bin\Debug\Enumerable.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-04-04T20:28:10.2507412+03:00" queuing="2012-04-04T20:28:10.3627476+03:00" start="2012-04-04T20:28:10.3777485+03:00" finish="2012-04-04T20:28:11.5538157+03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="41" executed="41" passed="32" error="0" failed="9" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetCountOfStrings_Should_Return_Right_Result" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="045fb746-ba3d-711e-94ba-3ded5d205be1">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetCountOfStrings" />
+      </TestCategory>
+      <Execution id="de77ac45-d616-49db-ba6a-9acd28c3dc7a" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCountOfStrings_Should_Return_Right_Result" />
+    </UnitTest>
+    <UnitTest name="GetNextVersionFromList_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="b71c9ec6-625b-4e8f-1ec8-f546c24b3cdd">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetNextVersionFromList" />
+      </TestCategory>
+      <Execution id="653d4f4a-a598-487d-b85b-7b58e9c220d5" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetNextVersionFromList_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetSumOfVectors_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="cfe08222-f6de-0def-88d5-c5148407d1d3">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetSumOfVectors" />
+      </TestCategory>
+      <Execution id="fe298bd4-9380-4ea7-b35a-bd0bd031bd28" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSumOfVectors_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetPrefixItems_Should_Raise_Exception_If_Prefix_Is_Null" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="608e8c24-666d-dcf7-c02c-68d28a471684">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetPrefixItems" />
+      </TestCategory>
+      <Execution id="401b8272-af53-4f7e-9c15-767508c4fdc9" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPrefixItems_Should_Raise_Exception_If_Prefix_Is_Null" />
+    </UnitTest>
+    <UnitTest name="GetCountOfGreaterThen10_Should_Return_Right_Result" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="1a3ca12f-fd40-063e-1b5e-7b7cacc7a8f9">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetCountOfGreaterThen10" />
+      </TestCategory>
+      <Execution id="13901f21-b9bc-4e90-a1b8-3faba39f91a2" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCountOfGreaterThen10_Should_Return_Right_Result" />
+    </UnitTest>
+    <UnitTest name="GetQuarterSales_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="59cfd53f-f7e3-6314-32be-e4ed7905d52b">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetQuarterSales" />
+      </TestCategory>
+      <Execution id="fe53e58e-f598-443b-b674-6ec29d82a7a9" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetQuarterSales_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetProductOfVectors_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="e24fc1e5-5dfe-c952-0f03-ee2451eb399e">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetProductOfVectors" />
+      </TestCategory>
+      <Execution id="c1f573bf-6182-47fa-9221-0ef131153390" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetProductOfVectors_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetUsedChars_Should_Return_List_of_Chars" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="4dae8c9f-c963-a4c7-f99c-6845e83c59e5">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetUsedChars" />
+      </TestCategory>
+      <Execution id="97774dc7-725c-4ca5-9198-6a0514e040ab" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetUsedChars_Should_Return_List_of_Chars" />
+    </UnitTest>
+    <UnitTest name="GetDigitCharsCount_Should_Return_Number_Of_Digit_Chars" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="b49786a5-3674-e883-0aa2-b7b8dd7bac3c">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetDigitCharsCount" />
+      </TestCategory>
+      <Execution id="193d5957-f1df-434c-a542-61e42cd1508b" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetDigitCharsCount_Should_Return_Number_Of_Digit_Chars" />
+    </UnitTest>
+    <UnitTest name="GetSquareSequence_Should_Return_Square_Items" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="43c72a8d-c049-5b37-79ec-2fc27da8bc8d">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetSquareSequence" />
+      </TestCategory>
+      <Execution id="35b3db5c-c243-438b-bc92-c54c14cc0dc2" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSquareSequence_Should_Return_Square_Items" />
+    </UnitTest>
+    <UnitTest name="GetPrefixItems_Should_Return_Items_Started_With_Required_Prefix" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="5b75b77b-328e-1e07-812e-ae5858f99375">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetPrefixItems" />
+      </TestCategory>
+      <Execution id="0b8a309a-4a96-4fa4-81db-5565cfa3d5f5" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPrefixItems_Should_Return_Items_Started_With_Required_Prefix" />
+    </UnitTest>
+    <UnitTest name="GetFirstNegativeSubsequence_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="493d7ab6-74be-557c-936e-edf421905239">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetFirstNegativeSubsequence" />
+      </TestCategory>
+      <Execution id="28522da7-e72e-478f-9210-5f7bb35e4591" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetFirstNegativeSubsequence_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetCountOfStringsWithMaxLenght_Should_Return_Right_Result" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="c16c7d47-220f-99a7-bc0c-07aa9bd68b77">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetCountOfStringsWithMaxLenght" />
+      </TestCategory>
+      <Execution id="4875b611-0b02-478a-af48-05440631b930" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCountOfStringsWithMaxLenght_Should_Return_Right_Result" />
+    </UnitTest>
+    <UnitTest name="GetPrefixItems_Should_Return_Empty_Sequence_If_No_Items_With_Required_Prefix" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="11c1deb1-0eef-696f-1bf1-9ebc7303fa37">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetPrefixItems" />
+      </TestCategory>
+      <Execution id="5a03ec8d-2c9a-41a1-8f48-de61efa447bf" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPrefixItems_Should_Return_Empty_Sequence_If_No_Items_With_Required_Prefix" />
+    </UnitTest>
+    <UnitTest name="GetFirstContainsFirst_Should_Return_Right_Result" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="3e3e5339-fc6a-81ab-04d0-eac57d498273">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetFirstContainsFirst" />
+      </TestCategory>
+      <Execution id="9e5d3ebb-6528-4b86-ad9f-256624255f89" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetFirstContainsFirst_Should_Return_Right_Result" />
+    </UnitTest>
+    <UnitTest name="IsAllStringsAreUppercase_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="7341c297-c057-8ebe-50ef-d6d392dc16f5">
+      <TestCategory>
+        <TestCategoryItem TestCategory="IsAllStringsAreUppercase" />
+      </TestCategory>
+      <Execution id="eec59f9b-c3f2-40fa-89c3-7346ceb1824b" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsAllStringsAreUppercase_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="Get3TopItems_Should_Return_Square_Items" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="4c54e396-1ddd-c0e2-8cd1-002e6ee61220">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Get3TopItems" />
+      </TestCategory>
+      <Execution id="49bf64bc-f472-43db-bdba-a25523fd6166" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="Get3TopItems_Should_Return_Square_Items" />
+    </UnitTest>
+    <UnitTest name="GetCountOfStringsWithLengthEqualsTo3_Should_Return_Right_Result" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="d46cfb58-bf8e-887e-ce38-565d152e39c9">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetCountOfStringsWithLengthEqualsTo3" />
+      </TestCategory>
+      <Execution id="21e7199e-f01c-4587-9ca8-03bb197104fc" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCountOfStringsWithLengthEqualsTo3_Should_Return_Right_Result" />
+    </UnitTest>
+    <UnitTest name="CombineNumbersAndFruits_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="4aa0c7c0-5ae9-c68b-8fc7-21a64305d247">
+      <TestCategory>
+        <TestCategoryItem TestCategory="CombineNumbersAndFruits" />
+      </TestCategory>
+      <Execution id="0b8e408f-19b5-4f0a-8140-add54595cbba" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="CombineNumbersAndFruits_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetStringOfSequence_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="068a35e1-babe-dd13-85ee-ce6cb79a6f86">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetStringOfSequence" />
+      </TestCategory>
+      <Execution id="68fcb202-789e-4982-84ce-23bf743ac8fa" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetStringOfSequence_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetStringsOnly_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="e649b2f4-e915-f12f-449b-cca2c13f2de3">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetStringsOnly" />
+      </TestCategory>
+      <Execution id="0041a94a-112a-4cf5-a03a-f8c1568ee3be" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetStringsOnly_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetIEnumerableTypesNames_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="54bfe939-eff8-e58f-ab02-133227efae85">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetIEnumerableTypesNames" />
+      </TestCategory>
+      <Execution id="495c8c3c-09a5-45f0-b097-c3bc3602dc6c" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetIEnumerableTypesNames_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetDigitCharsCount_Should_Throw_ArgumentException_If_data_Is_Null" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="3c334d4c-8dc8-d688-719d-596a1c04a356">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetDigitCharsCount" />
+      </TestCategory>
+      <Execution id="c7361483-4652-4a18-bd7d-59698b37a79d" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetDigitCharsCount_Should_Throw_ArgumentException_If_data_Is_Null" />
+    </UnitTest>
+    <UnitTest name="GetUppercaseStrings_Should_Return_Uppercased_Strings" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="89ecf07f-9a5c-e329-78c4-b63b2fb8e2c9">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetUppercaseStrings" />
+      </TestCategory>
+      <Execution id="37ec7e88-0e96-4c70-82cc-f919252d7337" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetUppercaseStrings_Should_Return_Uppercased_Strings" />
+    </UnitTest>
+    <UnitTest name="GetAverageOfDoubleValues_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="490f9b19-ece3-4e52-4cc8-91678ac7e694">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetAverageOfDoubleValues" />
+      </TestCategory>
+      <Execution id="7c921657-4ee4-465e-bf6c-1b96707762ac" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAverageOfDoubleValues_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="SortDigitNamesByNumericOrder_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="c12e3770-66b3-84f2-92aa-d27c4eb76039">
+      <TestCategory>
+        <TestCategoryItem TestCategory="SortDigitNamesByNumericOrder" />
+      </TestCategory>
+      <Execution id="e330ee0e-f57c-4593-8d3f-b229a3a6d411" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="SortDigitNamesByNumericOrder_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetSpecificEventEntriesCount_Should_Return_Right_Result" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="4e8e8de7-9b72-0cbc-9ab1-45b0e90ac2f5">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetSpecificEventEntriesCount" />
+      </TestCategory>
+      <Execution id="054e196a-426b-4b36-b180-196b1521e806" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSpecificEventEntriesCount_Should_Return_Right_Result" />
+    </UnitTest>
+    <UnitTest name="GetCommonChars_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="7b6e24df-00d3-a95f-ea51-95c29ba34c7e">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetCommonChars" />
+      </TestCategory>
+      <Execution id="c0bb3c69-1c61-44a8-9e79-267a7ab2164d" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCommonChars_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetTotalStringsLength_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="6555c6f9-4be4-2bb5-f66b-17e0ac806335">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetTotalStringsLength" />
+      </TestCategory>
+      <Execution id="19b97190-2f24-46e9-b61a-fca0cb47d4fd" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetTotalStringsLength_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetMissingDigits_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="4e4e92b1-cb43-4420-f1d2-e3e8be142f10">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetMissingDigits" />
+      </TestCategory>
+      <Execution id="8d0c6a29-a6ca-4dff-8ab5-e147e6e09d83" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetMissingDigits_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetMovingSumSequence_Should_Return_Moving_Sum_Items" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="4c6c3795-2b19-e043-e7e0-26eaee4ec22d">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetMovingSumSequence" />
+      </TestCategory>
+      <Execution id="03c1baec-4d3f-4262-a263-bab2e59437b2" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetMovingSumSequence_Should_Return_Moving_Sum_Items" />
+    </UnitTest>
+    <UnitTest name="GetIEnumerableTypesNames_Should_Throw_ArgumentNullException_If_assembly_Is_Null" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="0771890c-c3d7-dcba-b29b-00cbdda92306">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetIEnumerableTypesNames" />
+      </TestCategory>
+      <Execution id="7d275588-cebf-4914-9457-669e8f023af8" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetIEnumerableTypesNames_Should_Throw_ArgumentNullException_If_assembly_Is_Null" />
+    </UnitTest>
+    <UnitTest name="GetStringsLength_Should_Return_Strings_Length" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="a33a0fd4-ff4b-0e60-b661-e1b89609621a">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetStringsLength" />
+      </TestCategory>
+      <Execution id="48c971ee-c36b-486d-bbf1-5a1f1360e674" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetStringsLength_Should_Return_Strings_Length" />
+    </UnitTest>
+    <UnitTest name="AreNumericListsEqual_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="d1002e82-3a94-1810-4291-c7e3a753bb07">
+      <TestCategory>
+        <TestCategoryItem TestCategory="AreNumericListsEqual" />
+      </TestCategory>
+      <Execution id="1a98ebaf-5c25-48a0-a1af-d0ba9ab65afe" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="AreNumericListsEqual_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetEvenItems_Should_Return_EvenItems" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="e48b642c-09f4-0102-7220-3b8e7ff37c88">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetEvenItems" />
+      </TestCategory>
+      <Execution id="c53ad1cc-49cb-448c-ad93-81ed61c73d8b" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEvenItems_Should_Return_EvenItems" />
+    </UnitTest>
+    <UnitTest name="GetSumOfAllInts_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="bc926853-5e8d-4b91-f7a9-538af70e4dc9">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetSumOfAllInts" />
+      </TestCategory>
+      <Execution id="c8f86aa8-1815-498a-a878-d873d2b4f984" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSumOfAllInts_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetEvenItems_Should_Return_Empty_If_Sequence_Length_Is_Less_Than_2" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="a44f1187-d82a-d56b-ebad-aa457d19da97">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetEvenItems" />
+      </TestCategory>
+      <Execution id="d711aea9-445f-4c7a-8723-958380ba2ee1" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEvenItems_Should_Return_Empty_If_Sequence_Length_Is_Less_Than_2" />
+    </UnitTest>
+    <UnitTest name="IsSequenceHasNulls_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="9d4bc957-b6ab-4cff-5705-277f192062d5">
+      <TestCategory>
+        <TestCategoryItem TestCategory="IsSequenceHasNulls" />
+      </TestCategory>
+      <Execution id="7e10f462-94a0-45ec-a4b3-7b9e30dff348" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsSequenceHasNulls_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="SortStringsByLengthAndAlphabet_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="83e0f4f5-fabe-f6d3-a9f0-71b579a2d736">
+      <TestCategory>
+        <TestCategoryItem TestCategory="SortStringsByLengthAndAlphabet" />
+      </TestCategory>
+      <Execution id="b939c884-058c-4ef6-a641-fe959b7bb413" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="SortStringsByLengthAndAlphabet_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="PropagateItemsByPostionIndex_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="b2ed6984-7457-c58c-2e37-b04fc204b9b6">
+      <TestCategory>
+        <TestCategoryItem TestCategory="PropagateItemsByPostionIndex" />
+      </TestCategory>
+      <Execution id="e2a45af5-2916-4a55-b4bd-9e572196ac0e" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="PropagateItemsByPostionIndex_Should_Return_Right_Results" />
+    </UnitTest>
+    <UnitTest name="GetAllPairs_Should_Return_Right_Results" storage="f:\учеба\asp_epam\day6.workshop\enumerabletest\bin\debug\enumerabletest.dll" id="3a8fc5d7-2837-2826-9502-b64f8bc69515">
+      <TestCategory>
+        <TestCategoryItem TestCategory="GetAllPairs" />
+      </TestCategory>
+      <Execution id="2fb9ff9d-5a06-4bd0-9341-bdb29e662003" />
+      <TestMethod codeBase="F:/учеба/ASP_EPAM/Day6.Workshop/EnumerableTest/bin/Debug/EnumerableTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnumerableTest.TaskTest, EnumerableTest, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAllPairs_Should_Return_Right_Results" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Отсутствующие в списке результаты" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="045fb746-ba3d-711e-94ba-3ded5d205be1" executionId="de77ac45-d616-49db-ba6a-9acd28c3dc7a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="068a35e1-babe-dd13-85ee-ce6cb79a6f86" executionId="68fcb202-789e-4982-84ce-23bf743ac8fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0771890c-c3d7-dcba-b29b-00cbdda92306" executionId="7d275588-cebf-4914-9457-669e8f023af8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11c1deb1-0eef-696f-1bf1-9ebc7303fa37" executionId="5a03ec8d-2c9a-41a1-8f48-de61efa447bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1a3ca12f-fd40-063e-1b5e-7b7cacc7a8f9" executionId="13901f21-b9bc-4e90-a1b8-3faba39f91a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a8fc5d7-2837-2826-9502-b64f8bc69515" executionId="2fb9ff9d-5a06-4bd0-9341-bdb29e662003" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c334d4c-8dc8-d688-719d-596a1c04a356" executionId="c7361483-4652-4a18-bd7d-59698b37a79d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e3e5339-fc6a-81ab-04d0-eac57d498273" executionId="9e5d3ebb-6528-4b86-ad9f-256624255f89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43c72a8d-c049-5b37-79ec-2fc27da8bc8d" executionId="35b3db5c-c243-438b-bc92-c54c14cc0dc2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="490f9b19-ece3-4e52-4cc8-91678ac7e694" executionId="7c921657-4ee4-465e-bf6c-1b96707762ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="493d7ab6-74be-557c-936e-edf421905239" executionId="28522da7-e72e-478f-9210-5f7bb35e4591" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4aa0c7c0-5ae9-c68b-8fc7-21a64305d247" executionId="0b8e408f-19b5-4f0a-8140-add54595cbba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4c54e396-1ddd-c0e2-8cd1-002e6ee61220" executionId="49bf64bc-f472-43db-bdba-a25523fd6166" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4c6c3795-2b19-e043-e7e0-26eaee4ec22d" executionId="03c1baec-4d3f-4262-a263-bab2e59437b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4dae8c9f-c963-a4c7-f99c-6845e83c59e5" executionId="97774dc7-725c-4ca5-9198-6a0514e040ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e4e92b1-cb43-4420-f1d2-e3e8be142f10" executionId="8d0c6a29-a6ca-4dff-8ab5-e147e6e09d83" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e8e8de7-9b72-0cbc-9ab1-45b0e90ac2f5" executionId="054e196a-426b-4b36-b180-196b1521e806" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54bfe939-eff8-e58f-ab02-133227efae85" executionId="495c8c3c-09a5-45f0-b097-c3bc3602dc6c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="59cfd53f-f7e3-6314-32be-e4ed7905d52b" executionId="fe53e58e-f598-443b-b674-6ec29d82a7a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b75b77b-328e-1e07-812e-ae5858f99375" executionId="0b8a309a-4a96-4fa4-81db-5565cfa3d5f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="608e8c24-666d-dcf7-c02c-68d28a471684" executionId="401b8272-af53-4f7e-9c15-767508c4fdc9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6555c6f9-4be4-2bb5-f66b-17e0ac806335" executionId="19b97190-2f24-46e9-b61a-fca0cb47d4fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7341c297-c057-8ebe-50ef-d6d392dc16f5" executionId="eec59f9b-c3f2-40fa-89c3-7346ceb1824b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b6e24df-00d3-a95f-ea51-95c29ba34c7e" executionId="c0bb3c69-1c61-44a8-9e79-267a7ab2164d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83e0f4f5-fabe-f6d3-a9f0-71b579a2d736" executionId="b939c884-058c-4ef6-a641-fe959b7bb413" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89ecf07f-9a5c-e329-78c4-b63b2fb8e2c9" executionId="37ec7e88-0e96-4c70-82cc-f919252d7337" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9d4bc957-b6ab-4cff-5705-277f192062d5" executionId="7e10f462-94a0-45ec-a4b3-7b9e30dff348" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a33a0fd4-ff4b-0e60-b661-e1b89609621a" executionId="48c971ee-c36b-486d-bbf1-5a1f1360e674" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a44f1187-d82a-d56b-ebad-aa457d19da97" executionId="d711aea9-445f-4c7a-8723-958380ba2ee1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2ed6984-7457-c58c-2e37-b04fc204b9b6" executionId="e2a45af5-2916-4a55-b4bd-9e572196ac0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b49786a5-3674-e883-0aa2-b7b8dd7bac3c" executionId="193d5957-f1df-434c-a542-61e42cd1508b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b71c9ec6-625b-4e8f-1ec8-f546c24b3cdd" executionId="653d4f4a-a598-487d-b85b-7b58e9c220d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc926853-5e8d-4b91-f7a9-538af70e4dc9" executionId="c8f86aa8-1815-498a-a878-d873d2b4f984" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c12e3770-66b3-84f2-92aa-d27c4eb76039" executionId="e330ee0e-f57c-4593-8d3f-b229a3a6d411" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c16c7d47-220f-99a7-bc0c-07aa9bd68b77" executionId="4875b611-0b02-478a-af48-05440631b930" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cfe08222-f6de-0def-88d5-c5148407d1d3" executionId="fe298bd4-9380-4ea7-b35a-bd0bd031bd28" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d1002e82-3a94-1810-4291-c7e3a753bb07" executionId="1a98ebaf-5c25-48a0-a1af-d0ba9ab65afe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d46cfb58-bf8e-887e-ce38-565d152e39c9" executionId="21e7199e-f01c-4587-9ca8-03bb197104fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e24fc1e5-5dfe-c952-0f03-ee2451eb399e" executionId="c1f573bf-6182-47fa-9221-0ef131153390" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e48b642c-09f4-0102-7220-3b8e7ff37c88" executionId="c53ad1cc-49cb-448c-ad93-81ed61c73d8b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e649b2f4-e915-f12f-449b-cca2c13f2de3" executionId="0041a94a-112a-4cf5-a03a-f8c1568ee3be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="de77ac45-d616-49db-ba6a-9acd28c3dc7a" testId="045fb746-ba3d-711e-94ba-3ded5d205be1" testName="GetCountOfStrings_Should_Return_Right_Result" computerName="VASELOK-ПК" duration="00:00:00.5530969" startTime="2012-04-04T20:28:10.3797486+03:00" endTime="2012-04-04T20:28:11.1517927+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de77ac45-d616-49db-ba6a-9acd28c3dc7a">
+    </UnitTestResult>
+    <UnitTestResult executionId="68fcb202-789e-4982-84ce-23bf743ac8fa" testId="068a35e1-babe-dd13-85ee-ce6cb79a6f86" testName="GetStringOfSequence_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0020829" startTime="2012-04-04T20:28:11.1547929+03:00" endTime="2012-04-04T20:28:11.1627934+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68fcb202-789e-4982-84ce-23bf743ac8fa">
+    </UnitTestResult>
+    <UnitTestResult executionId="7d275588-cebf-4914-9457-669e8f023af8" testId="0771890c-c3d7-dcba-b29b-00cbdda92306" testName="GetIEnumerableTypesNames_Should_Throw_ArgumentNullException_If_assembly_Is_Null" computerName="VASELOK-ПК" duration="00:00:00.0028796" startTime="2012-04-04T20:28:11.1667936+03:00" endTime="2012-04-04T20:28:11.1747940+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d275588-cebf-4914-9457-669e8f023af8">
+    </UnitTestResult>
+    <UnitTestResult executionId="5a03ec8d-2c9a-41a1-8f48-de61efa447bf" testId="11c1deb1-0eef-696f-1bf1-9ebc7303fa37" testName="GetPrefixItems_Should_Return_Empty_Sequence_If_No_Items_With_Required_Prefix" computerName="VASELOK-ПК" duration="00:00:00.0012076" startTime="2012-04-04T20:28:11.1767942+03:00" endTime="2012-04-04T20:28:11.1827945+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a03ec8d-2c9a-41a1-8f48-de61efa447bf">
+    </UnitTestResult>
+    <UnitTestResult executionId="13901f21-b9bc-4e90-a1b8-3faba39f91a2" testId="1a3ca12f-fd40-063e-1b5e-7b7cacc7a8f9" testName="GetCountOfGreaterThen10_Should_Return_Right_Result" computerName="VASELOK-ПК" duration="00:00:00.0010750" startTime="2012-04-04T20:28:11.1847946+03:00" endTime="2012-04-04T20:28:11.1907950+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13901f21-b9bc-4e90-a1b8-3faba39f91a2">
+    </UnitTestResult>
+    <UnitTestResult executionId="2fb9ff9d-5a06-4bd0-9341-bdb29e662003" testId="3a8fc5d7-2837-2826-9502-b64f8bc69515" testName="GetAllPairs_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0143760" startTime="2012-04-04T20:28:11.1927951+03:00" endTime="2012-04-04T20:28:11.2117962+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fb9ff9d-5a06-4bd0-9341-bdb29e662003">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки EnumerableTest.TaskTest.GetAllPairs_Should_Return_Right_Results выдал исключение: System.NotImplementedException: Метод или операция не реализована..</Message>
+          <StackTrace>    в EnumerableTask.Task.GetAllPairs(IEnumerable`1 boys, IEnumerable`1 girls) в F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\Task.cs:строка 722
+   в EnumerableTest.TaskTest.GetAllPairsTest(IEnumerable`1 boys, IEnumerable`1 girls, IEnumerable`1 expected, String assertMessage) в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1169
+   в EnumerableTest.TaskTest.GetAllPairs_Should_Return_Right_Results() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1176
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c7361483-4652-4a18-bd7d-59698b37a79d" testId="3c334d4c-8dc8-d688-719d-596a1c04a356" testName="GetDigitCharsCount_Should_Throw_ArgumentException_If_data_Is_Null" computerName="VASELOK-ПК" duration="00:00:00.0009908" startTime="2012-04-04T20:28:11.2137963+03:00" endTime="2012-04-04T20:28:11.2187966+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7361483-4652-4a18-bd7d-59698b37a79d">
+    </UnitTestResult>
+    <UnitTestResult executionId="9e5d3ebb-6528-4b86-ad9f-256624255f89" testId="3e3e5339-fc6a-81ab-04d0-eac57d498273" testName="GetFirstContainsFirst_Should_Return_Right_Result" computerName="VASELOK-ПК" duration="00:00:00.0021740" startTime="2012-04-04T20:28:11.2207967+03:00" endTime="2012-04-04T20:28:11.2307972+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e5d3ebb-6528-4b86-ad9f-256624255f89">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки EnumerableTest.TaskTest.GetFirstContainsFirst_Should_Return_Right_Result выдал исключение: System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: predicate.</Message>
+          <StackTrace>    в System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   в EnumerableTask.Task.GetFirstContainsFirst(IEnumerable`1 data) в F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\Task.cs:строка 247
+   в EnumerableTest.TaskTest.GetFirstContainsFirstTest(IEnumerable`1 data, String expected, String assertMessage) в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 381
+   в EnumerableTest.TaskTest.GetFirstContainsFirst_Should_Return_Right_Result() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 387
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="35b3db5c-c243-438b-bc92-c54c14cc0dc2" testId="43c72a8d-c049-5b37-79ec-2fc27da8bc8d" testName="GetSquareSequence_Should_Return_Square_Items" computerName="VASELOK-ПК" duration="00:00:00.0013615" startTime="2012-04-04T20:28:11.2317973+03:00" endTime="2012-04-04T20:28:11.2387977+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35b3db5c-c243-438b-bc92-c54c14cc0dc2">
+    </UnitTestResult>
+    <UnitTestResult executionId="7c921657-4ee4-465e-bf6c-1b96707762ac" testId="490f9b19-ece3-4e52-4cc8-91678ac7e694" testName="GetAverageOfDoubleValues_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0022741" startTime="2012-04-04T20:28:11.2407978+03:00" endTime="2012-04-04T20:28:11.2487983+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c921657-4ee4-465e-bf6c-1b96707762ac">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки EnumerableTest.TaskTest.GetAverageOfDoubleValues_Should_Return_Right_Results выдал исключение: System.NotImplementedException: Метод или операция не реализована..</Message>
+          <StackTrace>    в EnumerableTask.Task.GetAverageOfDoubleValues(IEnumerable`1 data) в F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\Task.cs:строка 741
+   в EnumerableTest.TaskTest.GetAverageOfDoubleValuesTest(IEnumerable`1 data, Double expected, String assertMessage) в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1207
+   в EnumerableTest.TaskTest.GetAverageOfDoubleValues_Should_Return_Right_Results() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1214
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="28522da7-e72e-478f-9210-5f7bb35e4591" testId="493d7ab6-74be-557c-936e-edf421905239" testName="GetFirstNegativeSubsequence_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0015835" startTime="2012-04-04T20:28:11.2507984+03:00" endTime="2012-04-04T20:28:11.2567987+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28522da7-e72e-478f-9210-5f7bb35e4591">
+    </UnitTestResult>
+    <UnitTestResult executionId="0b8e408f-19b5-4f0a-8140-add54595cbba" testId="4aa0c7c0-5ae9-c68b-8fc7-21a64305d247" testName="CombineNumbersAndFruits_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0010211" startTime="2012-04-04T20:28:11.2577988+03:00" endTime="2012-04-04T20:28:11.2637991+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b8e408f-19b5-4f0a-8140-add54595cbba">
+    </UnitTestResult>
+    <UnitTestResult executionId="49bf64bc-f472-43db-bdba-a25523fd6166" testId="4c54e396-1ddd-c0e2-8cd1-002e6ee61220" testName="Get3TopItems_Should_Return_Square_Items" computerName="VASELOK-ПК" duration="00:00:00.0011067" startTime="2012-04-04T20:28:11.2667993+03:00" endTime="2012-04-04T20:28:11.2727997+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49bf64bc-f472-43db-bdba-a25523fd6166">
+    </UnitTestResult>
+    <UnitTestResult executionId="03c1baec-4d3f-4262-a263-bab2e59437b2" testId="4c6c3795-2b19-e043-e7e0-26eaee4ec22d" testName="GetMovingSumSequence_Should_Return_Moving_Sum_Items" computerName="VASELOK-ПК" duration="00:00:00.0013034" startTime="2012-04-04T20:28:11.2747998+03:00" endTime="2012-04-04T20:28:11.2818002+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03c1baec-4d3f-4262-a263-bab2e59437b2">
+    </UnitTestResult>
+    <UnitTestResult executionId="97774dc7-725c-4ca5-9198-6a0514e040ab" testId="4dae8c9f-c963-a4c7-f99c-6845e83c59e5" testName="GetUsedChars_Should_Return_List_of_Chars" computerName="VASELOK-ПК" duration="00:00:00.0021227" startTime="2012-04-04T20:28:11.2828002+03:00" endTime="2012-04-04T20:28:11.2898006+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="97774dc7-725c-4ca5-9198-6a0514e040ab">
+    </UnitTestResult>
+    <UnitTestResult executionId="8d0c6a29-a6ca-4dff-8ab5-e147e6e09d83" testId="4e4e92b1-cb43-4420-f1d2-e3e8be142f10" testName="GetMissingDigits_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0008847" startTime="2012-04-04T20:28:11.2918007+03:00" endTime="2012-04-04T20:28:11.2968010+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d0c6a29-a6ca-4dff-8ab5-e147e6e09d83">
+    </UnitTestResult>
+    <UnitTestResult executionId="054e196a-426b-4b36-b180-196b1521e806" testId="4e8e8de7-9b72-0cbc-9ab1-45b0e90ac2f5" testName="GetSpecificEventEntriesCount_Should_Return_Right_Result" computerName="VASELOK-ПК" duration="00:00:00.0027889" startTime="2012-04-04T20:28:11.2988011+03:00" endTime="2012-04-04T20:28:11.3078017+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="054e196a-426b-4b36-b180-196b1521e806">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки EnumerableTest.TaskTest.GetSpecificEventEntriesCount_Should_Return_Right_Result выдал исключение: System.NotImplementedException: Метод или операция не реализована..</Message>
+          <StackTrace>    в EnumerableTask.Task.GetSpecificEventEntriesCount(EventLogEntryType value) в F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\Task.cs:строка 353
+   в EnumerableTest.TaskTest.GetSpecificEventEntriesCount_Should_Return_Right_Result() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 531
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="495c8c3c-09a5-45f0-b097-c3bc3602dc6c" testId="54bfe939-eff8-e58f-ab02-133227efae85" testName="GetIEnumerableTypesNames_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0026696" startTime="2012-04-04T20:28:11.3088017+03:00" endTime="2012-04-04T20:28:11.3168022+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="495c8c3c-09a5-45f0-b097-c3bc3602dc6c">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки EnumerableTest.TaskTest.GetIEnumerableTypesNames_Should_Return_Right_Results выдал исключение: System.NotImplementedException: Метод или операция не реализована..</Message>
+          <StackTrace>    в EnumerableTask.Task.GetIEnumerableTypesNames(Assembly assembly) в F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\Task.cs:строка 378
+   в EnumerableTest.TaskTest.GetIEnumerableTypesNamesTest(Assembly assembly, String[] expected, String assertMessage) в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 576
+   в EnumerableTest.TaskTest.GetIEnumerableTypesNames_Should_Return_Right_Results() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 583
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fe53e58e-f598-443b-b674-6ec29d82a7a9" testId="59cfd53f-f7e3-6314-32be-e4ed7905d52b" testName="GetQuarterSales_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0027971" startTime="2012-04-04T20:28:11.3188023+03:00" endTime="2012-04-04T20:28:11.3268027+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe53e58e-f598-443b-b674-6ec29d82a7a9">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки EnumerableTest.TaskTest.GetQuarterSales_Should_Return_Right_Results выдал исключение: System.NotImplementedException: Метод или операция не реализована..</Message>
+          <StackTrace>    в EnumerableTask.Task.GetQuarterSales(IEnumerable`1 sales) в F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\Task.cs:строка 397
+   в EnumerableTest.TaskTest.GetQuarterSalesTest(IEnumerable`1 data, Int32[] expected, String assertMessage) в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 606
+   в EnumerableTest.TaskTest.GetQuarterSales_Should_Return_Right_Results() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 613
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0b8a309a-4a96-4fa4-81db-5565cfa3d5f5" testId="5b75b77b-328e-1e07-812e-ae5858f99375" testName="GetPrefixItems_Should_Return_Items_Started_With_Required_Prefix" computerName="VASELOK-ПК" duration="00:00:00.0005080" startTime="2012-04-04T20:28:11.3288029+03:00" endTime="2012-04-04T20:28:11.3338031+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b8a309a-4a96-4fa4-81db-5565cfa3d5f5">
+    </UnitTestResult>
+    <UnitTestResult executionId="401b8272-af53-4f7e-9c15-767508c4fdc9" testId="608e8c24-666d-dcf7-c02c-68d28a471684" testName="GetPrefixItems_Should_Raise_Exception_If_Prefix_Is_Null" computerName="VASELOK-ПК" duration="00:00:00.0004665" startTime="2012-04-04T20:28:11.3368033+03:00" endTime="2012-04-04T20:28:11.3418036+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="401b8272-af53-4f7e-9c15-767508c4fdc9">
+    </UnitTestResult>
+    <UnitTestResult executionId="19b97190-2f24-46e9-b61a-fca0cb47d4fd" testId="6555c6f9-4be4-2bb5-f66b-17e0ac806335" testName="GetTotalStringsLength_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0007188" startTime="2012-04-04T20:28:11.3458038+03:00" endTime="2012-04-04T20:28:11.3508041+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19b97190-2f24-46e9-b61a-fca0cb47d4fd">
+    </UnitTestResult>
+    <UnitTestResult executionId="eec59f9b-c3f2-40fa-89c3-7346ceb1824b" testId="7341c297-c057-8ebe-50ef-d6d392dc16f5" testName="IsAllStringsAreUppercase_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0011054" startTime="2012-04-04T20:28:11.3528042+03:00" endTime="2012-04-04T20:28:11.3588046+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eec59f9b-c3f2-40fa-89c3-7346ceb1824b">
+    </UnitTestResult>
+    <UnitTestResult executionId="c0bb3c69-1c61-44a8-9e79-267a7ab2164d" testId="7b6e24df-00d3-a95f-ea51-95c29ba34c7e" testName="GetCommonChars_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0012730" startTime="2012-04-04T20:28:11.3608047+03:00" endTime="2012-04-04T20:28:11.3668050+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0bb3c69-1c61-44a8-9e79-267a7ab2164d">
+    </UnitTestResult>
+    <UnitTestResult executionId="b939c884-058c-4ef6-a641-fe959b7bb413" testId="83e0f4f5-fabe-f6d3-a9f0-71b579a2d736" testName="SortStringsByLengthAndAlphabet_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0014453" startTime="2012-04-04T20:28:11.3688051+03:00" endTime="2012-04-04T20:28:11.3758055+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b939c884-058c-4ef6-a641-fe959b7bb413">
+    </UnitTestResult>
+    <UnitTestResult executionId="37ec7e88-0e96-4c70-82cc-f919252d7337" testId="89ecf07f-9a5c-e329-78c4-b63b2fb8e2c9" testName="GetUppercaseStrings_Should_Return_Uppercased_Strings" computerName="VASELOK-ПК" duration="00:00:00.0007380" startTime="2012-04-04T20:28:11.3778057+03:00" endTime="2012-04-04T20:28:11.3828059+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37ec7e88-0e96-4c70-82cc-f919252d7337">
+    </UnitTestResult>
+    <UnitTestResult executionId="7e10f462-94a0-45ec-a4b3-7b9e30dff348" testId="9d4bc957-b6ab-4cff-5705-277f192062d5" testName="IsSequenceHasNulls_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0007492" startTime="2012-04-04T20:28:11.3868062+03:00" endTime="2012-04-04T20:28:11.3918065+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e10f462-94a0-45ec-a4b3-7b9e30dff348">
+    </UnitTestResult>
+    <UnitTestResult executionId="48c971ee-c36b-486d-bbf1-5a1f1360e674" testId="a33a0fd4-ff4b-0e60-b661-e1b89609621a" testName="GetStringsLength_Should_Return_Strings_Length" computerName="VASELOK-ПК" duration="00:00:00.0007881" startTime="2012-04-04T20:28:11.3938066+03:00" endTime="2012-04-04T20:28:11.4008070+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48c971ee-c36b-486d-bbf1-5a1f1360e674">
+    </UnitTestResult>
+    <UnitTestResult executionId="d711aea9-445f-4c7a-8723-958380ba2ee1" testId="a44f1187-d82a-d56b-ebad-aa457d19da97" testName="GetEvenItems_Should_Return_Empty_If_Sequence_Length_Is_Less_Than_2" computerName="VASELOK-ПК" duration="00:00:00.0011323" startTime="2012-04-04T20:28:11.4028071+03:00" endTime="2012-04-04T20:28:11.4088074+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d711aea9-445f-4c7a-8723-958380ba2ee1">
+    </UnitTestResult>
+    <UnitTestResult executionId="e2a45af5-2916-4a55-b4bd-9e572196ac0e" testId="b2ed6984-7457-c58c-2e37-b04fc204b9b6" testName="PropagateItemsByPostionIndex_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0014748" startTime="2012-04-04T20:28:11.4108075+03:00" endTime="2012-04-04T20:28:11.4178079+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e2a45af5-2916-4a55-b4bd-9e572196ac0e">
+    </UnitTestResult>
+    <UnitTestResult executionId="193d5957-f1df-434c-a542-61e42cd1508b" testId="b49786a5-3674-e883-0aa2-b7b8dd7bac3c" testName="GetDigitCharsCount_Should_Return_Number_Of_Digit_Chars" computerName="VASELOK-ПК" duration="00:00:00.0002749" startTime="2012-04-04T20:28:11.4198081+03:00" endTime="2012-04-04T20:28:11.4258084+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="193d5957-f1df-434c-a542-61e42cd1508b">
+    </UnitTestResult>
+    <UnitTestResult executionId="653d4f4a-a598-487d-b85b-7b58e9c220d5" testId="b71c9ec6-625b-4e8f-1ec8-f546c24b3cdd" testName="GetNextVersionFromList_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0090473" startTime="2012-04-04T20:28:11.4278085+03:00" endTime="2012-04-04T20:28:11.4428094+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="653d4f4a-a598-487d-b85b-7b58e9c220d5">
+      <Output>
+        <ErrorInfo>
+          <Message>Ошибка в Assert.AreEqual. Ожидается: &lt;1.5&gt;. Фактически: &lt;1.2&gt;. GetNextVersionFromList should return right results</Message>
+          <StackTrace>   в EnumerableTest.TaskTest.GetNextVersionFromListTest(IEnumerable`1 data, String currVersion, String expected, String assertMessage) в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1081
+   в EnumerableTest.TaskTest.GetNextVersionFromList_Should_Return_Right_Results() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1087
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c8f86aa8-1815-498a-a878-d873d2b4f984" testId="bc926853-5e8d-4b91-f7a9-538af70e4dc9" testName="GetSumOfAllInts_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0009771" startTime="2012-04-04T20:28:11.4508098+03:00" endTime="2012-04-04T20:28:11.4588103+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8f86aa8-1815-498a-a878-d873d2b4f984">
+    </UnitTestResult>
+    <UnitTestResult executionId="e330ee0e-f57c-4593-8d3f-b229a3a6d411" testId="c12e3770-66b3-84f2-92aa-d27c4eb76039" testName="SortDigitNamesByNumericOrder_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0016857" startTime="2012-04-04T20:28:11.4628105+03:00" endTime="2012-04-04T20:28:11.4718110+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e330ee0e-f57c-4593-8d3f-b229a3a6d411">
+    </UnitTestResult>
+    <UnitTestResult executionId="4875b611-0b02-478a-af48-05440631b930" testId="c16c7d47-220f-99a7-bc0c-07aa9bd68b77" testName="GetCountOfStringsWithMaxLenght_Should_Return_Right_Result" computerName="VASELOK-ПК" duration="00:00:00.0013885" startTime="2012-04-04T20:28:11.4798115+03:00" endTime="2012-04-04T20:28:11.4868119+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4875b611-0b02-478a-af48-05440631b930">
+    </UnitTestResult>
+    <UnitTestResult executionId="fe298bd4-9380-4ea7-b35a-bd0bd031bd28" testId="cfe08222-f6de-0def-88d5-c5148407d1d3" testName="GetSumOfVectors_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0027838" startTime="2012-04-04T20:28:11.4888120+03:00" endTime="2012-04-04T20:28:11.4968125+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe298bd4-9380-4ea7-b35a-bd0bd031bd28">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки EnumerableTest.TaskTest.GetSumOfVectors_Should_Return_Right_Results выдал исключение: System.NotImplementedException: Метод или операция не реализована..</Message>
+          <StackTrace>    в EnumerableTask.Task.GetSumOfVectors(IEnumerable`1 vector1, IEnumerable`1 vector2) в F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\Task.cs:строка 683
+   в EnumerableTest.TaskTest.GetSumOfVectorsTest(IEnumerable`1 v1, IEnumerable`1 v2, IEnumerable`1 expected, String assertMessage) в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1106
+   в EnumerableTest.TaskTest.GetSumOfVectors_Should_Return_Right_Results() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1113
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1a98ebaf-5c25-48a0-a1af-d0ba9ab65afe" testId="d1002e82-3a94-1810-4291-c7e3a753bb07" testName="AreNumericListsEqual_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0014210" startTime="2012-04-04T20:28:11.4988126+03:00" endTime="2012-04-04T20:28:11.5058130+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a98ebaf-5c25-48a0-a1af-d0ba9ab65afe">
+    </UnitTestResult>
+    <UnitTestResult executionId="21e7199e-f01c-4587-9ca8-03bb197104fc" testId="d46cfb58-bf8e-887e-ce38-565d152e39c9" testName="GetCountOfStringsWithLengthEqualsTo3_Should_Return_Right_Result" computerName="VASELOK-ПК" duration="00:00:00.0008993" startTime="2012-04-04T20:28:11.5078131+03:00" endTime="2012-04-04T20:28:11.5138134+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21e7199e-f01c-4587-9ca8-03bb197104fc">
+    </UnitTestResult>
+    <UnitTestResult executionId="c1f573bf-6182-47fa-9221-0ef131153390" testId="e24fc1e5-5dfe-c952-0f03-ee2451eb399e" testName="GetProductOfVectors_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0021779" startTime="2012-04-04T20:28:11.5158136+03:00" endTime="2012-04-04T20:28:11.5228140+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1f573bf-6182-47fa-9221-0ef131153390">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки EnumerableTest.TaskTest.GetProductOfVectors_Should_Return_Right_Results выдал исключение: System.NotImplementedException: Метод или операция не реализована..</Message>
+          <StackTrace>    в EnumerableTask.Task.GetProductOfVectors(IEnumerable`1 vector1, IEnumerable`1 vector2) в F:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\Task.cs:строка 702
+   в EnumerableTest.TaskTest.GetProductOfVectorsTest(IEnumerable`1 v1, IEnumerable`1 v2, Int32 expected, String assertMessage) в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1138
+   в EnumerableTest.TaskTest.GetProductOfVectors_Should_Return_Right_Results() в F:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\TaskTest.cs:строка 1145
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c53ad1cc-49cb-448c-ad93-81ed61c73d8b" testId="e48b642c-09f4-0102-7220-3b8e7ff37c88" testName="GetEvenItems_Should_Return_EvenItems" computerName="VASELOK-ПК" duration="00:00:00.0003271" startTime="2012-04-04T20:28:11.5238140+03:00" endTime="2012-04-04T20:28:11.5308144+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c53ad1cc-49cb-448c-ad93-81ed61c73d8b">
+    </UnitTestResult>
+    <UnitTestResult executionId="0041a94a-112a-4cf5-a03a-f8c1568ee3be" testId="e649b2f4-e915-f12f-449b-cca2c13f2de3" testName="GetStringsOnly_Should_Return_Right_Results" computerName="VASELOK-ПК" duration="00:00:00.0010955" startTime="2012-04-04T20:28:11.5328145+03:00" endTime="2012-04-04T20:28:11.5388149+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0041a94a-112a-4cf5-a03a-f8c1568ee3be">
+    </UnitTestResult>
+  </Results>
+</TestRun>

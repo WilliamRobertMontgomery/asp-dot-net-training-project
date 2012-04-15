@@ -1,0 +1,5 @@
+f:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\bin\Debug\Enumerable.dll
+f:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\bin\Debug\Enumerable.pdb
+f:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\obj\Debug\ResolveAssemblyReference.cache
+f:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\obj\Debug\Enumerable.dll
+f:\учеба\ASP_EPAM\Day6.Workshop\Enumerable\obj\Debug\Enumerable.pdb
