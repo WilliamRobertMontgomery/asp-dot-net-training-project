@@ -1,0 +1,7 @@
+f:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\bin\Debug\EnumerableTest.dll
+f:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\bin\Debug\EnumerableTest.pdb
+f:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\bin\Debug\Enumerable.dll
+f:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\bin\Debug\Enumerable.pdb
+f:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\obj\Debug\ResolveAssemblyReference.cache
+f:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\obj\Debug\EnumerableTest.dll
+f:\учеба\ASP_EPAM\Day6.Workshop\EnumerableTest\obj\Debug\EnumerableTest.pdb
