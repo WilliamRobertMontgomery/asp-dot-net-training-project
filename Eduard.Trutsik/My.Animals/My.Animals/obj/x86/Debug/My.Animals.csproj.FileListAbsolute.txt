@@ -1,7 +1,0 @@
-D:\Программирование\Epam\DOT.net\Test\Test4\My.Animals\My.Animals\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\Программирование\Epam\DOT.net\Test\Test4\My.Animals\My.Animals\bin\Debug\My.Animals.exe
-D:\Программирование\Epam\DOT.net\Test\Test4\My.Animals\My.Animals\bin\Debug\My.Animals.pdb
-D:\Программирование\Epam\DOT.net\Test\Test4\My.Animals\My.Animals\obj\x86\Debug\My.Animals.exe
-D:\Программирование\Epam\DOT.net\Test\Test4\My.Animals\My.Animals\obj\x86\Debug\My.Animals.pdb
-D:\Программирование\Epam\DOT.net\MyProjects\My.Animals\My.Animals\obj\x86\Debug\My.Animals.exe
-D:\Программирование\Epam\DOT.net\MyProjects\My.Animals\My.Animals\obj\x86\Debug\My.Animals.pdb

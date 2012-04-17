@@ -1,9 +1,0 @@
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\bin\Debug\TestRegEx.dll
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\bin\Debug\TestRegEx.pdb
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\obj\Debug\ResolveAssemblyReference.cache
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\obj\Debug\TestRegEx.dll
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\obj\Debug\TestRegEx.pdb
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\bin\Debug\nunit.framework.dll
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\bin\Debug\RegEx.exe
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\bin\Debug\RegEx.pdb
-c:\users\edinolichnik\documents\visual studio 2010\Projects\RegEx\TestRegEx\bin\Debug\nunit.framework.xml

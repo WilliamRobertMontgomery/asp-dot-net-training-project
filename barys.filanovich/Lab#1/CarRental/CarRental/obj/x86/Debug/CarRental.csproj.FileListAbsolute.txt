@@ -1,5 +1,0 @@
-C:\Users\Edinolichnik\documents\visual studio 2010\Projects\CarRental\CarRental\bin\Debug\CarRental.exe
-C:\Users\Edinolichnik\documents\visual studio 2010\Projects\CarRental\CarRental\bin\Debug\CarRental.pdb
-C:\Users\Edinolichnik\documents\visual studio 2010\Projects\CarRental\CarRental\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Edinolichnik\documents\visual studio 2010\Projects\CarRental\CarRental\obj\x86\Debug\CarRental.exe
-C:\Users\Edinolichnik\documents\visual studio 2010\Projects\CarRental\CarRental\obj\x86\Debug\CarRental.pdb
