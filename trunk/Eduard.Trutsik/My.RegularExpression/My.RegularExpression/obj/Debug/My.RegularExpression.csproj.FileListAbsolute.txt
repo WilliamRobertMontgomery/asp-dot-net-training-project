@@ -1,5 +1,0 @@
-D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression\bin\Debug\My.RegularExpression.dll
-D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression\bin\Debug\My.RegularExpression.pdb
-D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression\obj\Debug\ResolveAssemblyReference.cache
-D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression\obj\Debug\My.RegularExpression.dll
-D:\Программирование\Epam\DOT.net\HomeWorks\Day4\My.RegularExpression\My.RegularExpression\obj\Debug\My.RegularExpression.pdb

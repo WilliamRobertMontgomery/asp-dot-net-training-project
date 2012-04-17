@@ -1,5 +1,0 @@
-D:\_Курсы\WorkShopDay3\Matrix\Matrix\bin\Debug\Matrix.exe
-D:\_Курсы\WorkShopDay3\Matrix\Matrix\bin\Debug\Matrix.pdb
-D:\_Курсы\WorkShopDay3\Matrix\Matrix\obj\Debug\ResolveAssemblyReference.cache
-D:\_Курсы\WorkShopDay3\Matrix\Matrix\obj\Debug\Matrix.exe
-D:\_Курсы\WorkShopDay3\Matrix\Matrix\obj\Debug\Matrix.pdb

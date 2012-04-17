@@ -1,5 +1,0 @@
-F:\QQQT\lab1\complex\complex\bin\Debug\complex.dll
-F:\QQQT\lab1\complex\complex\bin\Debug\complex.pdb
-F:\QQQT\lab1\complex\complex\obj\Debug\ResolveAssemblyReference.cache
-F:\QQQT\lab1\complex\complex\obj\Debug\complex.dll
-F:\QQQT\lab1\complex\complex\obj\Debug\complex.pdb
