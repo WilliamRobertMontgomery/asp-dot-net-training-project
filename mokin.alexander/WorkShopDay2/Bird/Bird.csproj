@@ -40,10 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="duck.cs" />
+    <Compile Include="Duck.cs" />
     <Compile Include="IWaterFowl.cs" />
     <Compile Include="IBird.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Swan.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

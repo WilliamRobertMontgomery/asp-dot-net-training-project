@@ -9,34 +9,51 @@ namespace TestProgram
     {
         static void Main(string[] args)
         {
-            Duck Duck1 = new Duck();
-            Duck Duck2 = new Duck();
-            Duck Duck3 = new Duck(20, 4);
+            Duck duck = new Duck();
+            duck.Eat();
+            duck.Fly();
+            duck.LayAnEgg();
+            duck.Swim();
+            duck.Walk();
+            Console.WriteLine("**Duck is checked\n");
 
-            Duck1.eat();
-            Duck1.fly();
-            Duck1.layAnEgg();
-            Duck1.swim();
-            Duck1.walk();
-            Duck1.info();
-            Console.WriteLine();
+            Swan swan = new Swan();
+            swan.Eat();
+            swan.Fly();
+            swan.LayAnEgg();
+            swan.Swim();
+            swan.Walk();
+            Console.WriteLine("**Swan is checked\n");
 
-            IBird ibird1;
-            ibird1 = Duck2;
-            ibird1.fly();
-            ibird1.eat();
-            ibird1.layAnEgg();
-            ibird1.walk();
-            Console.WriteLine();
+            Console.WriteLine("**Duck as a IBird");
+            IBird bird = new Duck(20, 10);
+            bird.Eat();
+            bird.Fly();
+            bird.LayAnEgg();
+            bird.Walk();
 
-            IWaterFowl WF = Duck3;
-            WF.eat();
-            WF.fly();
-            WF.layAnEgg();
-            WF.swim();
-            WF.walk();
-            Console.WriteLine();
-            Console.Read();
+            Console.WriteLine("\n**Swan as a IBird");
+            bird = new Swan(20, 10);
+            bird.Eat();
+            bird.Fly();
+            bird.LayAnEgg();
+            bird.Walk();
+
+            Console.WriteLine("\n**Duck as a IWaterFowl");
+            IWaterFowl waterFowl = new Duck(20, 1);
+            waterFowl.Eat();
+            waterFowl.Fly();
+            waterFowl.LayAnEgg();
+            waterFowl.Walk();
+            waterFowl.Swim();
+
+            Console.WriteLine("\n**Swan as a IWaterFowl");
+            waterFowl = new Swan(10, 1);
+            waterFowl.Eat();
+            waterFowl.Fly();
+            waterFowl.LayAnEgg();
+            waterFowl.Walk();
+            waterFowl.Swim();                  
         }
     }
 }
