@@ -7,6 +7,6 @@ namespace Bird
 {
     public interface IWaterFowl : IBird
     {
-        void swim();
+        void Swim();
     }
 }

@@ -7,9 +7,9 @@ namespace Bird
 {
     public interface IBird
     {
-        void fly();
-        void walk();
-        void eat();
-        void layAnEgg(); 
+        void Fly();
+        void Walk();
+        void Eat();
+        void LayAnEgg(); 
     }
 }
