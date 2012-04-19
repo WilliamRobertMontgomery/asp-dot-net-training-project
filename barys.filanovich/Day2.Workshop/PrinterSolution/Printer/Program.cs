@@ -16,7 +16,7 @@ namespace MyPrinters
 
         static void TestPrinterClass()
         {
-            Printer printer = new Printer();
+            IPrinter printer = new Printer();
 
             printer.GetPrinterInfo();
             Console.WriteLine();
@@ -51,7 +51,7 @@ namespace MyPrinters
 
         static void TestLaserPrinterClass()
         {
-            LaserPrinter laserPrinter = new LaserPrinter("PH 9999", 999, 16, true);
+            IPrinter laserPrinter = new LaserPrinter("PH 9999", 999, 16, true);
 
             for (int i = 0; i < 5; i++)
             {

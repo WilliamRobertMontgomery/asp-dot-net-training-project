@@ -22,7 +22,7 @@ namespace MyPrinters
             this.firtPageOutTime = firtPageOutTime;
         }
 
-        public void GetPrinterInfo()
+        public override void GetPrinterInfo()
         {
             Console.WriteLine("Test-page:");
             string result = string.Format(
