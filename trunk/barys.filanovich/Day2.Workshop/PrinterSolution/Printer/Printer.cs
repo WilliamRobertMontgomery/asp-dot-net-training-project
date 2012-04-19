@@ -125,8 +125,7 @@ namespace MyPrinters
 
         bool IsCapacityCartridgeOk (int pagesDoc)
         {
-            int balance = tempCapacity - pagesDoc;
-            if (balance >= 0)
+            if (tempCapacity >= pagesDoc)
             {
                 return true;
             }
