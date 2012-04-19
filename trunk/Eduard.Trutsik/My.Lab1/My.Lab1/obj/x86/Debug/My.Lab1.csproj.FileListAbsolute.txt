@@ -1,5 +1,0 @@
-D:\Программирование\Epam\DOT.net\HomeWorks\Lab1\My.Lab1\My.Lab1\bin\Debug\My.Lab1.exe
-D:\Программирование\Epam\DOT.net\HomeWorks\Lab1\My.Lab1\My.Lab1\bin\Debug\My.Lab1.pdb
-D:\Программирование\Epam\DOT.net\HomeWorks\Lab1\My.Lab1\My.Lab1\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\Программирование\Epam\DOT.net\HomeWorks\Lab1\My.Lab1\My.Lab1\obj\x86\Debug\My.Lab1.exe
-D:\Программирование\Epam\DOT.net\HomeWorks\Lab1\My.Lab1\My.Lab1\obj\x86\Debug\My.Lab1.pdb

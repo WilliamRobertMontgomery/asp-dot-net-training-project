@@ -1,4 +1,0 @@
-1|Teacher1
-2|Teacher2
-3|Teacher3
-4|Teacher4
