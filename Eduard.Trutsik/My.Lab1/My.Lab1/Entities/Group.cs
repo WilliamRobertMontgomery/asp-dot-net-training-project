@@ -11,6 +11,12 @@ namespace My.Lab1.Entities
 		public int id { get; private set;}
 		public string name { get; set; }
 
+		public Group()
+		{
+			id = 0;
+			name = "undefined";
+		}
+
 		public Group(int id, string name)
 		{
 			this.id = id;

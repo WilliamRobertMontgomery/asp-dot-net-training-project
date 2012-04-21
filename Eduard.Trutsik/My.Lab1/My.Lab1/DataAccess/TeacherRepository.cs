@@ -11,12 +11,12 @@ namespace My.Lab1.DataAccess
 	{
 		private const string fileTeachers = "Teachers.txt";
 
-		public Teacher getItem(int id)
+		public Teacher GetItem(int id)
 		{
-			return getItems().DefaultIfEmpty(null).Where(s => s.id == id).First();
+			return GetItems().DefaultIfEmpty(null).Where(s => s.id == id).First();
 		}
 
-		public IEnumerable<Teacher> getItems()
+		public IEnumerable<Teacher> GetItems()
 		{
 			string[] teachers = File.ReadAllLines(fileTeachers);
 			return teachers.Select(t =>
@@ -26,19 +26,29 @@ namespace My.Lab1.DataAccess
 			});
 		}
 
-		public void add(Teacher item)
+		public void Add(Teacher item)
 		{
 			File.AppendAllText(fileTeachers, string.Join("|", item.id + "|" + item.name + "\n"));
 		}
 
-		public void remove(Teacher item)
+		public void Remove(Teacher item)
 		{
-			throw new NotImplementedException();
+			IEnumerable<Teacher> temp = GetItems().Where(g => g.id != item.id);
+			File.Delete(fileTeachers);
+			foreach (Teacher teacher in temp)
+			{
+				File.AppendAllText(fileTeachers, String.Join("|", teacher.id + "|" + teacher.name + "\n"));
+			}
 		}
 
-		public void remove(int id)
+		public void Remove(int id)
 		{
-			throw new NotImplementedException();
+			IEnumerable<Teacher> temp = GetItems().Where(g => g.id != id);
+			File.Delete(fileTeachers);
+			foreach (Teacher teacher in temp)
+			{
+				File.AppendAllText(fileTeachers, String.Join("|", teacher.id + "|" + teacher.name + "\n"));
+			}
 		}
 	}
 }

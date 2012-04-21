@@ -11,34 +11,44 @@ namespace My.Lab1.DataAccess
 	{
 		private const string fileStudents = "Students.txt";
 
-		public Student getItem(int id)
+		public Student GetItem(int id)
 		{
-			return getItems().DefaultIfEmpty(null).Where(s => s.id == id).First();
+			return GetItems().DefaultIfEmpty(null).Where(s => s.id == id).First();
 		}
 
-		public IEnumerable<Student> getItems()
+		public IEnumerable<Student> GetItems()
 		{
 			string[] students = File.ReadAllLines(fileStudents);
 			return students.Select(s=>
  				{
 					string[] student = s.Split('|');
-					return new Student(Convert.ToInt32(student[0]),student[1], new GroupRepository().getItem(Convert.ToInt32(student[2])));
+					return new Student(Convert.ToInt32(student[0]),student[1], new GroupRepository().GetItem(Convert.ToInt32(student[2])));
 				});
 		}
 
-		public void add(Student item)
+		public void Add(Student item)
 		{
 			File.AppendAllText(fileStudents, string.Join("|", item.id + "|" + item.name + "|" + item.group.id + "\n"));
 		}
 
-		public void remove(Student item)
+		public void Remove(Student item)
 		{
-			throw new NotImplementedException();
+			IEnumerable<Student> temp = GetItems().Where(g => g.id != item.id);
+			File.Delete(fileStudents);
+			foreach (Student student in temp)
+			{
+				File.AppendAllText(fileStudents, String.Join("|", student.id + "|" + student.name +"|"+ student.group+"\n"));
+			}
 		}
 
-		public void remove(int id)
+		public void Remove(int id)
 		{
-			throw new NotImplementedException();
+			IEnumerable<Student> temp = GetItems().Where(g => g.id != id);
+			File.Delete(fileStudents);
+			foreach (Student student in temp)
+			{
+				File.AppendAllText(fileStudents, String.Join("|", student.id + "|" + student.name + "|" + student.group + "\n"));
+			}
 		}
 	}
 }

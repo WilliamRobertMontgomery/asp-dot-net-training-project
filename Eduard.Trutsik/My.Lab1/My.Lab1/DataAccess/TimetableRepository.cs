@@ -9,36 +9,46 @@ namespace My.Lab1.DataAccess
 {
 	public class TimetableRepository:IRepository<Timetable>
 	{
-		private const string fileStudents = "Timetables.txt";
+		private const string fileTimetables = "Timetables.txt";
 
-		public Timetable getItem(int id)
+		public Timetable GetItem(int id)
 		{
-			return getItems().DefaultIfEmpty(null).Where(s => s.id == id).First();
+			return GetItems().DefaultIfEmpty(null).Where(s => s.id == id).First();
 		}
 
-		public IEnumerable<Timetable> getItems()
+		public IEnumerable<Timetable> GetItems()
 		{
-			string[] timetables = File.ReadAllLines(fileStudents);
+			string[] timetables = File.ReadAllLines(fileTimetables);
 			return timetables.Select(s =>
 			{
 				string[] timetable = s.Split('|');
-				return new Timetable(Convert.ToInt32(timetable[0]), Convert.ToDateTime(timetable[1]), new GroupRepository().getItem(Convert.ToInt32(timetable[2])),new SubjectRepository().getItem(Convert.ToInt32(timetable[3])),new TeacherRepository().getItem(Convert.ToInt32(timetable[4])));
+				return new Timetable(Convert.ToInt32(timetable[0]), Convert.ToDateTime(timetable[1]), new GroupRepository().GetItem(Convert.ToInt32(timetable[2])),new SubjectRepository().GetItem(Convert.ToInt32(timetable[3])),new TeacherRepository().GetItem(Convert.ToInt32(timetable[4])));
 			});
 		}
 
-		public void add(Timetable item)
+		public void Add(Timetable item)
 		{
-			File.AppendAllText(fileStudents, string.Join("|", item.id + "|" + item.dateTimeStart + "|" + item.group.id+ "|"+item.subject+ "|" + item.teacher+ "\n"));
+			File.AppendAllText(fileTimetables, string.Join("|", item.id + "|" + item.dateTimeStart + "|" + item.group.id + "|" + item.subject + "|" + item.teacher + "\n"));
 		}
 
-		public void remove(Timetable item)
+		public void Remove(Timetable item)
 		{
-			throw new NotImplementedException();
+			IEnumerable<Timetable> temp = GetItems().Where(g => g.id != item.id);
+			File.Delete(fileTimetables);
+			foreach (Timetable timetable in temp)
+			{
+				File.AppendAllText(fileTimetables, string.Join("|", item.id + "|" + item.dateTimeStart + "|" + item.group.id + "|" + item.subject + "|" + item.teacher + "\n"));
+			}
 		}
 
-		public void remove(int id)
+		public void Remove(int id)
 		{
-			throw new NotImplementedException();
+			IEnumerable<Timetable> temp = GetItems().Where(g => g.id != id);
+			File.Delete(fileTimetables);
+			foreach (Timetable timetable in temp)
+			{
+				File.AppendAllText(fileTimetables, string.Join("|", timetable.id + "|" + timetable.dateTimeStart + "|" + timetable.group.id + "|" + timetable.subject + "|" + timetable.teacher + "\n"));
+			}
 		}
 	}
 }

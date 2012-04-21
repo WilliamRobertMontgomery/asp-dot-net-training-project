@@ -9,7 +9,13 @@ namespace My.Lab1.Entities
 	public class Subject
 	{
 		public int id { get; private set; }
-		public string name { get; set; }	
+		public string name { get; set; }
+
+		public Subject()
+		{
+			id = 0;
+			name = "undefined";
+		}
 
 		public Subject(int id,string name)
 		{
