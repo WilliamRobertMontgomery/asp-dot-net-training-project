@@ -1,0 +1,84 @@
+<Project>
+  <Name>Policlinic</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.3.1512.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Models</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Specialization</Name>
+        <Access>Public</Access>
+        <Location left="69" top="16" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public int Id { get; set; }</Member>
+        <Member type="Property">public string NameSpecialization { get; set; }</Member>
+        <Member type="Property">public IEnumerable&lt;Doctor&gt; Doctors { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Pacient</Name>
+        <Access>Public</Access>
+        <Location left="842" top="16" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public int Id { get; set; }</Member>
+        <Member type="Property">public string FirstName { get; set; }</Member>
+        <Member type="Property">public string LastName { get; set; }</Member>
+        <Member type="Property">public IEnumerable&lt;Record&gt; Records { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Doctor</Name>
+        <Access>Public</Access>
+        <Location left="302" top="16" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public int Id { get; set; }</Member>
+        <Member type="Property">public string FirstName { get; set; }</Member>
+        <Member type="Property">public string LastName { get; set; }</Member>
+        <Member type="Property">public Specialization Specialization { get; set; }</Member>
+        <Member type="Property">public IEnumerable&lt;Record&gt; Records { get; set; }</Member>
+        <Member type="Method">public void Reception()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Record</Name>
+        <Access>Public</Access>
+        <Location left="573" top="16" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public int Id { get; set; }</Member>
+        <Member type="Property">public Doctor Doctor { get; set; }</Member>
+        <Member type="Property">public Pacient Pacient { get; set; }</Member>
+        <Member type="Property">public DateTime Time { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
