@@ -1,102 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="My.Lab1.BusinessLogic.ProcessingTimetable" Collapsed="true">
+  <Class Name="My.Lab1.BusinessLogic.ProcessingTimetable">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgEAAAAAMBAAEAAAAAAAAAIAUAAAAACQAEAgAAAAAAA=</HashCode>
+      <HashCode>AgEAAAAAIAAAEAAAAAAAAAIAEAAAAAAQAEAgAAAAAAA=</HashCode>
       <FileName>BusinessLogic\ProcessingTimetable.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My.Lab1.DataAccess.GroupRepository" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6" Y="3.25" Width="1.5" />
+  <Class Name="My.Lab1.DataAccess.GroupRepository" BaseTypeListCollapsed="true">
+    <Position X="6" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABQAAAAAAEAAAAAAAAAAAAAAAAAAIAAAACAAA=</HashCode>
+      <HashCode>AAIAAAAAAQAAAEAAAAAABAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>DataAccess\GroupRepository.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="My.Lab1.DataAccess.StudentRepository" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6" Y="1" Width="1.5" />
+  <Class Name="My.Lab1.DataAccess.StudentRepository" BaseTypeListCollapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABQAAAAAAEAAAAAAAAAAAAAAAAAAIAAAACAAA=</HashCode>
+      <HashCode>AAIAAAABAAAAAEAAAAAABAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>DataAccess\StudentRepository.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="My.Lab1.DataAccess.SubjectRepository" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6" Y="2.5" Width="1.5" />
+  <Class Name="My.Lab1.DataAccess.SubjectRepository" BaseTypeListCollapsed="true">
+    <Position X="6" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABQAAAAAAEAAAAAAAAAAAAAAAAAAIAAAACAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAEAAAAAABAAAAAAAAgAAAAAQAAAAAAA=</HashCode>
       <FileName>DataAccess\SubjectRepository.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="My.Lab1.DataAccess.TeacherRepository" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6" Y="1.75" Width="1.5" />
+  <Class Name="My.Lab1.DataAccess.TeacherRepository" BaseTypeListCollapsed="true">
+    <Position X="6" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAIIAAAACAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAEAAAAAABAAAAAAAAgAAAIAAAAAAAAA=</HashCode>
       <FileName>DataAccess\TeacherRepository.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="My.Lab1.DataAccess.TimetableRepository" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6" Y="4" Width="1.5" />
+  <Class Name="My.Lab1.DataAccess.TimetableRepository" BaseTypeListCollapsed="true">
+    <Position X="6" Y="12.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABQAAAAAAEAAAAAAAAAAAAAAAAAAIAAAACAAA=</HashCode>
+      <HashCode>AAIgAAAAAAAAAEAAAAAABAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>DataAccess\TimetableRepository.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="My.Lab1.Entities.Group" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+  <Class Name="My.Lab1.Entities.Group">
+    <Position X="0.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Entities\Group.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My.Lab1.Entities.Student" Collapsed="true">
-    <Position X="0.5" Y="1" Width="1.5" />
+  <Class Name="My.Lab1.Entities.Student">
+    <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Entities\Student.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My.Lab1.Entities.Subject" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+  <Class Name="My.Lab1.Entities.Subject">
+    <Position X="0.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Entities\Subject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My.Lab1.Entities.Teacher" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+  <Class Name="My.Lab1.Entities.Teacher">
+    <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Entities\Teacher.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My.Lab1.Entities.Timetable" Collapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
+  <Class Name="My.Lab1.Entities.Timetable">
+    <Position X="0.5" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAEAAAAAACAAAAAIAAAAAAAAAABAgA=</HashCode>
       <FileName>Entities\Timetable.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My.Lab1.Program" Collapsed="true">
-    <Position X="3.25" Y="5" Width="1.5" />
+  <Class Name="My.Lab1.Program">
+    <Position X="3.25" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAEIgAAAEAABAAAAAA=</HashCode>
       <FileName>Presentation\Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="System.Object" Collapsed="true">
-    <Position X="3.25" Y="2.75" Width="1.5" />
+  <Class Name="System.Object">
+    <Position X="3.25" Y="6" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Interface Name="My.Lab1.DataAccess.IRepository&lt;T&gt;" Collapsed="true">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+  <Interface Name="My.Lab1.DataAccess.IRepository&lt;T&gt;">
+    <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAAIAAAACAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAEAAAAAABAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>DataAccess\IRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
