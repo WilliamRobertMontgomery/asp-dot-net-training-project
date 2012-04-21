@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Policlinic">
+  <DataContextMoniker Name="/PoliclinicDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ed8c1240-bc2e-427e-a0ce-85c222cbb4f6" absoluteBounds="3.5, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PoliclinicDataContext/Doctors" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38a85edd-ad7a-4f6f-904d-cf7ab1cec890" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87770b5f-ad0d-4511-a21c-26a08303fe03" absoluteBounds="0.75, 1.125, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/PoliclinicDataContext/Specializations" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d7f3938-77fc-41f3-8deb-c106b495b2ec" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cdf3ef98-ec53-4aa8-a64b-6ebe51e2a452" absoluteBounds="3.5, 4, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/PoliclinicDataContext/Pacients" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c176bbb-9007-4115-88c2-e70d444d8cb3" absoluteBounds="3.515, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a2e2d64-6d3f-40a3-ab8e-3b7e61485e86" absoluteBounds="6.25, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PoliclinicDataContext/Records" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8e4abd1-21cb-4a9d-9b43-7a808430d864" absoluteBounds="6.265, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PoliclinicDataContext/Specializations/Specializations_Doctors" />
+      <nodes>
+        <classShapeMoniker Id="87770b5f-ad0d-4511-a21c-26a08303fe03" />
+        <classShapeMoniker Id="ed8c1240-bc2e-427e-a0ce-85c222cbb4f6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.66429768880208); (6.25 : 1.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PoliclinicDataContext/Doctors/Doctors_Records" />
+      <nodes>
+        <classShapeMoniker Id="ed8c1240-bc2e-427e-a0ce-85c222cbb4f6" />
+        <classShapeMoniker Id="6a2e2d64-6d3f-40a3-ab8e-3b7e61485e86" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.69314697265625); (7.25 : 4.69314697265625); (7.25 : 2.45359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PoliclinicDataContext/Pacients/Pacients_Records" />
+      <nodes>
+        <classShapeMoniker Id="cdf3ef98-ec53-4aa8-a64b-6ebe51e2a452" />
+        <classShapeMoniker Id="6a2e2d64-6d3f-40a3-ab8e-3b7e61485e86" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

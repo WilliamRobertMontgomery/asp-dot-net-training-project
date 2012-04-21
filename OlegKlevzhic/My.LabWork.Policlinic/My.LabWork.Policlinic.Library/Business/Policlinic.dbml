@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PoliclinicDB" Class="PoliclinicDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PC-Assassin\SQLSERVERR2;Initial Catalog=PoliclinicDB;Integrated Security=True" SettingsObjectName="My.LabWork.Policlinic.Library.Properties.Settings" SettingsPropertyName="PoliclinicDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Doctors" Member="Doctors">
+    <Type Name="Doctors">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Specialization" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Doctors_Records" Member="Records" ThisKey="Id" OtherKey="Id_Doctor" Type="Records" />
+      <Association Name="Specializations_Doctors" Member="Specializations" ThisKey="Id_Specialization" OtherKey="Id" Type="Specializations" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Specializations" Member="Specializations">
+    <Type Name="Specializations">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NameSpecialization" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Specializations_Doctors" Member="Doctors" ThisKey="Id" OtherKey="Id_Specialization" Type="Doctors" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pacients" Member="Pacients">
+    <Type Name="Pacients">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Pacients_Records" Member="Records" ThisKey="Id" OtherKey="Id_Pacient" Type="Records" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Records" Member="Records">
+    <Type Name="Records">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Doctor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Pacient" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Doctors_Records" Member="Doctors" ThisKey="Id_Doctor" OtherKey="Id" Type="Doctors" IsForeignKey="true" />
+      <Association Name="Pacients_Records" Member="Pacients" ThisKey="Id_Pacient" OtherKey="Id" Type="Pacients" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
