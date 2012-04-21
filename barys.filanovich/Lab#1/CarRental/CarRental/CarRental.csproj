@@ -44,10 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\Car.cs" />
+    <Compile Include="BusinessLogic\CarRentalSystem.cs" />
     <Compile Include="DataAccess\CarRepository.cs" />
     <Compile Include="DataAccess\ClientRepository.cs" />
-    <Compile Include="BusinessLogic\CarRentalSystem.cs" />
+    <Compile Include="DataAccess\IRepository.cs" />
     <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\IControl.cs" />
     <Compile Include="Entities\Manager.cs" />
     <Compile Include="Presentation\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
