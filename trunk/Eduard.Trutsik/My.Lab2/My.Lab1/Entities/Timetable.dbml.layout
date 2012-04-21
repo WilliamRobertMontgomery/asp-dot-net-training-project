@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Timetable">
+  <DataContextMoniker Name="/TimetableDataContext" />
+  <nestedChildShapes>
+    <classShape Id="df7989a9-6295-42a8-8470-f4d980c8fee9" absoluteBounds="1.5, 5.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/TimetableDataContext/Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12c4944f-aec0-4a02-b9ae-e8407fd6f141" absoluteBounds="1.5150000000000001, 5.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d35dea6-8dcb-4662-8fe2-c7eb753753a8" absoluteBounds="3.5, 3.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TimetableDataContext/TimeTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9d811a8-22f0-4493-81ed-55cabf44fc9d" absoluteBounds="3.5149999999999997, 3.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd748f76-a1a5-4670-862a-2c437afaea86" absoluteBounds="4.5, 5.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TimetableDataContext/Student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8b9bad0-11f2-48d4-b8ce-c2f1ea60bddc" absoluteBounds="4.515, 5.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c2a2a75-e333-420a-9c82-bb8607953c09" absoluteBounds="3.5, 1.375, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/TimetableDataContext/Subj_Teach" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff3e47fa-245b-422c-af26-0228cb26413c" absoluteBounds="3.515, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b3ddee10-9231-45fa-b4df-3bc9eb2fe792" absoluteBounds="5.875, 0.5, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/TimetableDataContext/Subject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95e8e8c3-8df7-4e44-a570-6c111d0a2d96" absoluteBounds="5.8900000000000006, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5277ac4e-8f94-4d48-901b-98ba66338daa" absoluteBounds="1, 0.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/TimetableDataContext/Teacher" />
+      <nestedChildShapes>
+        <elementListCompartment Id="159e2509-9658-477c-8dda-7b3b8420f290" absoluteBounds="1.0150000000000001, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.4999995 : 5.125); (2.4999995 : 3.91429768880208); (3.5 : 3.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TimetableDataContext/Group/Group_TimeTable" />
+      <nodes>
+        <classShapeMoniker Id="df7989a9-6295-42a8-8470-f4d980c8fee9" />
+        <classShapeMoniker Id="1d35dea6-8dcb-4662-8fe2-c7eb753753a8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 5.72199625651042); (4.5 : 5.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TimetableDataContext/Group/Group_Student" />
+      <nodes>
+        <classShapeMoniker Id="df7989a9-6295-42a8-8470-f4d980c8fee9" />
+        <classShapeMoniker Id="cd748f76-a1a5-4670-862a-2c437afaea86" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 2.7612939453125); (4.5 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TimetableDataContext/Subj_Teach/Subj_Teach_TimeTable" />
+      <nodes>
+        <classShapeMoniker Id="7c2a2a75-e333-420a-9c82-bb8607953c09" />
+        <classShapeMoniker Id="1d35dea6-8dcb-4662-8fe2-c7eb753753a8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 1.53449625651042); (5.5 : 1.53449625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TimetableDataContext/Subject/Subject_Subj_Teach" />
+      <nodes>
+        <classShapeMoniker Id="b3ddee10-9231-45fa-b4df-3bc9eb2fe792" />
+        <classShapeMoniker Id="7c2a2a75-e333-420a-9c82-bb8607953c09" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 1.53449625651042); (3.5 : 1.53449625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TimetableDataContext/Teacher/Teacher_Subj_Teach" />
+      <nodes>
+        <classShapeMoniker Id="5277ac4e-8f94-4d48-901b-98ba66338daa" />
+        <classShapeMoniker Id="7c2a2a75-e333-420a-9c82-bb8607953c09" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -9,17 +9,16 @@ namespace My.Lab1.DataAccess
 {
 	public class GroupRepository : IRepository<Group>
 	{
-		private const string fileStudents = "Groups.txt";
+		private const string fileGroups = "Groups.txt";
 
-
-		public Group getItem(int id)
+		public Group GetItem(int id)
 		{
-			return getItems().DefaultIfEmpty(null).Where(s => s.id == id).First();
+			return GetItems().DefaultIfEmpty(null).Where(s => s.id == id).First();
 		}
 
-		public IEnumerable<Group> getItems()
+		public IEnumerable<Group> GetItems()
 		{
-			string[] groups = File.ReadAllLines(fileStudents);
+			string[] groups = File.ReadAllLines(fileGroups);
 			return groups.Select(s =>
 			{
 				string[] group = s.Split('|');
@@ -27,19 +26,29 @@ namespace My.Lab1.DataAccess
 			});
 		}
 
-		public void add(Group item)
+		public void Add(Group item)
 		{
-			File.AppendAllText(fileStudents, string.Join("|", item.id + "|" + item.name + "\n"));
+			File.AppendAllText(fileGroups, String.Join("|", item.id + "|" + item.name + "\n"));
 		}
 
-		public void remove(Group item)
+		public void Remove(Group item)
 		{
-			throw new NotImplementedException();
+			IEnumerable<Group> temp = GetItems().Where(g => g.id != item.id);
+			File.Delete(fileGroups);
+			foreach (Group group in temp)
+			{
+				File.AppendAllText(fileGroups, String.Join("|", group.id + "|" + group.name + "\n"));
+			}
 		}
 
-		public void remove(int id)
+		public void Remove(int id)
 		{
-			throw new NotImplementedException();
+			IEnumerable<Group> temp = GetItems().Where(g => g.id != id);
+			File.Delete(fileGroups);
+			foreach (Group group in temp)
+			{
+				File.AppendAllText(fileGroups, String.Join("|", group.id + "|" + group.name + "\n"));
+			}
 		}
 	}
 }

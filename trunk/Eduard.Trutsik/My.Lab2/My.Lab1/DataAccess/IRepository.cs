@@ -12,5 +12,6 @@ namespace My.Lab1.DataAccess
 		void Add(T item);
 		void Remove(T item);
 		void Remove(int id);
+		void Update(T item);
 	}
 }

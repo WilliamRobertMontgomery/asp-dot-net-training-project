@@ -18,7 +18,7 @@ namespace My.Lab1
 		{
 			dateTimeStart = Convert.ToDateTime("18.04.2012 08:00:00");
 			dateTimeFinish = Convert.ToDateTime("18.04.2012 15:00:00");
-			processing = new ProcessingTimetable(new TimetableRepository());
+			processing = new ProcessingTimetable();			
 			Start(dateTimeStart,dateTimeFinish, "PM");
 			Console.WriteLine();
 			Console.WriteLine("Все расписание:");
@@ -33,15 +33,16 @@ namespace My.Lab1
 			{
 				Console.SetCursorPosition(0, 0);
 				Console.WriteLine("Время: {0}", dateTimeStart);
-				dateTimeStart = dateTimeStart.AddSeconds(3);
-				if (processing.ShowTimetableForDateTimeAndGroup(dateTimeStart, nameGroup) != null && flag)
+				dateTimeStart = dateTimeStart.AddSeconds(1);
+				TimeTable timeTable = processing.ShowTimetableForDateTimeAndGroup(dateTimeStart, nameGroup);
+				if (timeTable != null && flag)
 				{
 					Console.Clear();
 					Console.WriteLine("Время: {0}\n", dateTimeStart);
-					Console.WriteLine("Началась пара:\n{0}", processing.ShowTimetableForDateTimeAndGroup(dateTimeStart, nameGroup));
+					Console.WriteLine("Началась пара: DateTime:{0}; Group:{1}; Subject:{2}; Teacher:{3}\n", timeTable.DateTime, timeTable.Group.name, timeTable.Subj_Teach.Subject.name, timeTable.Subj_Teach.Teacher.name);
 					flag = false;
 				}
-				else if (processing.ShowTimetableForDateTimeAndGroup(dateTimeStart, nameGroup) == null && !flag)
+				else if (timeTable == null && !flag)
 				{
 					Console.SetCursorPosition(0, 4);
 					Console.WriteLine("Пара закончилась: {0}\n", dateTimeStart);
@@ -50,11 +51,11 @@ namespace My.Lab1
 			}
 		}
 
-		public static void Show(IEnumerable<Timetable> timetable)
+		public static void Show(IEnumerable<TimeTable> timetable)
 		{
 			foreach (var item in timetable)
 			{
-				Console.WriteLine(item.ToString());
+				Console.WriteLine(item.DateTime+" "+item.Group.name+" "+item.Subj_Teach.Subject.name+" "+item.Subj_Teach.Teacher.name);
 			}
 		}
 	}

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Timetable" Class="TimetableDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=pc-thug;Initial Catalog=Timetable;Integrated Security=True" SettingsObjectName="My.Lab1.Properties.Settings" SettingsPropertyName="TimetableConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[Group]" Member="Groups">
+    <Type Name="Group">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Group_TimeTable" Member="TimeTables" ThisKey="id" OtherKey="id_group" Type="TimeTable" />
+      <Association Name="Group_Student" Member="Students" ThisKey="id" OtherKey="id_group" Type="Student" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TimeTable" Member="TimeTables">
+    <Type Name="TimeTable">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="id_subj_teach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_group" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Group_TimeTable" Member="Group" ThisKey="id_group" OtherKey="id" Type="Group" IsForeignKey="true" />
+      <Association Name="Subj_Teach_TimeTable" Member="Subj_Teach" ThisKey="id_subj_teach" OtherKey="id" Type="Subj_Teach" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Students">
+    <Type Name="Student">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="id_group" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Group_Student" Member="Group" ThisKey="id_group" OtherKey="id" Type="Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Subj_Teach" Member="Subj_Teaches">
+    <Type Name="Subj_Teach">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_subject" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_teacher" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Subj_Teach_TimeTable" Member="TimeTables" ThisKey="id" OtherKey="id_subj_teach" Type="TimeTable" />
+      <Association Name="Subject_Subj_Teach" Member="Subject" ThisKey="id_subject" OtherKey="id" Type="Subject" IsForeignKey="true" />
+      <Association Name="Teacher_Subj_Teach" Member="Teacher" ThisKey="id_teacher" OtherKey="id" Type="Teacher" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Subject" Member="Subjects">
+    <Type Name="Subject">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Subject_Subj_Teach" Member="Subj_Teaches" ThisKey="id" OtherKey="id_subject" Type="Subj_Teach" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Teacher" Member="Teachers">
+    <Type Name="Teacher">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Teacher_Subj_Teach" Member="Subj_Teaches" ThisKey="id" OtherKey="id_teacher" Type="Subj_Teach" />
+    </Type>
+  </Table>
+</Database>
