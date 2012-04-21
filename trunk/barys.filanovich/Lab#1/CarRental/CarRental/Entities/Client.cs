@@ -5,10 +5,14 @@ using System.Text;
 
 namespace CarRental.Entities
 {
-    public class Client
+    public class Client : IControl
     {
         public string Id { get; private set; }
         public string Name { get; set; }
+
+        public Client()
+        {
+        }
 
         public Client(string id,string name)
         {
@@ -21,9 +25,14 @@ namespace CarRental.Entities
             return string.Format("ID:{0}\r\nName:{1}", this.Id, this.Name);
         }
 
-        public void Apply(string brand)
+        private void BookTheCar(string brandOfCar)
         {
-            Manager.GetCar(brand,this);
+            
+        }
+
+        public void Control()
+        {
+            throw new NotImplementedException();
         }
     }
 }

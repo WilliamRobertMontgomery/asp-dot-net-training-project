@@ -7,19 +7,19 @@ using CarRental.BusinessLogic;
 
 namespace CarRental.DataAccess
 {
-    public class CarRepository
+    public class CarRepository : IRepository<Car>
     {
         const string extension = ".car";
 
-        public static void Save(Car car)
+        public void Save(Car item)
         {
-            StreamWriter fileWriter = new StreamWriter(car.BrandName + extension, false);
-            fileWriter.Write("{0}\r\n{1}\r\n{2}", 
-                car.BrandName, car.Status, car.DateOfLease);
+            StreamWriter fileWriter = new StreamWriter(item.Id + extension, false);
+            fileWriter.Write("{0}\r\n{1}\r\n{2}\r\n{3}",
+                item.Id, item.BrandName, item.Client, item.DateOfLease);
             fileWriter.Close();
         }
 
-        public static Car[] GetCars()
+        public Car[] Read()
         {
             Car[] cars;
 
@@ -34,10 +34,15 @@ namespace CarRental.DataAccess
                 string[] carString = carInfo.Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
                 carFile.Close();
 
-                cars[i] = new Car(carString[0], carString[1], carString[2]);
+                cars[i] = new Car(carString[0], carString[1], carString[2], carString[3]);
             }
 
             return cars;
-        } 
+        }
+
+        public void Remove(Car item)
+        {
+            File.Delete(item.Id + ".car");
+        }
     }
 }

@@ -7,18 +7,18 @@ using System.IO;
 
 namespace CarRental.DataAccess
 {
-    public class ClientRepository
+    public class ClientRepository : IRepository<Client>
     {
         const string extension = ".clt";
 
-        public static void Save(Client client)
+        public void Save(Client item)
         {
-            StreamWriter fileWriter = new StreamWriter(client.Id + extension, false);
-            fileWriter.Write("{0}\r\n{1}", client.Id, client.Name);
+            StreamWriter fileWriter = new StreamWriter(item.Id + extension, false);
+            fileWriter.Write("{0}\r\n{1}", item.Id, item.Name);
             fileWriter.Close();
         }
 
-        public static Client[] GetClients()
+        public Client[] Read()
         {
             Client[] clients;
 
@@ -37,6 +37,11 @@ namespace CarRental.DataAccess
             }
 
             return clients;
+        }
+
+        public void Remove(Client item)
+        {
+            File.Delete(item.Id+".clt");
         }
     }
 }

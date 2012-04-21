@@ -7,21 +7,24 @@ namespace CarRental.BusinessLogic
 {
     public class Car
     {
+        public string Id { get; set; }
         public string BrandName { get; set; }
-        public string Status { get; set; }
+        public string Client { get; set; }
         public string DateOfLease { get; set; }
 
-        public Car(string brand, string status = "free", string date = null)
+        public Car(
+            string id, string brand, string status = null, string date = null)
         {
+            Id = id;
             BrandName = brand;
-            Status = status;
+            Client = status;
             DateOfLease = date;
         }
 
         public override string ToString()
         {
-            return string.Format("Brand Name:{0}\r\nStatus:{1}\r\n{2}", 
-                this.BrandName, this.Status,this.DateOfLease);
+            return string.Format("Id:{0}\r\nBrand Name:{1}\r\nClient:{2}\r\n{3}",
+                this.Id, this.BrandName, this.Client, this.DateOfLease);
         }
     }
 }
