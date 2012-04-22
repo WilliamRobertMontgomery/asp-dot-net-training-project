@@ -120,11 +120,11 @@ namespace CarRental.BusinessLogic
             }
         }
 
-        private Client SelectClient(string id)
+        public Client SelectClient(string clientId)
         {
             foreach (Client client in this.GetClients())
             {
-                if (string.Compare(client.Id, id) == 0)
+                if (string.Compare(client.Id, clientId) == 0)
                 {
                     return client;
                 }
@@ -133,11 +133,11 @@ namespace CarRental.BusinessLogic
             return null;
         }
 
-        private Car SelectCar(string id)
+        private Car SelectCar(string carId)
         {
             foreach (Car car in this.GetCars())
             {
-                if (string.Compare(car.Id, id, true) == 0)
+                if (string.Compare(car.Id, carId, true) == 0)
                 {
                     return car;
                 }
@@ -188,11 +188,11 @@ namespace CarRental.BusinessLogic
             selectedClient = null;
         }
 
-        public void RemoveClient(string id)
+        public void RemoveClient(string clientId)
         {
-            if (!this.IdClientIsOK(id))
+            if (!this.IdClientIsOK(clientId))
             {
-                _clientRepository.Remove(this.SelectClient(id));
+                _clientRepository.Remove(this.SelectClient(clientId));
             }
             else
             {
@@ -200,11 +200,11 @@ namespace CarRental.BusinessLogic
             }
         }
 
-        public void RemoveCar(string id)
+        public void RemoveCar(string carId)
         {
-            if (this.CarAvailable(id))
+            if (this.CarAvailable(carId))
             {
-                _carRepository.Remove(this.SelectCar(id));
+                _carRepository.Remove(this.SelectCar(carId));
             }
             else
             {

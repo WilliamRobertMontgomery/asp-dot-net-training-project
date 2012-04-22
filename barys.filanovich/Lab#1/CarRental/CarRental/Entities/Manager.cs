@@ -86,7 +86,7 @@ namespace CarRental.Entities
                 "To add new car enter 'newcar'\r\n" +
                 "To add new client enter 'newclient'\r\n" +
                 "To remove the client enter 'delclient'\r\n" +
-                "To remove the car enter 'delcar'\r\n" +
+                "To remove the car enter 'delcars'\r\n" +
                 "To show client list enter 'showclients'\r\n" +
                 "To show car list enter 'showcar'\r\n" +
                 "To set car for client enter 'setcar'\r\n" +
@@ -132,8 +132,6 @@ namespace CarRental.Entities
                         break;
                     case ("cls"):
                         Console.Clear();
-                        break;
-                    case ("quit"):
                         break;
                     default:
                         Console.WriteLine("Is not recognized as an internal command.");

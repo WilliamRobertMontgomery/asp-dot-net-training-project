@@ -31,13 +31,16 @@ namespace CarRental
                     control.Control();
                     break;
                 case ("client"):
-                    control = new Client();
+                    Console.Write("Enter your ID, please:");
+                    control = new Client(Console.ReadLine());
+                    control.Control();
                     break;
                 case ("generate"):
                     GenerateTestCarRental();
                     break;
                 default:
                     Console.WriteLine("Is not recognized as an internal command.");
+                    Console.ReadKey();
                     break;
             }
         }

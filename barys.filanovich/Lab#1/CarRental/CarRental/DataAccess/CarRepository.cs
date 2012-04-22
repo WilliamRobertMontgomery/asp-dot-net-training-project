@@ -9,7 +9,7 @@ namespace CarRental.DataAccess
 {
     public class CarRepository : IRepository<Car>
     {
-        const string extension = ".car";
+        private const string extension = ".car";
 
         public void Save(Car item)
         {
