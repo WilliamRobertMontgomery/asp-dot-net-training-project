@@ -48,13 +48,16 @@
     <Compile Include="DataAccess\CarRepository.cs" />
     <Compile Include="DataAccess\ClientRepository.cs" />
     <Compile Include="DataAccess\IRepository.cs" />
+    <Compile Include="DataAccess\IRepository1.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\IControl.cs" />
     <Compile Include="Entities\Manager.cs" />
     <Compile Include="Presentation\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
