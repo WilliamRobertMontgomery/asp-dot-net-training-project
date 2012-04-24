@@ -25,9 +25,10 @@ namespace MyRegex.Test
 		[Test]
 		public void GetCountWordListTest()
 		{
-			string inputString = "2. Подсчитать в тексте число слов.";
-			int[] actualCount = {3, 2, 1, 0};
-			List<string> wordList = new List<string> {"o", "чи", "текст", "нет"};
+			string inputString = "2. В заданном тексте подсчитать частоту использования каждого буквосочетания, " +
+				"слова и словосочетания из заданного списка";
+			int[] actualCount = {5, 2, 2, 1, 0};
+			string[] wordList = new string[] { "ан", "сочетания", "слов", "В заданном тексте", "нет" };
 			int[] outputCount = Reg.GetCountWordList(inputString, wordList);
 			Assert.AreEqual(actualCount, outputCount);
 		}
@@ -47,7 +48,7 @@ namespace MyRegex.Test
 		public void GetCountSentencesTest()
 		{
 			string inputString = "4. Подсчитать количество предложений в тексте. " + 
-								 "В итоге три предложения считая.";
+								 "В итоге три предложения.";
 			int actualCount = 3;
 			int outputCount = Reg.GetCountSentences(inputString);
 			Assert.AreEqual(actualCount, outputCount);
@@ -67,9 +68,9 @@ namespace MyRegex.Test
 		[Test]
 		public void ReplaceDateTest()
 		{
-			string inputString = "Все даты в тексте записаны в западноевропейском формате: 2012.12.21 " +
+			string inputString = "Все даты в тексте записаны в западноевропейском формате: 2012.11.21 " +
 								"Привести их к принятому формату у нас: 21.11.2012 " +
-								"1999.12.31; 2012.02.29-date" + 
+								"1999.12.31; 2012.02.29-date" +
 								"192.168.1.1; 2222.2.22; 2000.00.01";
 			string actualString = "Все даты в тексте записаны в западноевропейском формате: 21.11.2012 " +
 								"Привести их к принятому формату у нас: 21.11.2012 " +
@@ -78,6 +79,7 @@ namespace MyRegex.Test
 			string outputString = Reg.ReplaceDate(inputString);
 			Assert.AreEqual(actualString, outputString);
 		}
+
 
 
 		[Test]
@@ -119,14 +121,14 @@ namespace MyRegex.Test
 		{
 			string inputString = "9. В тексте указаны стоимости товаров в долларах, например xxx $. " +
 								"Заменить на аналогичные суммы только в рублях: xxx р. " +
-								"1 $ == 8000 p " +
+								"1 $ == 8000 р " +
 								"100 $ " +
 								"00 $ + 11$$ + $ + 15 S";
 			string actualString = "9. В тексте указаны стоимости товаров в долларах, например xxx $. " +
 								"Заменить на аналогичные суммы только в рублях: xxx р. " +
-								"1 р == 8000 p " +
+								"1 р == 8000 р " +
 								"100 р " +
-								"00 $ + 11$$ + $ + 15 S";
+								"00 р + 11$$ + $ + 15 S";
 			string outputString = Reg.ReplaceMoney(inputString);
 			Assert.AreEqual(actualString, outputString);
 		}
@@ -157,12 +159,14 @@ namespace MyRegex.Test
 								"Кроме того точками также разделены предложения внутри текста. " +
 								"Заменить во всех числах точки на запятые. " +
 								"3.1415926 " +
-								"1.2.3 4.";
+								"10.10 0.0 " +
+								"a2.3 4. 1234.12h34";
 			string actualString = "11,0 Все вещественные числа в тексте записаны в формате с десятичной точкой. " +
 								"Кроме того точками также разделены предложения внутри текста. " +
 								"Заменить во всех числах точки на запятые. " +
 								"3,1415926 " +
-								"1.2.3 4.";
+								"10,10 0,0 " +
+								"a2.3 4. 1234.12h34";
 			string outputString = Reg.ReplaceDecimalDivider(inputString);
 			Assert.AreEqual(actualString, outputString);
 		}
@@ -195,9 +199,9 @@ namespace MyRegex.Test
 		{
 			// 14. Из заданного локального пути выделить имя файла и его расширение.
 			string inputString = @"C:\Program Files\Total Commander\Totalcmd.exe";
-			string[] actualString = new string[] {"Totalcmd", "exe"};
+			string actualString = "Totalcmd.exe";
 
-			string[] outputString = Reg.SelectNameAndExtension(inputString);
+			string outputString = Reg.SelectNameAndExtension(inputString);
 			Assert.AreEqual(actualString, outputString);
 		}
 
@@ -206,7 +210,7 @@ namespace MyRegex.Test
 		public void VerifySpacesTest()
 		{
 			string inputString = "15.Проверить и при необходимости расставить в тексте пробелы:после знаков препинания.";
-			string actualString = "15. Проверить и при необходимости расставить в тексте пробелы: после знаков препинания. ";
+			string actualString = "15. Проверить и при необходимости расставить в тексте пробелы: после знаков препинания.";
 			string outputString = Reg.VerifySpaces(inputString);
 			Assert.AreEqual(actualString, outputString);
 		}
