@@ -9,9 +9,7 @@ namespace MyRegex
 	{
 		static void Main(string[] args)
 		{
-			Reg.DeleteHtmlTags("<html><head><title>TITLE</title></head><body>BODY</body></html>");
-
-			Console.ReadKey();
+			
 		}
 	}
 }
