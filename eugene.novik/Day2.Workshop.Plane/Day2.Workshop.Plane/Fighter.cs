@@ -7,6 +7,8 @@ namespace Day2.Workshop.Plane
 {
 	class Fighter : MilitaryPlane
 	{
+		private int armsWeight;
+
 		public Fighter() 
 			: base()
 		{
@@ -16,30 +18,26 @@ namespace Day2.Workshop.Plane
 		public Fighter(string name, int crew, int armsWeight)
 			: base(name, crew)
 		{
-			Console.WriteLine("Fighter.ConstructorWithParameters: name = {0}, crew = {1}, arms weight = {2}", name, crew, armsWeight);
 			this.armsWeight = armsWeight;
+			Console.WriteLine("Fighter.ConstructorWithParameters: name = {0}, crew = {1}, arms weight = {2}", name, crew, armsWeight);
 		}
-
-		private int armsWeight;
 
 		public int ArmsWeight
 		{
-			get
-			{
-				Console.WriteLine("Fighter.ArmsWeight.get( {0} )", armsWeight);
-				return armsWeight;
-			}
-
-			set
-			{
-				Console.WriteLine("Fighter.ArmsWeight.set( {0} )", value);
-				armsWeight = value;
-			}
+			get	{ return armsWeight; }
+			set { armsWeight = value; }
 		}
 
 		public void Attack( string target )
 		{
 			Console.WriteLine("Fighter.Attack( {0} )", target);
 		}
+
+		public override void PrintInformation()
+		{
+			Console.WriteLine(	"Fighter Information:\n" +
+								" name: {0}\n crew: {1}\n arms weight: {2}", Name, Crew, ArmsWeight);
+		}
+
 	}
 }

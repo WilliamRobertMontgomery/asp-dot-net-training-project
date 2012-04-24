@@ -10,5 +10,6 @@ namespace Day2.Workshop.Plane
 		void Takeoff();
 		void FlyTo(string target);
 		void Land();
+		void PrintInformation();
 	}
 }
