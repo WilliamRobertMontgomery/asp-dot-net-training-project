@@ -18,37 +18,19 @@ namespace Day2.Workshop.Plane
 
 		public MilitaryPlane(string name, int crew)
 		{
-			Console.WriteLine("MilitaryPlane.ConstructorWithParameters: name = {0}, crew = {1}", name, crew);
 			this.name = name;
 			this.crew = crew;
+			Console.WriteLine("MilitaryPlane.ConstructorWithParameters: name = {0}, crew = {1}", name, crew);
 		}
 
 		public string Name{
-			get
-			{
-				Console.WriteLine("MilitaryPlane.Name.get( {0} )", name);
-				return name;
-			}
-			
-			set
-			{
-				Console.WriteLine("MilitaryPlane.Name.set( {0} )", value);
-				name = value;
-			}
+			get { return name; }
+			set { name = value; }
 		}
 
 		public int Crew{
-			get
-			{
-				Console.WriteLine("MilitaryPlane.Crew.get( {0} )", crew);
-				return crew;
-			}
-
-			set
-			{
-				Console.WriteLine("MilitaryPlane.Crew.set( {0} )", value);
-				crew = value;
-			}
+			get { return crew; }
+			set { crew = value; }
 		}
 
 		public void Takeoff() 
@@ -66,5 +48,10 @@ namespace Day2.Workshop.Plane
 			Console.WriteLine("MilitaryPlane.Land()");	
 		}
 
+		public virtual void PrintInformation()
+		{
+			Console.WriteLine(	"MilitaryPlane Information:\n" +
+								" name: {0}\n crew: {1}", Name, Crew );
+		}
 	}
 }
