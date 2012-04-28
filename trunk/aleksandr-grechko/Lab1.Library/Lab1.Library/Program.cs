@@ -43,8 +43,10 @@ namespace Lab1.Library
 
 		static void InitApplication()
 		{
-			Repository repository = new Repository(new ObjectRepositoryFactory());
-			InitData(repository);
+			//Repository repository = new Repository(new ObjectRepositoryFactory());
+			Repository repository = new Repository(new TextRepositoryFactory());
+			
+			//InitData(repository);
 
 			library = new LibraryClass(repository);
 

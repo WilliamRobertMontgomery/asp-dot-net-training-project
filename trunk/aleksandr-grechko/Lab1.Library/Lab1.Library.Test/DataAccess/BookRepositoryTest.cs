@@ -9,6 +9,7 @@ using Lab1.Library.DataAccess;
 namespace Lab1.Library.Test.DataAccess
 {
 	[TestFixture(typeof(ObjectRepositoryFactory))]
+    [TestFixture(typeof(TextRepositoryFactory))]
 	public class BookRepositoryTest<T> 
 		where T : IRepositoryFactory, new()
 	{
@@ -28,6 +29,12 @@ namespace Lab1.Library.Test.DataAccess
 			department = new LibraryDepartment("Абонемент", true);
 			book1 = new Book("John Doe", "Book", 2000, department);
 			book2 = new Book("Alex Pupkin", "Book2", 2001, department);
+		}
+
+		[TestFixtureTearDown]
+		public void ClearRepository()
+		{
+			libraryDepartmentRepository.Remove(department);
 		}
 
 		[Test]

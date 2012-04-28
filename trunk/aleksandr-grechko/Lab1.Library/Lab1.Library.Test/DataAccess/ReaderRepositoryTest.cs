@@ -8,16 +8,20 @@ using Lab1.Library.DataAccess;
 
 namespace Lab1.Library.Test.DataAccess
 {
-	[TestFixture(typeof(ReaderObjectRepository))]
-	public class ReaderRepositoryTest<T> where T : ReaderRepository, new()
+    [TestFixture(typeof(ObjectRepositoryFactory))]
+    [TestFixture(typeof(TextRepositoryFactory))]
+    public class ReaderRepositoryTest<T>
+        where T : IRepositoryFactory, new()
 	{
+        IRepositoryFactory repositoryFactory;
 		ReaderRepository readerRepository;
 		Reader reader1, reader2;
 		int countItems;
 
 		public ReaderRepositoryTest()
 		{
-			readerRepository = new T();
+            repositoryFactory = new T();
+            readerRepository = repositoryFactory.CreateReaderRepository();
 			countItems = readerRepository.GetItems().Count();
 			reader1 = new Reader("John Doe", "Boston");
 			reader2 = new Reader("Alex Pupkin", "London");
@@ -97,10 +101,10 @@ namespace Lab1.Library.Test.DataAccess
 			readerRepository.Save(reader1);
 			readerRepository.Save(reader2);
 			IEnumerable<Reader> readers = readerRepository.GetReadersByName("John Doe", true);
-			Assert.AreEqual(readers.Count(), 1);
-			Assert.AreEqual(readers.First(), reader1);
+			Assert.AreEqual(1, readers.Count());
+            Assert.AreEqual(reader1, readers.First());
 			readers = readerRepository.GetReadersByName("n", false);
-			Assert.AreEqual(readers.Count(), 2);
+            Assert.AreEqual(2, readers.Count());
 			Assert.IsNotNull(readers.SingleOrDefault(r => r.Id == reader1.Id));
 			Assert.IsNotNull(readers.SingleOrDefault(r => r.Id == reader2.Id));
 			readerRepository.Remove(reader1);
