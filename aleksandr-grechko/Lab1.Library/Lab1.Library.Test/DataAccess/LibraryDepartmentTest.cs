@@ -9,6 +9,7 @@ using Lab1.Library.DataAccess;
 namespace Lab1.Library.Test.DataAccess
 {
 	[TestFixture(typeof(ObjectRepositoryFactory))]
+    [TestFixture(typeof(TextRepositoryFactory))]
 	public class LibraryDepartmentRepositoryTest<T>
 		where T : IRepositoryFactory, new()
 	{

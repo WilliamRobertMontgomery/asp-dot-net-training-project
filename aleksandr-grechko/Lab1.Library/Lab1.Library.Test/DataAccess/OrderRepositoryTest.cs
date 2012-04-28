@@ -9,6 +9,7 @@ using Lab1.Library.DataAccess;
 namespace Lab1.Library.Test.DataAccess
 {
 	[TestFixture(typeof(ObjectRepositoryFactory))]
+    [TestFixture(typeof(TextRepositoryFactory))]
 	public class OrderRepositoryTest<T>
 		where T : IRepositoryFactory, new()
 	{
@@ -46,6 +47,15 @@ namespace Lab1.Library.Test.DataAccess
 
 			order1 = new Order(reader, book);
 			order2 = new Order(reader, book) { TimeGetBook = DateTime.Now, LibrarianOpenOrder = librarian};
+		}
+
+		[TestFixtureTearDown]
+		public void ClearRepository()
+		{
+			bookRepository.Remove(book);
+			readerRepository.Remove(reader);
+			librarianRepository.Remove(librarian);
+			libraryDepartmentRepository.Remove(department);
 		}
 
 		[Test]

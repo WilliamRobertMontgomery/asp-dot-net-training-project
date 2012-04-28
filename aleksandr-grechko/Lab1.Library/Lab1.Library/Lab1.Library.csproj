@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogic\LibraryClass.cs" />
     <Compile Include="DataAccess\Repository.cs" />
+    <Compile Include="DataAccess\RepositoryFactory\TextRepositoryFactory.cs" />
     <Compile Include="DataAccess\RepositoryFactory\ObjectRepositoryFactory.cs" />
     <Compile Include="DataAccess\Repository\BookRepository.cs" />
     <Compile Include="DataAccess\Repository\LibraryDepartmentRepository.cs" />
@@ -58,6 +59,11 @@
     <Compile Include="DataAccess\ObjectRepository\LibraryDepartmentObjectRepository.cs" />
     <Compile Include="DataAccess\ObjectRepository\OrderObjectRepository.cs" />
     <Compile Include="DataAccess\ObjectRepository\ReaderObjectRepository.cs" />
+    <Compile Include="DataAccess\TextRepository\BookTextRepository.cs" />
+    <Compile Include="DataAccess\TextRepository\LibrarianTextRepository.cs" />
+    <Compile Include="DataAccess\TextRepository\LibraryDepartmentTextRepository.cs" />
+    <Compile Include="DataAccess\TextRepository\OrderTextRepository.cs" />
+    <Compile Include="DataAccess\TextRepository\ReaderTextRepository.cs" />
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\LibraryDepartment.cs" />
     <Compile Include="Entities\Librarian.cs" />
@@ -68,7 +74,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataAccess\TextFileRepository\" />
     <Folder Include="DataAccess\XMLRepository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
