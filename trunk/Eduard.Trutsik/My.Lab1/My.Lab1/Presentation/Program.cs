@@ -9,6 +9,12 @@ using System.Timers;
 
 namespace My.Lab1
 {
+
+    /*
+    * AUTHOR: Mikalai Strylets
+    * REVIEW: Where is start data initialization procedure?
+    * DETAILS: 
+    */
 	class Program
 	{
 		static DateTime dateTimeStart;
