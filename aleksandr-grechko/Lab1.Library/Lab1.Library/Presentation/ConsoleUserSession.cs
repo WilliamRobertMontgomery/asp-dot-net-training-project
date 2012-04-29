@@ -24,7 +24,19 @@ namespace Lab1.Library.Presentation
 			do
 			{
 				Console.Clear();
-				Console.WriteLine("Пользователь - {0}\n", (reader != null) ? reader.FullName : "Anonymous" );
+
+                /*
+                * AUTHOR: Mikalai Strylets
+                * REVIEW: Do not hardcode strings or user interface resources
+                * DETAILS: Storing your data in a resource file enables you to change the data without recompiling your entire app.
+                 * It also enables you to store data in a single location, and eliminates the need to rely on hard-coded data
+                 * that is stored in multiple locations. For details see http://msdn.microsoft.com/en-us/library/w7x1y988.aspx
+                 * See also following MSDN sections which describes how to use resources in your applications
+                 * http://msdn.microsoft.com/en-us/library/f45fce5x.aspx
+                 * http://msdn.microsoft.com/en-us/library/9za7fxc7.aspx
+                 * http://msdn.microsoft.com/en-us/library/7k989cfy%28v=vs.90%29.aspx
+                */
+                Console.WriteLine("Пользователь - {0}\n", (reader != null) ? reader.FullName : "Anonymous" );
 				Console.WriteLine("Выбор книги\n1. Все книги\n2. Список по отделам\n3. Поиск по автору\n4. Поиск по названию\n\n5. Вернуть книгу\n\n0. Выйти\n");
 				switch (GetMenuNumber(5))
 				{

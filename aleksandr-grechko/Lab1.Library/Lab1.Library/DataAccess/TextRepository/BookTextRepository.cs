@@ -12,6 +12,12 @@ namespace Lab1.Library.DataAccess
 
         private const string FILE_NAME = @"Text\Books.txt";
 
+        /*
+        * AUTHOR: Mikalai Strylets
+        * REVIEW: The recommended naming and capitalization convention is to use Pascal casing for constants.
+        * DETAILS: A constant is a static field. For details see
+         * http://msdn.microsoft.com/en-us/library/ms229012.aspx
+        */
         private const int RECORD_SIZE = 512;
 
         private const int MAX_RECORD_STRING_LENGTH = (RECORD_SIZE - 2) / 2;
