@@ -46,7 +46,7 @@ namespace Lab1.Library
 			//Repository repository = new Repository(new ObjectRepositoryFactory());
 			Repository repository = new Repository(new TextRepositoryFactory());
 			
-			//InitData(repository);
+			InitData(repository);
 
 			library = new LibraryClass(repository);
 
