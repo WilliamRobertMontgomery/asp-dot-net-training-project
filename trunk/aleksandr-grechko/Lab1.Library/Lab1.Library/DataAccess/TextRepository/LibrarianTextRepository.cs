@@ -10,30 +10,30 @@ namespace Lab1.Library.DataAccess
 	public class LibrarianTextRepository : LibrarianRepository
 	{
 
-        private const string FILE_NAME = @"Text\Librarians.txt";
+        private const string FileName = @"Text\Librarians.txt";
 
-        private const int RECORD_SIZE = 512;
+        private const int RecordSize = 512;
 
-        private const int MAX_RECORD_STRING_LENGTH = (RECORD_SIZE - 2) / 2;
+        private const int MaxRecordStringLength = (RecordSize - 2) / 2;
 
         public LibrarianTextRepository(LibraryDepartmentRepository libraryDepartmentRepository)
 		{
 			this.libraryDepartmentRepository = libraryDepartmentRepository;
 
-            if (!Directory.GetParent(FILE_NAME).Exists) Directory.GetParent(FILE_NAME).Create();
-            if (!File.Exists(FILE_NAME)) File.Create(FILE_NAME).Close();
+            if (!Directory.GetParent(FileName).Exists) Directory.GetParent(FileName).Create();
+            if (!File.Exists(FileName)) File.Create(FileName).Close();
 		}
 
         public override Librarian GetItem(Guid id)
         {
-            using (BinaryReader binaryReader = new BinaryReader(File.Open(FILE_NAME, FileMode.Open), Encoding.Unicode))
+            using (BinaryReader binaryReader = new BinaryReader(File.Open(FileName, FileMode.Open), Encoding.Unicode))
             {
                 while (binaryReader.PeekChar() != -1)
                 {
                     string[] arrayString = binaryReader.ReadString().Split('|');
                     if (arrayString[0] == id.ToString())
                     {
-                        return CreateLibrarian(arrayString);
+                        return CreateItem(arrayString);
                     }
                 }
                 return null;
@@ -42,11 +42,11 @@ namespace Lab1.Library.DataAccess
 
         public override IEnumerable<Librarian> GetItems()
         {
-            using (BinaryReader binaryReader = new BinaryReader(File.Open(FILE_NAME, FileMode.Open), Encoding.Unicode))
+            using (BinaryReader binaryReader = new BinaryReader(File.Open(FileName, FileMode.Open), Encoding.Unicode))
             {
                 while (binaryReader.PeekChar() != -1)
                 {
-                    yield return CreateLibrarian(binaryReader.ReadString().Split('|'));
+                    yield return CreateItem(binaryReader.ReadString().Split('|'));
                 }
             }
         }
@@ -54,7 +54,7 @@ namespace Lab1.Library.DataAccess
         public override void Save(Librarian item)
         {
             int i = 0;
-            using (BinaryReader binaryReader = new BinaryReader(File.Open(FILE_NAME, FileMode.Open), Encoding.Unicode))
+            using (BinaryReader binaryReader = new BinaryReader(File.Open(FileName, FileMode.Open), Encoding.Unicode))
             {
                 while (binaryReader.PeekChar() != -1)
                 {
@@ -63,12 +63,12 @@ namespace Lab1.Library.DataAccess
                     i = i + 1;
                 }
             }
-            using (BinaryWriter binaryWriter = new BinaryWriter(File.Open(FILE_NAME, FileMode.Open, FileAccess.Write), Encoding.Unicode))
+            using (BinaryWriter binaryWriter = new BinaryWriter(File.Open(FileName, FileMode.Open, FileAccess.Write), Encoding.Unicode))
             {
-                binaryWriter.Seek(i * RECORD_SIZE, SeekOrigin.Begin);
+                binaryWriter.Seek(i * RecordSize, SeekOrigin.Begin);
                 StringBuilder str = new StringBuilder(String.Join("|", item.Id.ToString(), item.FullName, item.Department.Id.ToString()));
                 str.Append("|");
-                str.Length = MAX_RECORD_STRING_LENGTH;
+                str.Length = MaxRecordStringLength;
                 binaryWriter.Write(str.ToString());
             }
             libraryDepartmentRepository.Save(item.Department);
@@ -82,7 +82,7 @@ namespace Lab1.Library.DataAccess
         public override void Remove(Guid id)
         {
             List<String> listString = new List<String>();
-            using (BinaryReader binaryReader = new BinaryReader(File.Open(FILE_NAME, FileMode.Open), Encoding.Unicode))
+            using (BinaryReader binaryReader = new BinaryReader(File.Open(FileName, FileMode.Open), Encoding.Unicode))
             {
                 while (binaryReader.PeekChar() != -1)
                 {
@@ -94,7 +94,7 @@ namespace Lab1.Library.DataAccess
                     }
                 }
             }
-            using (BinaryWriter binaryWriter = new BinaryWriter(File.Open(FILE_NAME, FileMode.Create, FileAccess.Write), Encoding.Unicode))
+            using (BinaryWriter binaryWriter = new BinaryWriter(File.Open(FileName, FileMode.Create, FileAccess.Write), Encoding.Unicode))
             {
                 foreach (string s in listString) 
                 {
@@ -103,7 +103,7 @@ namespace Lab1.Library.DataAccess
             }
         }
 
-        private Librarian CreateLibrarian(string[] arrayString)
+        private Librarian CreateItem(string[] arrayString)
         {
             LibraryDepartment department = libraryDepartmentRepository.GetItem(new Guid(arrayString[2]));
             return new Librarian(new Guid(arrayString[0]), arrayString[1], department);

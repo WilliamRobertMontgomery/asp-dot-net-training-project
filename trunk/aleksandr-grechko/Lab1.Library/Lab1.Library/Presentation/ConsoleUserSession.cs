@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Lab1.Library.Entities;
 using Lab1.Library.BusinessLogic;
+using System.Resources;
 
 namespace Lab1.Library.Presentation
 {
@@ -13,9 +14,13 @@ namespace Lab1.Library.Presentation
 
 		private LibraryClass library;
 
+		private ResourceManager rm;
+
 		public ConsoleUserSession(LibraryClass library)
 		{
 			this.library = library;
+						
+			rm = ResourceManager.CreateFileBasedResourceManager("ConsoleResources", ".", null);
 		}
 
 		public void MainMenuView()
@@ -36,8 +41,8 @@ namespace Lab1.Library.Presentation
                  * http://msdn.microsoft.com/en-us/library/9za7fxc7.aspx
                  * http://msdn.microsoft.com/en-us/library/7k989cfy%28v=vs.90%29.aspx
                 */
-                Console.WriteLine("Пользователь - {0}\n", (reader != null) ? reader.FullName : "Anonymous" );
-				Console.WriteLine("Выбор книги\n1. Все книги\n2. Список по отделам\n3. Поиск по автору\n4. Поиск по названию\n\n5. Вернуть книгу\n\n0. Выйти\n");
+				Console.WriteLine(rm.GetString("ReaderNameTitle"), (reader != null) ? reader.FullName : "Anonymous");
+				Console.WriteLine(rm.GetString("MainMenu"));
 				switch (GetMenuNumber(5))
 				{
 					case 1:
@@ -51,11 +56,11 @@ namespace Lab1.Library.Presentation
 						}
 						break;
 					case 3:
-						Console.Write("Введите имя автора: ");
+						Console.Write(rm.GetString("AuthorNamePrompt"));
 						GetBook(GetObjectFromListObjects(library.GetBooksByAuthor(Console.ReadLine())) as Book);
 						break;
 					case 4:
-						Console.Write("Введите название книги: ");
+						Console.Write(rm.GetString("TitleBookPrompt"));
 						GetBook(GetObjectFromListObjects(library.GetBooksByTitle(Console.ReadLine())) as Book);
 						break;
 					case 5:
@@ -76,7 +81,7 @@ namespace Lab1.Library.Presentation
 			library.ExitReader(reader);
 			reader = null;
 
-			Console.WriteLine("Хотите продолжить работу ( Yes - 1 / No - 0): ");
+			Console.WriteLine(rm.GetString("CountinueSessionQuestion"));
 			if (GetMenuNumber(1) == 0) return true;
 
 			return false;
@@ -87,14 +92,14 @@ namespace Lab1.Library.Presentation
 			if (book == null) return;
 			if (reader == null && !Authorization()) return;
 			Console.Clear();
-			Console.WriteLine("Заказ книги - {0}\n", book);
+			Console.WriteLine(rm.GetString("OrderBookTitle"), book);
 			if (library.OrderBook(book, reader))
 			{
-				Console.WriteLine("Читайте на здоровье!");
+				Console.WriteLine(rm.GetString("OrderSuccess"));
 			}
 			else
 			{
-				Console.WriteLine("Выбраная вами книга уже выдана.");
+				Console.WriteLine(rm.GetString("OrderWrong"));
 			}
 			Console.ReadLine();
 		}
@@ -110,20 +115,22 @@ namespace Lab1.Library.Presentation
 		{
 			if (reader != null) return true;
 			Console.Clear();
-			Console.WriteLine("Авторизация\n");
-			Console.Write("Введите полное имя пользователя: ");
+			//Console.WriteLine("Авторизация\n");	rm.GetString("")
+			Console.WriteLine(rm.GetString("AuthorizationTitle"));
+			Console.Write(rm.GetString("AuthorizationPrompt"));
 			string fullName = Console.ReadLine();
 			reader = library.GetReader(fullName);
 			if (reader == null)
 			{
-				Console.WriteLine("Пользователь с таким именем не найден.\nХотите добавить нового пользователя ( Yes - 1 / No - 0): ");
+				Console.WriteLine(rm.GetString("ReaderNotFound"));
+				Console.WriteLine(rm.GetString("AddNewReaderQuestion"));
 				if (GetMenuNumber(1) == 0) return false;
-				Console.Write("Введите адрес нового пользователя: ");
+				Console.Write(rm.GetString("AddressNewReaderPrompt"));
 				reader = library.AddReader(fullName, Console.ReadLine());
 			}
 			if (!library.AuthorizationReader(reader))
 			{
-				Console.WriteLine("Пользователь {0} уже работает в системе.", reader.FullName);
+				Console.WriteLine(rm.GetString("AuthorizationError"), reader.FullName);
 				Console.ReadLine();
 				reader = null;
 				return false;
@@ -136,7 +143,7 @@ namespace Lab1.Library.Presentation
 			Console.Clear();
 			for (int i = 0; i <= objects.Count() - 1; i++)
 				Console.WriteLine("{0}. {1}", i + 1, objects.ElementAt(i));
-			Console.WriteLine("\n0. Выйти\n");
+			Console.WriteLine(rm.GetString("Exit"));
 
 			int index = GetMenuNumber(objects.Count());
 

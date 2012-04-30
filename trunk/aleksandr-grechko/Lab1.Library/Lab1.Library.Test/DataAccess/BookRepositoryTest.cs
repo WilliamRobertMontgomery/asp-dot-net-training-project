@@ -10,6 +10,7 @@ namespace Lab1.Library.Test.DataAccess
 {
 	[TestFixture(typeof(ObjectRepositoryFactory))]
     [TestFixture(typeof(TextRepositoryFactory))]
+	[TestFixture(typeof(XMLRepositoryFactory))]
 	public class BookRepositoryTest<T> 
 		where T : IRepositoryFactory, new()
 	{
