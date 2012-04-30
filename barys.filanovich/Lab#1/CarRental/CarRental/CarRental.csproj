@@ -48,7 +48,6 @@
     <Compile Include="DataAccess\CarRepository.cs" />
     <Compile Include="DataAccess\ClientRepository.cs" />
     <Compile Include="DataAccess\IRepository.cs" />
-    <Compile Include="DataAccess\IRepository1.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\IControl.cs" />
     <Compile Include="Entities\Manager.cs" />
