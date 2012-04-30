@@ -6,6 +6,7 @@ using Lab1.Library.Entities;
 using Lab1.Library.DataAccess;
 using Lab1.Library.BusinessLogic;
 using Lab1.Library.Presentation;
+using System.Xml.Linq;
 
 namespace Lab1.Library
 {
@@ -44,9 +45,10 @@ namespace Lab1.Library
 		static void InitApplication()
 		{
 			//Repository repository = new Repository(new ObjectRepositoryFactory());
-			Repository repository = new Repository(new TextRepositoryFactory());
+			//Repository repository = new Repository(new TextRepositoryFactory());
+			Repository repository = new Repository(new XMLRepositoryFactory());
 			
-			InitData(repository);
+			//InitData(repository);
 
 			library = new LibraryClass(repository);
 
@@ -58,7 +60,6 @@ namespace Lab1.Library
 			InitApplication();
 
 			userSession.MainMenuView();
-
 		}
 	}
 }

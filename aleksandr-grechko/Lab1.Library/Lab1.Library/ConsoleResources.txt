@@ -1,0 +1,25 @@
+﻿;Main menu
+ReaderNameTitle = Пользователь - {0}\n
+MainMenu = Выбор книги\n1. Все книги\n2. Список по отделам\n3. Поиск по автору\n4. Поиск по названию\n\n5. Вернуть книгу\n\n0. Выйти\n
+AuthorNamePrompt = Введите имя автора: 
+TitleBookPrompt = Введите название книги: 
+
+; Authorization
+AuthorizationTitle = Авторизация\n
+AuthorizationPrompt = Введите полное имя пользователя: 
+AuthorizationError = Пользователь {0} уже работает в системе.
+ReaderNotFound = Пользователь с таким именем не найден.
+AddNewReaderQuestion = Хотите добавить нового пользователя ( Yes - 1 / No - 0): 
+AddressNewReaderPrompt = Введите адрес нового пользователя: 
+
+; Order book
+OrderBookTitle = Заказ книги - {0}\n
+OrderSuccess = Читайте на здоровье!
+OrderWrong = Выбраная вами книга уже выдана.
+
+;Session
+CountinueSessionQuestion = Хотите продолжить работу ( Yes - 1 / No - 0): 
+
+;List object
+Exit = \n0. Выйти\n
+
