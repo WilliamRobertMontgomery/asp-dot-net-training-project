@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Lab1Airport.Repository;
 
 namespace Lab1Airport
 {
@@ -9,98 +10,127 @@ namespace Lab1Airport
 
     class CCashier
     {
-        public CCashier(ref CBank bank, ref CReis reis, ref CClients clients, ref CAircrafts aircrafts)
+        public CCashier(ref CBank bank,ref CBasicReis basicReis, ref CReis reis, ref CClients clients, ref CPlains aircrafts)
         {
-            Bank = bank;
-            Reis = reis;
-            Clients = clients;
-            Aircrafts = aircrafts;
+            BankEntitie = bank;
+            ReisEntitie = reis;
+            ClientsEntitie = clients;
+            BasicReisEntitie = basicReis;
+            PlainsEntitie = aircrafts;
         }
-        private CBank Bank;
-        private CReis Reis;
-        private CClients Clients;
-        private CAircrafts Aircrafts;
-
+        private CBank BankEntitie;
+        private CReis ReisEntitie;
+        private CBasicReis BasicReisEntitie;
+        private CClients ClientsEntitie;
+        private CPlains PlainsEntitie;
+        
         //Бронирование
-        public CReis.CReisItem Reserve(string destination, DateTime nowTime)
+        public void Reserve()
         {
+            Console.Clear();
+            BasicReisEntitie.OutToConsole();
+
+            Console.Write("Введите пункт назначения: ");
+            string destination = Console.ReadLine();
+            Console.Clear();
+            Console.Write("Укажите текущую дату в формате dd/mm/yy: ");
+            DateTime nowTime = DateTime.Parse(Console.ReadLine());
+
             //Выбираем все рейсы в искомую точку и сортируем по времени
-            var reises = Reis.ReisItem.Where(x => x.Destination == destination).OrderBy(x => x.StartTime);
-            //считаем число оставшихся мест в каждую точку
-            var freePlaces = Reis.ReisItem.Select(x => Aircrafts.AircraftsItem.ElementAt(x.NumberOfAircraft).NumberOfSeats - Clients.ClientItem.Where(x2 => x2.NumberOfReis == x.NumberOfReis).Count());
+            var basicReises = BasicReisEntitie.GetAll().Where(x => x.To.Trim() == destination.Trim()).Select(x => x.CodeBasicReis);
+            var reises = ReisEntitie.GetAll().Where(x => basicReises.Contains((int)x.CodeBasicReis)).OrderBy(x => x.Date);
+            //Выбираем из подходящих рейсов, рейсы на которые есть места
+            var freeReises = reises.Where(x => PlainsEntitie.GetAll().Single(plain => plain.CodePlane == x.BasicReis.CodePlain).NumberOfSeats - ClientsEntitie.GetAll().Where(client => client.CodeReis == x.CodeReis).Count() > 0);
             //Выбираем первый, по времени, рейс на который есть места
-            var total = reises.SkipWhile(x => x.StartTime < nowTime).SkipWhile((x, index) => freePlaces.ElementAt(index) == 0).DefaultIfEmpty(null).First();
+            var total = freeReises.SkipWhile(x => x.Date < nowTime).DefaultIfEmpty(null).First();
 
             if (total != null)
             {
-                Clients.Add(Clients.ClientItem.Count, total.NumberOfReis, false);
-                return total;
+                Clients temp = new Clients();
+                temp.BookOrBuy = false;
+                temp.CodeReis = total.CodeReis;
+                ClientsEntitie.AddElement(temp);
+                Console.WriteLine("Забронирован билет на рейс {0} в {1} на {2}", total.CodeReis, total.BasicReis.To.Trim(), total.Date);
             }
             else
             {
-                return null;
+                Console.WriteLine("Билетов в {0} нет на допустимый период", destination);
             }
+            Console.WriteLine("Нажмите любую клавишу");
+            Console.ReadKey();
+            Console.Clear();
         }
         //Покупка
-        public CReis.CReisItem Sell(string destination, DateTime nowTime)
+        public void Sell()
         {
+            Console.Clear();
+            BasicReisEntitie.OutToConsole();
+            Console.Write("Введите пункт назначения: ");
+            string destination = Console.ReadLine();
+            Console.Clear();
+            Console.Write("Укажите текущую дату в формате dd/mm/yy: ");
+            DateTime nowTime = DateTime.Parse(Console.ReadLine());
+
             //Выбираем все рейсы в искомую точку и сортируем по времени
-            var reises = Reis.ReisItem.Where(x => x.Destination == destination).OrderBy(x=>x.StartTime);
-            //считаем число оставшихся мест в каждую точку
-            IEnumerable<int> freePlaces = Reis.ReisItem.Select(reisItem => Aircrafts.AircraftsItem.Single(AircraftsItem => reisItem.NumberOfAircraft == AircraftsItem.NumberOfAircraft).NumberOfSeats - Clients.ClientItem.Where(x2 => x2.NumberOfReis == reisItem.NumberOfReis).Count());
-            //Выбираем первый, по времени, рейс на который есть места, отсеяв ушедшие рейсы
-            var total = reises.SkipWhile(x => x.StartTime < nowTime).SkipWhile((x, index) => freePlaces.ElementAt(index) == 0).DefaultIfEmpty(null).First();
+            var basicReises = BasicReisEntitie.GetAll().Where(x => x.To.Trim() == destination.Trim()).Select(x => x.CodeBasicReis);
+            var reises = ReisEntitie.GetAll().Where(x => basicReises.Contains((int)x.CodeBasicReis)).OrderBy(x => x.Date);
+            //Выбираем из подходящих рейсов, рейсы на которые есть места
+            var freeReises = reises.Where(x => PlainsEntitie.GetAll().Single(plain => plain.CodePlane == x.BasicReis.CodePlain).NumberOfSeats - ClientsEntitie.GetAll().Where(client => client.CodeReis == x.CodeReis).Count() > 0);
+            //Выбираем первый, по времени, рейс на который есть места
+            var total = freeReises.SkipWhile(x => x.Date < nowTime).DefaultIfEmpty(null).First();
 
             if (total != null)
             {
-                //Добавляем в клиенты
-                Clients.Add(Clients.ClientItem.Count, total.NumberOfReis, true);
-                //Ложим деньги в банк
-                Bank.Add(total.Price, nowTime, "Reis " + total.NumberOfReis.ToString());
-                return total;
+                Clients tempClient = new Clients();
+                tempClient.BookOrBuy = true;
+                tempClient.CodeReis = total.CodeReis;
+                ClientsEntitie.AddElement(tempClient);
+
+                Bank tempBank = new Bank();
+                tempBank.Ammount = total.BasicReis.Price;
+                tempBank.Date = total.Date;
+                tempBank.Comment = String.Format("Платеж за билет на рейс {0}", total.CodeReis);
+                BankEntitie.AddElement(tempBank);
+                Console.WriteLine("Продан билет на рейс {0} в {1} на {2}", total.CodeReis, total.BasicReis.To.Trim(), total.Date);
             }
             else
             {
-                return null;
+                Console.WriteLine("Билетов в {0} нет на допустимы период", destination);
             }
-            
+            Console.WriteLine("Нажмите любую клавишу");
+            Console.ReadKey();
+            Console.Clear();
         }
         //Завершение бронирования(покупка)
-        public bool FinishReserve(int numberOfClient, DateTime nowTime)
+        public void FinishReserve()
         {
-            var total = Clients.FinishReserve(numberOfClient);
-            if (total != null)
-            {
-                double money = Reis.ReisItem.Single(x => x.NumberOfReis == total.NumberOfReis).Price;
-                Bank.Add(money, nowTime, "Reis " + total.NumberOfReis.ToString());
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        //Отмена бронирования по клиенту
-        public bool CanselReserveByClient(int numberOfClient)
-        {
-            var total = Clients.ClientItem.Single(x => x.NumderOfClient == numberOfClient);
-            if (total != null)
-            {
-                Clients.Delete(total.NumderOfClient);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            
-        }
-        //Отмена бронирования по рейсу
-        public bool CanselReserveByReis(int numberOfReis)
-        {
-            Clients.ClientItem.RemoveAll(x => x.NumberOfReis == numberOfReis);
-            return true;
-        }
+            Console.Clear();
+            ClientsEntitie.OutToConsole();
 
+            Console.Write("Введите номер клиента: ");
+            int numberOfClient = Int32.Parse(Console.ReadLine());
+            Console.Clear();
+
+            var total = ClientsEntitie.GetAll().DefaultIfEmpty().SingleOrDefault(x=>x.CodeClient==numberOfClient);
+            if (total != null)
+            {
+                total.BookOrBuy = true;
+                ClientsEntitie.UpdateElement(total);
+
+                Bank tempBank = new Bank();
+                tempBank.Ammount = total.Reis.BasicReis.Price;
+                tempBank.Date = total.Reis.Date;
+                tempBank.Comment = String.Format("Платеж за билет на рейс {0}", total.CodeReis);
+                BankEntitie.AddElement(tempBank);
+                Console.WriteLine("Продан билет на рейс {0} в {1} на {2}", total.CodeReis, total.Reis.BasicReis.To.Trim(), total.Reis.Date);
+            }
+            else
+            {
+                Console.WriteLine("Клиент с таким номером не найден");
+            }
+            Console.WriteLine("Нажмите любую клавишу");
+            Console.ReadKey();
+            Console.Clear();
+        }
     }
 }

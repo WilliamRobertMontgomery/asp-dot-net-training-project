@@ -32,5 +32,16 @@ namespace Lab1Airport.Properties {
                 return ((string)(this["DBAiportConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Repository\\DBAiport.mdf" +
+            ";Integrated Security=True;User Instance=True")]
+        public string DBAiportConnectionString1 {
+            get {
+                return ((string)(this["DBAiportConnectionString1"]));
+            }
+        }
     }
 }

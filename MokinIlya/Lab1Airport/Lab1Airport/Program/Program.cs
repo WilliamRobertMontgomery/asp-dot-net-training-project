@@ -14,77 +14,49 @@ namespace Lab1Airport
         static void Main(string[] args)
         {
             //Инициализуруем и заполняем необходимые объекты
-            CReis Reis=new CReis();
             CBank Bank = new CBank();
-            CAircrafts Aircrafts = new CAircrafts();
+            CBasicReis BasicReis = new CBasicReis();
+            CReis Reis = new CReis();
             CClients Clients = new CClients();
-            CHelper.ReadOfDataBase(ref Aircrafts, ref Reis); //Заполням базу, из файла, стартовыми значениями
+            CPlains Plains = new CPlains();
 
-            DateTime startMoment = DateTime.Parse("02/04/2010");
-            Reis.GenerateReises(startMoment, startMoment.AddDays(20));//генерируем рейсы на некоторый период
-            CCashier Cashier = new CCashier(ref Bank, ref Reis, ref Clients, ref Aircrafts);//инициализируем кассира
+            CCashier Cashier = new CCashier(ref Bank, ref BasicReis, ref Reis, ref Clients, ref Plains);
 
-            //Динамика
-            Dynamics(Reis, startMoment, Cashier);
-
-            Console.ReadKey();
+            OutMenu(Reis, Cashier);
         }
 
-        private static void Dynamics(CReis Reis, DateTime startMoment, CCashier Cashier)
-        {
-            DateTime currentMoment = startMoment;
-            while (currentMoment < startMoment.AddDays(20))
-            {
-                //Определяем число заявок на покупку
-                int countForSell = Rand.Next(10);
-                for (int i = 0; i < countForSell; i++)
-                {
-                    Sell(Reis, Cashier, currentMoment);
-                    System.Threading.Thread.Sleep(400);
-                }
-                currentMoment = currentMoment.AddDays(1);
-                //Определяем число заявок на бронирование
-                int countForReserve = Rand.Next(3);
-                for (int i = 0; i < countForReserve; i++)
-                {
-                    Reserve(Reis, Cashier, currentMoment);
-                    System.Threading.Thread.Sleep(400);
-                }
-                currentMoment = currentMoment.AddDays(1);
+        private static void OutMenu(CReis Reis, CCashier Cashier)
+{
+            Console.WriteLine("МЕНЮ");
+            Console.WriteLine("1 - Генерация новых рейсов");
+            Console.WriteLine("2 - Продать билет");
+            Console.WriteLine("3 - Бронировать билет");
+            Console.WriteLine("4 - Завершить бронирование билета");
+            Console.WriteLine("5 - Выход");
 
-            }
-        }
-
-        private static void Sell(CReis Reis, CCashier Cashier, DateTime currentMoment)
-        {
-            //Генерируем наименование пункта назначения
-            int index = Rand.Next(Reis.ReisItemBasic.Count);
-            string destination = Reis.ReisItemBasic.ElementAt(index).Destination;
-            var total = Cashier.Sell(destination, currentMoment);
-            if (total != null)
+            Console.Write("Выберите действие: ");
+            string str = Console.ReadLine();
+            switch (str)
             {
-                Console.WriteLine("Продан билет в {0} на {1}", destination, total.StartTime);
+                case "1": 
+                    Reis.GenerateReises();
+                    OutMenu(Reis, Cashier);
+                    break;
+                case "2":
+                    Cashier.Sell();
+                    OutMenu(Reis, Cashier);
+                    break;
+                case "3":
+                    Cashier.Reserve();
+                    OutMenu(Reis, Cashier);
+                    break;
+                case "4":
+                    Cashier.FinishReserve();
+                    OutMenu(Reis, Cashier);
+                    break;
+                default:
+                    break;
             }
-            else
-            {
-                Console.WriteLine("Билетов в {0} в допустимом периоде нет", destination);
-            }
-        }
-
-        private static void Reserve(CReis Reis, CCashier Cashier, DateTime currentMoment)
-        {
-            //Генерируем наименование пункта назначения
-            int index = Rand.Next(Reis.ReisItemBasic.Count);
-            string destination = Reis.ReisItemBasic.ElementAt(index).Destination;
-            var total = Cashier.Sell(destination, currentMoment);
-            if (total != null)
-            {
-                Console.WriteLine("Бронирован билет в {0} на {1}", destination, total.StartTime);
-            }
-            else
-            {
-                Console.WriteLine("Билетов в {0} в допустимом периоде нет", destination);
-            }
-        }
+}
     }
 }
