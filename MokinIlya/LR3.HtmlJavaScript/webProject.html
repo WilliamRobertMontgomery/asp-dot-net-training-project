@@ -1,8 +1,86 @@
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="jquery.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var hash = window.location.hash.substr(1);
+            var href = $('#Navigation a').each(function () {
+                var href = $(this).attr('href');
+                if (hash == href.substr(0, href.length - 5)) {
+                    var toLoad = hash + '.html';
+                    $.ajax({
+                        url: toLoad,
+                        type: 'get',
+                        error:
+                                function () {
+                                    $("#Content").html("<h1>ERROR 404</h1>");
+
+                                },
+                        success:
+                                function (html) {
+                                    $("#Content").html(html);
+
+                                }
+                    });
+                }
+            });
+            if (!hash) {
+                $.ajax({
+                    url: "main.html",
+                    type: 'get',
+                    error:
+                                function () {
+                                    $("#Content").html("<h1>ERROR 404</h1>");
+
+                                },
+                    success:
+                                function (html) {
+                                    $("#Content").html(html);
+
+                                }
+                });
+            }
+
+            $('#Navigation a').click(function () {
+                if (this.href) {
+                    var toLoad = $(this).attr('href');
+                    $('#Content').hide('fast', loadContent);
+                    $('#load').remove();
+                    $('#Content').append('<span id="load">LOADING...</span>');
+                    $('#load').fadeIn('normal');
+                    window.location.hash = $(this).attr('href').substr(0, $(this).attr('href').length - 5);
+                    function loadContent() {
+                        $.ajax({
+                            url: toLoad,
+                            type: 'get',
+                            error:
+                                function () {
+                                    $("#Content").html("<h1>ERROR 404</h1>");
+                                    showNewContent()
+                                },
+                            success:
+                                function (html) {
+                                    $("#Content").html(html);
+                                    showNewContent()
+                                }
+                        });
+                    }
+                    function showNewContent() {
+                        $('#Content').show('normal', hideLoader());
+                    }
+                    function hideLoader() {
+                        $('#load').fadeOut('normal');
+                    }
+                    return false;
+                }
+            });
+
+        });
+    </script> 
     <style type="text/css">
         body
         {
@@ -121,6 +199,7 @@
             border: 1px solid #e7e6e4;
             margin:0px;
             padding:5px;
+            min-height:600px;
         }
         div#Content h1
         {
@@ -143,7 +222,7 @@
                 
 
     </style>
-    <title>WebProject</title>
+    <title>webProject</title>
 </head>
 <body>
     <div id="AllBlocks">
@@ -156,48 +235,15 @@
                     <img src="logo.png" alt="Логотип Весенний" />
                 </div>
                 <div id="Navigation">
-                    <a href="#">Главная</a> 
-                    <a href="#">О компании</a> 
-                    <a href="#">Контакты</a> 
-                    <a href="#">Полезное об интересном</a> 
-                    <a href="#">Каталоги судовых дизелей</a>
+                    <a href="main.html">Главная</a> 
+                    <a href="about.html">О компании</a> 
+                    <a href="contacts.html">Контакты</a> 
+                    <a href="null">Полезное об интересном</a> 
+                    <a href="null">Каталоги судовых дизелей</a>
                 </div>
-                <div id="Content">
-                    <h1>
-                    Судовое оборудование и сзч для дизелей, каталоги судовых дизелей ряда 8,5/11, Ч
-                    18/22</h1>
-                    <quote>«Корабли постоят и ложатся на курс» - пел ёщё в прошлом веке В.Высоцкий
-                    Оказывается с тех пор ничего изменилось!</quote>
-                    <p>Все мы знаем, чьими усилиями – они «ложатся» под этот курс и каких трудов это стоит.</p>
-                    
-                    <p>А уж что делается для того чтобы судно не простаивало зря возле стенки, а приносило всем нашим клиентам и нам бурную радость от своего существования - это уже другая повесть. </p>
-                    
-                    <p>И если судно в море, и все там идет согласно планов горячо обожаемых нами мореходов - значит не напрасно мы здесь ноги «до конца…» стираем. Вот это нас и объединяет.</br>
-                    Понятно как важна своевременность поставки оборудования.</br>
-                    Как необходима для вас оперативность в работе, и ваше желание сократить расходы своей компании.</br>
-                    Все мы понимаем и знаем цену совместной работы когда – «Всё решалось одним звонком»</br>
-                    Проблемы начинаются там, где исповедуют религию «курятника».</br>
-                    (Клюнуть ближнего и на …сесть на нижнего) </br>
-                    Совместная  работа предполагает  порядочность, взаимоуважение и доверие.</br>
-                    </p>
-                    <p>Мы не идеалисты, но мы верим, что время закрытости российского предпринимательства прошло.</br>
-                    И ВЫ убедитесь, что открытость, а значит и порядочность - это необходимость.</br>
-                    Общеизвестно, что успех зависит от слаженной работы всего комплекса компаний. </p>
-                    
-                    <p>Главная задача этого сайта -</br>
-                    Облегчить работу персоналу, занимающемуся снабжением судов оборудованием и СЗЧ для дизелей.</p>
-                    
-                    <p>Это наша попытка сделать что-то - чтобы всё давно известное стало ещё и доступным.</p>
-                    
-                    <p>Весна это время когда в природе всё расцветает.</br>
-                    Сегодня пришло время расцвета российского предпринимательства.</p>
-                    
-                    <p>Хорошие деньги зарабатываются совместными усилиями.</br>
-                    А это сила, приводящая в движение бизнес.</p>
-                    
-                    <p>До встречи,</br>
-                    Коллектив НПП «Весенний»</p>
-                </div>
+                <div id="Content">
+                </div>
+
                 <div id="Aside">
                     <img src="right.png" alt="Рекламная панель" />
                 </div>
