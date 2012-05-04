@@ -1,107 +1,60 @@
-﻿
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="jquery.js"></script> 
+    <script type="text/javascript" src="jquery.js"></script>
+    
     <script type="text/javascript">
-        $(document).ready(function () {
+    <!--
+        var myProject = new Object();
 
-            var hash = window.location.hash.substr(1);
-            var href = $('#Navigation a').each(function () {
-                var href = $(this).attr('href');
-                if (hash == href.substr(0, href.length - 5)) {
-                    var toLoad = hash + '.html';
-                    $.ajax({
-                        url: toLoad,
-                        type: 'get',
-                        error:
-                                function () {
-                                    $("#Content").html("<h1>ERROR 404</h1>");
+        myProject.ShowInContent = function (toLoad) {
+            $('#Content').hide('fast');
+            $('#Content').load(toLoad, function (response, status, xhr) { if (status == "error") { $('#Content').html("<h1> Ошибка: " + xhr.status.toString()) +"</h1>"} });
+            $('#Content').show('normal');
+            window.location.hash = toLoad;
+        }
 
-                                },
-                        success:
-                                function (html) {
-                                    $("#Content").html(html);
-
-                                }
-                    });
-                }
-            });
-            if (!hash) {
-                $.ajax({
-                    url: "main.html",
-                    type: 'get',
-                    error:
-                                function () {
-                                    $("#Content").html("<h1>ERROR 404</h1>");
-
-                                },
-                    success:
-                                function (html) {
-                                    $("#Content").html(html);
-
-                                }
-                });
+        myProject.Initialize = function () {
+            myProject.Hash = location.hash.substr(1);
+            
+            if (!myProject.Hash) {
+                myProject.ShowInContent('main.html');
+            }
+            else {
+                myProject.ShowInContent(myProject.Hash);
             }
 
             $('#Navigation a').click(function () {
-                if (this.href) {
-                    var toLoad = $(this).attr('href');
-                    $('#Content').hide('fast', loadContent);
-                    $('#load').remove();
-                    $('#Content').append('<span id="load">LOADING...</span>');
-                    $('#load').fadeIn('normal');
-                    window.location.hash = $(this).attr('href').substr(0, $(this).attr('href').length - 5);
-                    function loadContent() {
-                        $.ajax({
-                            url: toLoad,
-                            type: 'get',
-                            error:
-                                function () {
-                                    $("#Content").html("<h1>ERROR 404</h1>");
-                                    showNewContent()
-                                },
-                            success:
-                                function (html) {
-                                    $("#Content").html(html);
-                                    showNewContent()
-                                }
-                        });
-                    }
-                    function showNewContent() {
-                        $('#Content').show('normal', hideLoader());
-                    }
-                    function hideLoader() {
-                        $('#load').fadeOut('normal');
-                    }
-                    return false;
-                }
-            });
+                myProject.ShowInContent(this.href);
+                return false;
+            })
+        }
 
-        });
-    </script> 
+        $( function () { myProject.Initialize(); } );
+        -->
+    </script>
     <style type="text/css">
         body
         {
             margin: 0px;
             padding: 0px;
-            background-color:#e0e2ea;
+            background-color: #e0e2ea;
         }
         #AllBlocks
         {
-            position:relative;
+            position: relative;
             height: 100%;
             width: 960px;
             margin: 0px auto;
             padding: 0px;
-            border-left:2px solid Gray;
-            border-right:2px solid Gray;
-            background-color:White;
+            border-left: 2px solid Gray;
+            border-right: 2px solid Gray;
+            background-color: White;
         }
         #Page
         {
-            margin:0px;
+            margin: 0px;
             min-height: 100%;
             height: auto !important;
             height: 100%;
@@ -109,67 +62,67 @@
         #WrapperForTopBlocks
         {
             padding: 0px 0px 100px 0px;
-            margin:auto auto;
+            margin: auto auto;
         }
         #Footer
         {
             height: 100px;
-            margin:-100px 0px 0px 0px;
+            margin: -100px 0px 0px 0px;
             padding: 5px;
             background: Gray;
-            font-family:Calibri;
+            font-family: Calibri;
         }
         div#TopNavigation
         {
-            position:relative;
-            width:100%;
-            text-align:center;
-            background-color:Gray;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            background-color: Gray;
         }
         div#TopNavigation a
         {
-            display:inline-block;
-            background-color:Gray;
-            margin:0px;
-            padding:10px 3px;
+            display: inline-block;
+            background-color: Gray;
+            margin: 0px;
+            padding: 10px 3px;
             color: Black;
-            width:32.5%;
-            text-align:center;
-            font-family:Calibri;
-            color:White;
-            font-weight:bold;
-            text-decoration:none;
-            border-left:1px solid Black;
-            border-right:1px solid Black;
+            width: 32.5%;
+            text-align: center;
+            font-family: Calibri;
+            color: White;
+            font-weight: bold;
+            text-decoration: none;
+            border-left: 1px solid Black;
+            border-right: 1px solid Black;
         }
         div#TopNavigation a:hover
         {
-            background-color:Black;
+            background-color: Black;
             text-decoration: underline;
         }
         div#Navigation
         {
-            position:relative;
-            width:205px;
-            display:inline-block;
-            left:0px;
-            height:100%;
-            float:left;
+            position: relative;
+            width: 205px;
+            display: inline-block;
+            left: 0px;
+            height: 100%;
+            float: left;
             border: 1px solid #e7e6e4;
         }
         
         div#Navigation a
         {
-            display:block;
-            background-color:#be9974;
-            margin:0px 2px 2px 2px;
-            padding:5px 3px 5px 3px;
+            display: block;
+            background-color: #be9974;
+            margin: 0px 2px 2px 2px;
+            padding: 5px 3px 5px 3px;
             color: Black;
             border: 2px solid white;
         }
         div#Navigation a:hover
         {
-            border-color:Black;
+            border-color: Black;
         }
         img
         {
@@ -177,50 +130,48 @@
         }
         div#Header
         {
-            width:100%;
+            width: 100%;
             margin: 0px auto;
-            text-align:center;
+            text-align: center;
         }
-        div#Header img 
+        div#Header img
         {
-            top:0;
-            left:0;
-            height:150px;
+            top: 0;
+            left: 0;
+            height: 150px;
         }
         div#Content
-        {             
-            position:relative;
-            top:0px;
-            left:0px;
-            width:555px;
-            font-family:Calibri;
-            display:inline-block;
+        {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 555px;
+            font-family: Calibri;
+            display: inline-block;
             background: url(http://vesenni.ru/images/oform/popl_prod71.gif);
             border: 1px solid #e7e6e4;
-            margin:0px;
-            padding:5px;
-            min-height:600px;
+            margin: 0px;
+            padding: 5px;
+            min-height: 600px;
         }
         div#Content h1
         {
-            font-size:16pt;
-            font-family:Arial;
-            border-bottom:2px solid black;
+            font-size: 16pt;
+            font-family: Arial;
+            border-bottom: 2px solid black;
             color: #c8711b;
-            margin:0px;
-            padding:0px;
+            margin: 0px;
+            padding: 0px;
         }
         div#Aside
         {
-            display:inline-block;
-            position:relative;
-            width:176px;
-            float:right;
+            display: inline-block;
+            position: relative;
+            width: 176px;
+            float: right;
             border: 1px solid #e7e6e4;
-            margin:0px;
+            margin: 0px;
         }
-                
-
     </style>
     <title>webProject</title>
 </head>
@@ -229,21 +180,18 @@
         <div id="Page">
             <div id="WrapperForTopBlocks">
                 <div id="TopNavigation">
-                    <a href="#">СЗЧ</a><a href="#">Камаз</a><a href="#">Популярное</a> 
+                    <a href="#">СЗЧ</a><a href="#">Камаз</a><a href="#">Популярное</a>
                 </div>
                 <div id="Header">
                     <img src="logo.png" alt="Логотип Весенний" />
                 </div>
                 <div id="Navigation">
-                    <a href="main.html">Главная</a> 
-                    <a href="about.html">О компании</a> 
-                    <a href="contacts.html">Контакты</a> 
-                    <a href="null">Полезное об интересном</a> 
-                    <a href="null">Каталоги судовых дизелей</a>
+                    <a href="main.html">Главная</a> <a href="about.html">О компании</a> <a href="contacts.html">
+                        Контакты</a> <a href="null">Полезное об интересном</a> <a href="null">Каталоги судовых
+                            дизелей</a>
                 </div>
                 <div id="Content">
                 </div>
-
                 <div id="Aside">
                     <img src="right.png" alt="Рекламная панель" />
                 </div>
@@ -251,8 +199,9 @@
             <div id="Footer">
                 <b>Контакты</b><br />
                 td@vesenni.ru<br />
-                тел/факс (4232) 29-99-31 (многоканальный); <br />
-                      (4232) 30-20-93<br />
+                тел/факс (4232) 29-99-31 (многоканальный);
+                <br />
+                (4232) 30-20-93<br />
             </div>
         </div>
     </div>
