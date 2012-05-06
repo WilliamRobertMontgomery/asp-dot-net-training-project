@@ -30,7 +30,7 @@ namespace My.LabWork.Policlinic.Library.DataAccess
 			return context.Doctors.Where(x => x.Id_Specialization == id_Specialization);
 		}
 
-		public IEnumerable<Specialization> GetSpecialization()
+		public IEnumerable<Specialization> GetSpecializations()
 		{
 			return context.Specializations;
 		}
@@ -72,6 +72,12 @@ namespace My.LabWork.Policlinic.Library.DataAccess
 		{
 			context.Specializations.InsertOnSubmit(specialization);
 			context.SubmitChanges();
+		}
+
+
+		public Specialization GetSpecialization(int id)
+		{
+			return context.Specializations.FirstOrDefault(x => x.Id == id);
 		}
 	}
 }

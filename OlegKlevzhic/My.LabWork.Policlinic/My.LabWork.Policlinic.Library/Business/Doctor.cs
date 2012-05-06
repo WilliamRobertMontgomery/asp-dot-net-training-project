@@ -23,7 +23,7 @@ namespace My.LabWork.Policlinic.Library.Business
 			while (true)
 			{
 				var buf = Records.Select(x => new Tuple<Pacient, DateTime>(x.Pacient, x.Time));
-				if (buf.Where(x => (x.Item2.Minute == DateTime.Now.Minute) && (x.Item2.Hour == DateTime.Now.Hour)&&(x.Item2.Second==DateTime.Now.Second)).Count() != 0)
+				if (buf.Where(x => (x.Item2.Minute == DateTime.Now.Minute) && (x.Item2.Hour == DateTime.Now.Hour) && (x.Item2.Second == DateTime.Now.Second)).Count() != 0)
 				{
 					int i = 0;
 					while (i < 16)
@@ -47,7 +47,7 @@ namespace My.LabWork.Policlinic.Library.Business
 
 		public override string ToString()
 		{
-			return String.Format("Doctor: {0} {1}. {2}", FirstName, LastName, Specialization.NameSpecialization);
+			return String.Format("{0} {1}", FirstName, LastName);
 		}
 	}
 }

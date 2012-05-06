@@ -17,7 +17,7 @@ namespace My.LabWork.Policlinic.Library.Business
 
 		public override string ToString()
 		{
-			return String.Format("{0}\n{1}\n{2:HH:mm}",this.Doctor.ToString(),this.Pacient.ToString(),this.Time.ToString());
+			return String.Format("Doctor: {0}.\n Pacient: {1}.\n Time: {2:HH:mm}.", this.Doctor.ToString(), this.Pacient.ToString(), this.Time.ToString());
 		}
 	}
 }

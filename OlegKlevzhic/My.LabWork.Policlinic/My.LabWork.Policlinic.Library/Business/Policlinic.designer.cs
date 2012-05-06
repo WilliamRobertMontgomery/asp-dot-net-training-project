@@ -20,60 +20,68 @@ namespace My.LabWork.Policlinic.Library.Business
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-	
-	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="PoliclinicDB")]
+	using System.Configuration;
+
+
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name = "PoliclinicDB")]
 	public partial class PoliclinicDataContext : System.Data.Linq.DataContext
 	{
-		
+
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
-		
-    #region Определения метода расширяемости
-    partial void OnCreated();
-    partial void InsertDoctors(Doctor instance);
-    partial void UpdateDoctors(Doctor instance);
-    partial void DeleteDoctors(Doctor instance);
-    partial void InsertSpecializations(Specialization instance);
-    partial void UpdateSpecializations(Specialization instance);
-    partial void DeleteSpecializations(Specialization instance);
-    partial void InsertPacients(Pacient instance);
-    partial void UpdatePacients(Pacient instance);
-    partial void DeletePacients(Pacient instance);
-    partial void InsertRecords(Record instance);
-    partial void UpdateRecords(Record instance);
-    partial void DeleteRecords(Record instance);
-    #endregion
-		
-		public PoliclinicDataContext() : 
-				base(global::My.LabWork.Policlinic.Library.Properties.Settings.Default.PoliclinicDBConnectionString1, mappingSource)
+		private static string connectionString = ConfigurationManager.ConnectionStrings["PoliclinicDB"].ConnectionString.ToString();
+
+		#region Определения метода расширяемости
+		partial void OnCreated();
+		partial void InsertDoctors(Doctor instance);
+		partial void UpdateDoctors(Doctor instance);
+		partial void DeleteDoctors(Doctor instance);
+		partial void InsertSpecializations(Specialization instance);
+		partial void UpdateSpecializations(Specialization instance);
+		partial void DeleteSpecializations(Specialization instance);
+		partial void InsertPacients(Pacient instance);
+		partial void UpdatePacients(Pacient instance);
+		partial void DeletePacients(Pacient instance);
+		partial void InsertRecords(Record instance);
+		partial void UpdateRecords(Record instance);
+		partial void DeleteRecords(Record instance);
+		#endregion
+
+		public PoliclinicDataContext()
+			: base(connectionString)
 		{
 			OnCreated();
 		}
-		
-		public PoliclinicDataContext(string connection) : 
-				base(connection, mappingSource)
+
+		//	public PoliclinicDataContext() :
+		//	base(global::My.LabWork.Policlinic.Library.Properties.Settings.Default.PoliclinicDBConnectionString, mappingSource)
+		//{
+		//	OnCreated();
+		//}
+
+		public PoliclinicDataContext(string connection) :
+			base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-		
-		public PoliclinicDataContext(System.Data.IDbConnection connection) : 
-				base(connection, mappingSource)
+
+		public PoliclinicDataContext(System.Data.IDbConnection connection) :
+			base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-		
-		public PoliclinicDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
-				base(connection, mappingSource)
+
+		public PoliclinicDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) :
+			base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-		
-		public PoliclinicDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
-				base(connection, mappingSource)
+
+		public PoliclinicDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) :
+			base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-		
+
 		public System.Data.Linq.Table<Doctor> Doctors
 		{
 			get
@@ -81,7 +89,7 @@ namespace My.LabWork.Policlinic.Library.Business
 				return this.GetTable<Doctor>();
 			}
 		}
-		
+
 		public System.Data.Linq.Table<Specialization> Specializations
 		{
 			get
@@ -89,7 +97,7 @@ namespace My.LabWork.Policlinic.Library.Business
 				return this.GetTable<Specialization>();
 			}
 		}
-		
+
 		public System.Data.Linq.Table<Pacient> Pacients
 		{
 			get
@@ -97,7 +105,7 @@ namespace My.LabWork.Policlinic.Library.Business
 				return this.GetTable<Pacient>();
 			}
 		}
-		
+
 		public System.Data.Linq.Table<Record> Records
 		{
 			get
@@ -106,47 +114,47 @@ namespace My.LabWork.Policlinic.Library.Business
 			}
 		}
 	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Doctors")]
+
+	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Doctors")]
 	public partial class Doctor : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
+
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
+
 		private int _Id;
-		
+
 		private string _FirstName;
-		
+
 		private string _LastName;
-		
+
 		private int _Id_Specialization;
-		
+
 		private EntitySet<Record> _Records;
-		
+
 		private EntityRef<Specialization> _Specializations;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnFirstNameChanging(string value);
-    partial void OnFirstNameChanged();
-    partial void OnLastNameChanging(string value);
-    partial void OnLastNameChanged();
-    partial void OnId_SpecializationChanging(int value);
-    partial void OnId_SpecializationChanged();
-    #endregion
-		
+
+		#region Определения метода расширяемости
+		partial void OnLoaded();
+		partial void OnValidate(System.Data.Linq.ChangeAction action);
+		partial void OnCreated();
+		partial void OnIdChanging(int value);
+		partial void OnIdChanged();
+		partial void OnFirstNameChanging(string value);
+		partial void OnFirstNameChanged();
+		partial void OnLastNameChanging(string value);
+		partial void OnLastNameChanged();
+		partial void OnId_SpecializationChanging(int value);
+		partial void OnId_SpecializationChanged();
+		#endregion
+
 		public Doctor()
 		{
 			this._Records = new EntitySet<Record>(new Action<Record>(this.attach_Records), new Action<Record>(this.detach_Records));
 			this._Specializations = default(EntityRef<Specialization>);
 			OnCreated();
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
 		public int Id
 		{
 			get
@@ -165,8 +173,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_FirstName", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
 		public string FirstName
 		{
 			get
@@ -185,8 +193,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LastName", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
 		public string LastName
 		{
 			get
@@ -205,8 +213,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Specialization", DbType="Int NOT NULL")]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id_Specialization", DbType = "Int NOT NULL")]
 		public int Id_Specialization
 		{
 			get
@@ -229,8 +237,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Doctors_Records", Storage="_Records", ThisKey="Id", OtherKey="Id_Doctor")]
+
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Doctors_Records", Storage = "_Records", ThisKey = "Id", OtherKey = "Id_Doctor")]
 		public EntitySet<Record> Records
 		{
 			get
@@ -242,8 +250,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				this._Records.Assign(value);
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Specializations_Doctors", Storage="_Specializations", ThisKey="Id_Specialization", OtherKey="Id", IsForeignKey=true)]
+
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Specializations_Doctors", Storage = "_Specializations", ThisKey = "Id_Specialization", OtherKey = "Id", IsForeignKey = true)]
 		public Specialization Specialization
 		{
 			get
@@ -253,7 +261,7 @@ namespace My.LabWork.Policlinic.Library.Business
 			set
 			{
 				Specialization previousValue = this._Specializations.Entity;
-				if (((previousValue != value) 
+				if (((previousValue != value)
 							|| (this._Specializations.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
@@ -276,11 +284,11 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
+
 		public event PropertyChangingEventHandler PropertyChanging;
-		
+
 		public event PropertyChangedEventHandler PropertyChanged;
-		
+
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -288,7 +296,7 @@ namespace My.LabWork.Policlinic.Library.Business
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
+
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -296,49 +304,49 @@ namespace My.LabWork.Policlinic.Library.Business
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
+
 		private void attach_Records(Record entity)
 		{
 			this.SendPropertyChanging();
 			entity.Doctor = this;
 		}
-		
+
 		private void detach_Records(Record entity)
 		{
 			this.SendPropertyChanging();
 			entity.Doctor = null;
 		}
 	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Specializations")]
+
+	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Specializations")]
 	public partial class Specialization : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
+
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
+
 		private int _Id;
-		
+
 		private string _NameSpecialization;
-		
+
 		private EntitySet<Doctor> _Doctors;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnNameSpecializationChanging(string value);
-    partial void OnNameSpecializationChanged();
-    #endregion
-		
+
+		#region Определения метода расширяемости
+		partial void OnLoaded();
+		partial void OnValidate(System.Data.Linq.ChangeAction action);
+		partial void OnCreated();
+		partial void OnIdChanging(int value);
+		partial void OnIdChanged();
+		partial void OnNameSpecializationChanging(string value);
+		partial void OnNameSpecializationChanged();
+		#endregion
+
 		public Specialization()
 		{
 			this._Doctors = new EntitySet<Doctor>(new Action<Doctor>(this.attach_Doctors), new Action<Doctor>(this.detach_Doctors));
 			OnCreated();
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
 		public int Id
 		{
 			get
@@ -357,8 +365,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameSpecialization", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_NameSpecialization", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
 		public string NameSpecialization
 		{
 			get
@@ -377,8 +385,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Specializations_Doctors", Storage="_Doctors", ThisKey="Id", OtherKey="Id_Specialization")]
+
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Specializations_Doctors", Storage = "_Doctors", ThisKey = "Id", OtherKey = "Id_Specialization")]
 		public EntitySet<Doctor> Doctors
 		{
 			get
@@ -390,11 +398,11 @@ namespace My.LabWork.Policlinic.Library.Business
 				this._Doctors.Assign(value);
 			}
 		}
-		
+
 		public event PropertyChangingEventHandler PropertyChanging;
-		
+
 		public event PropertyChangedEventHandler PropertyChanged;
-		
+
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -402,7 +410,7 @@ namespace My.LabWork.Policlinic.Library.Business
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
+
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -410,53 +418,53 @@ namespace My.LabWork.Policlinic.Library.Business
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
+
 		private void attach_Doctors(Doctor entity)
 		{
 			this.SendPropertyChanging();
 			entity.Specialization = this;
 		}
-		
+
 		private void detach_Doctors(Doctor entity)
 		{
 			this.SendPropertyChanging();
 			entity.Specialization = null;
 		}
 	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Pacients")]
+
+	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Pacients")]
 	public partial class Pacient : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
+
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
+
 		private int _Id;
-		
+
 		private string _FirstName;
-		
+
 		private string _LastName;
-		
+
 		private EntitySet<Record> _Records;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnFirstNameChanging(string value);
-    partial void OnFirstNameChanged();
-    partial void OnLastNameChanging(string value);
-    partial void OnLastNameChanged();
-    #endregion
-		
+
+		#region Определения метода расширяемости
+		partial void OnLoaded();
+		partial void OnValidate(System.Data.Linq.ChangeAction action);
+		partial void OnCreated();
+		partial void OnIdChanging(int value);
+		partial void OnIdChanged();
+		partial void OnFirstNameChanging(string value);
+		partial void OnFirstNameChanged();
+		partial void OnLastNameChanging(string value);
+		partial void OnLastNameChanged();
+		#endregion
+
 		public Pacient()
 		{
 			this._Records = new EntitySet<Record>(new Action<Record>(this.attach_Records), new Action<Record>(this.detach_Records));
 			OnCreated();
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
 		public int Id
 		{
 			get
@@ -475,8 +483,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_FirstName", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
 		public string FirstName
 		{
 			get
@@ -495,8 +503,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LastName", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
 		public string LastName
 		{
 			get
@@ -515,8 +523,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Pacients_Records", Storage="_Records", ThisKey="Id", OtherKey="Id_Pacient")]
+
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Pacients_Records", Storage = "_Records", ThisKey = "Id", OtherKey = "Id_Pacient")]
 		public EntitySet<Record> Records
 		{
 			get
@@ -528,11 +536,11 @@ namespace My.LabWork.Policlinic.Library.Business
 				this._Records.Assign(value);
 			}
 		}
-		
+
 		public event PropertyChangingEventHandler PropertyChanging;
-		
+
 		public event PropertyChangedEventHandler PropertyChanged;
-		
+
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -540,7 +548,7 @@ namespace My.LabWork.Policlinic.Library.Business
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
+
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -548,60 +556,60 @@ namespace My.LabWork.Policlinic.Library.Business
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
+
 		private void attach_Records(Record entity)
 		{
 			this.SendPropertyChanging();
 			entity.Pacient = this;
 		}
-		
+
 		private void detach_Records(Record entity)
 		{
 			this.SendPropertyChanging();
 			entity.Pacient = null;
 		}
 	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Records")]
+
+	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Records")]
 	public partial class Record : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
+
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
+
 		private int _Id;
-		
+
 		private int _Id_Doctor;
-		
+
 		private int _Id_Pacient;
-		
+
 		private System.DateTime _Time;
-		
+
 		private EntityRef<Doctor> _Doctors;
-		
+
 		private EntityRef<Pacient> _Pacients;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnId_DoctorChanging(int value);
-    partial void OnId_DoctorChanged();
-    partial void OnId_PacientChanging(int value);
-    partial void OnId_PacientChanged();
-    partial void OnTimeChanging(System.DateTime value);
-    partial void OnTimeChanged();
-    #endregion
-		
+
+		#region Определения метода расширяемости
+		partial void OnLoaded();
+		partial void OnValidate(System.Data.Linq.ChangeAction action);
+		partial void OnCreated();
+		partial void OnIdChanging(int value);
+		partial void OnIdChanged();
+		partial void OnId_DoctorChanging(int value);
+		partial void OnId_DoctorChanged();
+		partial void OnId_PacientChanging(int value);
+		partial void OnId_PacientChanged();
+		partial void OnTimeChanging(System.DateTime value);
+		partial void OnTimeChanged();
+		#endregion
+
 		public Record()
 		{
 			this._Doctors = default(EntityRef<Doctor>);
 			this._Pacients = default(EntityRef<Pacient>);
 			OnCreated();
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
 		public int Id
 		{
 			get
@@ -620,8 +628,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Doctor", DbType="Int NOT NULL")]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id_Doctor", DbType = "Int NOT NULL")]
 		public int Id_Doctor
 		{
 			get
@@ -644,8 +652,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Pacient", DbType="Int NOT NULL")]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id_Pacient", DbType = "Int NOT NULL")]
 		public int Id_Pacient
 		{
 			get
@@ -668,8 +676,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Time", DbType="DateTime NOT NULL")]
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Time", DbType = "DateTime NOT NULL")]
 		public System.DateTime Time
 		{
 			get
@@ -688,8 +696,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Doctors_Records", Storage="_Doctors", ThisKey="Id_Doctor", OtherKey="Id", IsForeignKey=true)]
+
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Doctors_Records", Storage = "_Doctors", ThisKey = "Id_Doctor", OtherKey = "Id", IsForeignKey = true)]
 		public Doctor Doctor
 		{
 			get
@@ -699,7 +707,7 @@ namespace My.LabWork.Policlinic.Library.Business
 			set
 			{
 				Doctor previousValue = this._Doctors.Entity;
-				if (((previousValue != value) 
+				if (((previousValue != value)
 							|| (this._Doctors.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
@@ -722,8 +730,8 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Pacients_Records", Storage="_Pacients", ThisKey="Id_Pacient", OtherKey="Id", IsForeignKey=true)]
+
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Pacients_Records", Storage = "_Pacients", ThisKey = "Id_Pacient", OtherKey = "Id", IsForeignKey = true)]
 		public Pacient Pacient
 		{
 			get
@@ -733,7 +741,7 @@ namespace My.LabWork.Policlinic.Library.Business
 			set
 			{
 				Pacient previousValue = this._Pacients.Entity;
-				if (((previousValue != value) 
+				if (((previousValue != value)
 							|| (this._Pacients.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
@@ -756,11 +764,11 @@ namespace My.LabWork.Policlinic.Library.Business
 				}
 			}
 		}
-		
+
 		public event PropertyChangingEventHandler PropertyChanging;
-		
+
 		public event PropertyChangedEventHandler PropertyChanged;
-		
+
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -768,7 +776,7 @@ namespace My.LabWork.Policlinic.Library.Business
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
+
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))

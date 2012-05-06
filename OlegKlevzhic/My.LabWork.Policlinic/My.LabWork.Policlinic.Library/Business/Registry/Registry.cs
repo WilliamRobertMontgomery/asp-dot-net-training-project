@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using My.LabWork.Policlinic.Library.DataAccess;
-using My.LabWork.Policlinic.Library.Extentions;
 
 namespace My.LabWork.Policlinic.Library.Business.Registry
 {
-	public class Registry : IRegistry
+	public class Registry : Repository, IRegistry
 	{
-		private IRepository repository;
-
 		public Registry()
+			: base()
 		{
-			repository = new Repository();
 		}
 
 		public string Greeting(Pacient thePacient)
@@ -21,19 +18,9 @@ namespace My.LabWork.Policlinic.Library.Business.Registry
 			return String.Format("Hello,{0}!", thePacient.ToString());
 		}
 
-		public string GetSpecialization()
-		{
-			return repository.GetSpecialization().GetString();
-		}
-
-		public string GetDoctorsSpecialization(int id_Specialization)
-		{
-			return repository.GetDoctorsSpecialization(id_Specialization).GetString();
-		}
-
 		public DateTime GetTimeDoctor(int id_Doctor)
 		{
-			var time = repository.GetRecordsDoctor(id_Doctor).Select(x => x.Time).DefaultIfEmpty(DateTime.Now).Max();
+			var time = GetRecordsDoctor(id_Doctor).Select(x => x.Time).DefaultIfEmpty(DateTime.Now).Max();
 			if (DateTime.Now > time)
 			{
 				return DateTime.Now.AddMinutes(2);
@@ -46,7 +33,7 @@ namespace My.LabWork.Policlinic.Library.Business.Registry
 
 		public DateTime GetTimeSpecialization(int id_Specialization)
 		{
-			var time = repository.GetRecordSpecialization(id_Specialization).Select(x => x.Time).DefaultIfEmpty(DateTime.Now).Max();
+			var time = GetRecordSpecialization(id_Specialization).Select(x => x.Time).DefaultIfEmpty(DateTime.Now).Max();
 
 			if (DateTime.Now > time)
 			{
@@ -60,25 +47,20 @@ namespace My.LabWork.Policlinic.Library.Business.Registry
 
 		public Record WriteToReceptionSpecialization(int id_Specialization, Pacient thePacient)
 		{
-			int idDoctor = repository.GetRecordSpecialization(id_Specialization).OrderByDescending(x => x.Time).FirstOrDefault().Id_Doctor;
+			int idDoctor = GetRecordSpecialization(id_Specialization).OrderByDescending(x => x.Time).FirstOrDefault().Id_Doctor;
 			DateTime time = GetTimeSpecialization(id_Specialization);
 			Record theRecord = new Record(idDoctor, thePacient.Id, time);
-			repository.AddPacient(thePacient);
-			repository.AddRecord(theRecord);
+			AddPacient(thePacient);
+			AddRecord(theRecord);
 			return theRecord;
 		}
 
 		public Record WriteToReceptionDoctor(int id_Doctor, Pacient thePacient)
 		{
-			repository.AddPacient(thePacient);
+			AddPacient(thePacient);
 			Record theRecord = new Record(id_Doctor, thePacient.Id, GetTimeDoctor(id_Doctor));
-			repository.AddRecord(theRecord);
+			AddRecord(theRecord);
 			return theRecord;
-		}
-
-		public Doctor GetDoctor(int id_Doctor)
-		{
-			return repository.GetDoctor(id_Doctor);
 		}
 	}
 }

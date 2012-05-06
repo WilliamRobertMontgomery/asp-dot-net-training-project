@@ -8,7 +8,8 @@ namespace My.LabWork.Policlinic.Library.DataAccess
 {
 	public interface IRepository
 	{
-		IEnumerable<Specialization> GetSpecialization();
+		IEnumerable<Specialization> GetSpecializations();
+		Specialization GetSpecialization(int id);
 		Doctor GetDoctor(int id);
 		IEnumerable<Doctor> GetDoctors();
 		IEnumerable<Doctor> GetDoctorsSpecialization(int idSpecialization);
