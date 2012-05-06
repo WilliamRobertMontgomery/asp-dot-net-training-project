@@ -26,22 +26,11 @@ namespace My.LabWork.Policlinic.Library.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC-ASSASSIN\\SQLSERVERR2;AttachDbFilename=|DataDirectory|\\PoliclinicDB" +
-            ".mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC-Assassin\\SQLSERVERR2;Initial Catalog=PoliclinicDB;Integrated Secur" +
+            "ity=True")]
         public string PoliclinicDBConnectionString {
             get {
                 return ((string)(this["PoliclinicDBConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC-Assassin\\SQLSERVERR2;Initial Catalog=PoliclinicDB;Integrated Secur" +
-            "ity=True")]
-        public string PoliclinicDBConnectionString1 {
-            get {
-                return ((string)(this["PoliclinicDBConnectionString1"]));
             }
         }
     }

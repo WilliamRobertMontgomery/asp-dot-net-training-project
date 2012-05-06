@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PoliclinicDB" Class="PoliclinicDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=PC-Assassin\SQLSERVERR2;Initial Catalog=PoliclinicDB;Integrated Security=True" SettingsObjectName="My.LabWork.Policlinic.Library.Properties.Settings" SettingsPropertyName="PoliclinicDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PC-Assassin\SQLSERVERR2;Initial Catalog=PoliclinicDB;Integrated Security=True" SettingsObjectName="My.LabWork.Policlinic.Library.Properties.Settings" SettingsPropertyName="PoliclinicDBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Doctors" Member="Doctors">
     <Type Name="Doctors">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

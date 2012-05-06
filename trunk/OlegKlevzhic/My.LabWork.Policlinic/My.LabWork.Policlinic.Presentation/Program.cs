@@ -17,13 +17,13 @@ namespace My.LabWork.Policlinic.Presentation
 		public static void MenuSpecialization()
 		{
 			Console.WriteLine("0. Quit");
-			Console.Write(theRegistry.GetSpecialization());
+			Console.Write(theRegistry.GetSpecializations().GetString());
 		}
 
 		public static void MenuDoctors(int numberSpecialization)
 		{
 			Console.WriteLine("0. Back up.");
-			Console.WriteLine(theRegistry.GetDoctorsSpecialization(numberSpecialization));
+			Console.WriteLine(theRegistry.GetDoctorsSpecialization(numberSpecialization).GetString());
 		}
 
 		public static void MenuRegistration(int numberDoctor)

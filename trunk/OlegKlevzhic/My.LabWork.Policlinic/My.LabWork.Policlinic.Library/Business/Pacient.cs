@@ -16,7 +16,7 @@ namespace My.LabWork.Policlinic.Library.Business
 
 		public override string ToString()
 		{
-			return String.Format("Pacient: {0} {1}", FirstName, LastName);
+			return String.Format("{0} {1}", FirstName, LastName);
 		}
 	}
 }

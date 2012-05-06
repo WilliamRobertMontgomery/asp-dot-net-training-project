@@ -22,24 +22,6 @@ namespace My.LabWork.Policlinic.Test
 		}
 
 		[Test]
-		public void GetSpecializationTest()
-		{
-			Assert.AreEqual(registry.GetSpecialization(), "1. Surgeon\n2. Therapist\n");
-		}
-
-		[Test]
-		public void GetDoctorTest()
-		{
-			Assert.AreEqual(registry.GetDoctor(1).ToString(), "Doctor: Michael Jhonson. Surgeon");
-		}
-
-		[Test]
-		public void GetDoctorsSpecializationTest()
-		{
-			Assert.AreEqual(registry.GetDoctorsSpecialization(1), "1. Doctor: Michael Jhonson. Surgeon\n2. Doctor: Anna Nicolson. Surgeon\n");
-		}
-
-		[Test]
 		public void GetTimeDoctoTest()
 		{
 			Assert.AreEqual(registry.GetTimeDoctor(1), DateTime.Now.AddMinutes(2));

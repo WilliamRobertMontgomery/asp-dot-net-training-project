@@ -47,6 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
@@ -112,7 +113,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="Business\Policlinic.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Policlinic.designer.cs</LastGenOutput>
