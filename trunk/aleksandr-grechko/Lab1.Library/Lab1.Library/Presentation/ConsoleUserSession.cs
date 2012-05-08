@@ -14,13 +14,9 @@ namespace Lab1.Library.Presentation
 
 		private LibraryClass library;
 
-		private ResourceManager rm;
-
 		public ConsoleUserSession(LibraryClass library)
 		{
 			this.library = library;
-						
-			rm = ResourceManager.CreateFileBasedResourceManager("ConsoleResources", ".", null);
 		}
 
 		public void MainMenuView()
@@ -41,8 +37,8 @@ namespace Lab1.Library.Presentation
                  * http://msdn.microsoft.com/en-us/library/9za7fxc7.aspx
                  * http://msdn.microsoft.com/en-us/library/7k989cfy%28v=vs.90%29.aspx
                 */
-				Console.WriteLine(rm.GetString("ReaderNameTitle"), (reader != null) ? reader.FullName : "Anonymous");
-				Console.WriteLine(rm.GetString("MainMenu"));
+				Console.WriteLine(ConsoleResource.ReaderNameTitle, (reader != null) ? reader.FullName : "Anonymous");
+				Console.WriteLine(ConsoleResource.MainMenu);
 				switch (GetMenuNumber(5))
 				{
 					case 1:
@@ -56,11 +52,11 @@ namespace Lab1.Library.Presentation
 						}
 						break;
 					case 3:
-						Console.Write(rm.GetString("AuthorNamePrompt"));
+						Console.Write(ConsoleResource.AuthorNamePrompt);
 						GetBook(GetObjectFromListObjects(library.GetBooksByAuthor(Console.ReadLine())) as Book);
 						break;
 					case 4:
-						Console.Write(rm.GetString("TitleBookPrompt"));
+						Console.Write(ConsoleResource.TitleBookPrompt);
 						GetBook(GetObjectFromListObjects(library.GetBooksByTitle(Console.ReadLine())) as Book);
 						break;
 					case 5:
@@ -81,7 +77,7 @@ namespace Lab1.Library.Presentation
 			library.ExitReader(reader);
 			reader = null;
 
-			Console.WriteLine(rm.GetString("CountinueSessionQuestion"));
+			Console.WriteLine(ConsoleResource.CountinueSessionQuestion);
 			if (GetMenuNumber(1) == 0) return true;
 
 			return false;
@@ -92,14 +88,14 @@ namespace Lab1.Library.Presentation
 			if (book == null) return;
 			if (reader == null && !Authorization()) return;
 			Console.Clear();
-			Console.WriteLine(rm.GetString("OrderBookTitle"), book);
+			Console.WriteLine(ConsoleResource.OrderBookTitle, book);
 			if (library.OrderBook(book, reader))
 			{
-				Console.WriteLine(rm.GetString("OrderSuccess"));
+				Console.WriteLine(ConsoleResource.OrderSuccess);
 			}
 			else
 			{
-				Console.WriteLine(rm.GetString("OrderWrong"));
+				Console.WriteLine(ConsoleResource.OrderWrong);
 			}
 			Console.ReadLine();
 		}
@@ -115,22 +111,21 @@ namespace Lab1.Library.Presentation
 		{
 			if (reader != null) return true;
 			Console.Clear();
-			//Console.WriteLine("Авторизация\n");	rm.GetString("")
-			Console.WriteLine(rm.GetString("AuthorizationTitle"));
-			Console.Write(rm.GetString("AuthorizationPrompt"));
+			Console.WriteLine(ConsoleResource.AuthorizationTitle);
+			Console.Write(ConsoleResource.AuthorNamePrompt);
 			string fullName = Console.ReadLine();
 			reader = library.GetReader(fullName);
 			if (reader == null)
 			{
-				Console.WriteLine(rm.GetString("ReaderNotFound"));
-				Console.WriteLine(rm.GetString("AddNewReaderQuestion"));
+				Console.WriteLine(ConsoleResource.ReaderNotFound);
+				Console.WriteLine(ConsoleResource.AddNewReaderQuestion);
 				if (GetMenuNumber(1) == 0) return false;
-				Console.Write(rm.GetString("AddressNewReaderPrompt"));
+				Console.Write(ConsoleResource.AddressNewReaderPrompt);
 				reader = library.AddReader(fullName, Console.ReadLine());
 			}
 			if (!library.AuthorizationReader(reader))
 			{
-				Console.WriteLine(rm.GetString("AuthorizationError"), reader.FullName);
+				Console.WriteLine(ConsoleResource.AuthorizationError, reader.FullName);
 				Console.ReadLine();
 				reader = null;
 				return false;
@@ -143,7 +138,7 @@ namespace Lab1.Library.Presentation
 			Console.Clear();
 			for (int i = 0; i <= objects.Count() - 1; i++)
 				Console.WriteLine("{0}. {1}", i + 1, objects.ElementAt(i));
-			Console.WriteLine(rm.GetString("Exit"));
+			Console.WriteLine(ConsoleResource.Exit);
 
 			int index = GetMenuNumber(objects.Count());
 

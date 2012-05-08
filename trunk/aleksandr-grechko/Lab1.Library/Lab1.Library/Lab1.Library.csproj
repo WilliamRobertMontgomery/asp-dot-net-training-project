@@ -59,6 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\LibraryClass.cs" />
+    <Compile Include="ConsoleResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsoleResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\Repository.cs" />
     <Compile Include="DataAccess\RepositoryFactory\XMLRepositoryFactory.cs" />
     <Compile Include="DataAccess\RepositoryFactory\TextRepositoryFactory.cs" />
@@ -117,13 +122,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ConsoleResources.resources">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ConsoleResources.txt" />
+    <EmbeddedResource Include="ConsoleResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConsoleResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

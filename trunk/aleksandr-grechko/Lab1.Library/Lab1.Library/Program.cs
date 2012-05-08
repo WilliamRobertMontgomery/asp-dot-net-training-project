@@ -48,7 +48,7 @@ namespace Lab1.Library
 			//Repository repository = new Repository(new TextRepositoryFactory());
 			Repository repository = new Repository(new XMLRepositoryFactory());
 			
-			//InitData(repository);
+			if (repository.BookRepository.GetItems().Count() == 0) InitData(repository);
 
 			library = new LibraryClass(repository);
 
