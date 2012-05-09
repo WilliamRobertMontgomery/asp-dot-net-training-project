@@ -1,0 +1,8 @@
+F:\учеба\ASP_EPAM\ЛАБЫ!!!\Lab2\Lab2.Tests\obj\Debug\ResolveAssemblyReference.cache
+F:\учеба\ASP_EPAM\ЛАБЫ!!!\Lab2\Lab2.Tests\bin\Debug\Lab2.Tests.dll
+F:\учеба\ASP_EPAM\ЛАБЫ!!!\Lab2\Lab2.Tests\bin\Debug\Lab2.Tests.pdb
+F:\учеба\ASP_EPAM\ЛАБЫ!!!\Lab2\Lab2.Tests\bin\Debug\Lab2.exe
+F:\учеба\ASP_EPAM\ЛАБЫ!!!\Lab2\Lab2.Tests\bin\Debug\nunit.framework.dll
+F:\учеба\ASP_EPAM\ЛАБЫ!!!\Lab2\Lab2.Tests\bin\Debug\Lab2.pdb
+F:\учеба\ASP_EPAM\ЛАБЫ!!!\Lab2\Lab2.Tests\obj\Debug\Lab2.Tests.dll
+F:\учеба\ASP_EPAM\ЛАБЫ!!!\Lab2\Lab2.Tests\obj\Debug\Lab2.Tests.pdb
