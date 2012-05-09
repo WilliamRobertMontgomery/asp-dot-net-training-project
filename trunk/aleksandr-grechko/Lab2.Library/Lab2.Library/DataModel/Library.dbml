@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Library" Class="LibraryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Data\Library.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="Lab2.Library.Properties.Settings" SettingsPropertyName="LibraryConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Books" Member="Books">
+    <Type Name="Book">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Author" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Book_Order" Member="Orders" ThisKey="Id" OtherKey="BookId" Type="Order" />
+      <Association Name="LibraryDepartment_Book" Member="LibraryDepartment" ThisKey="DepartmentId" OtherKey="Id" Type="LibraryDepartment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Readers" Member="Readers">
+    <Type Name="Reader">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Reader_Order" Member="Orders" ThisKey="Id" OtherKey="ReaderId" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Librarians" Member="Librarians">
+    <Type Name="Librarian">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Librarian_Order" Member="Orders" ThisKey="Id" OtherKey="LibrarianOpenOrderId" Type="Order" />
+      <Association Name="Librarian_Order1" Member="Orders1" ThisKey="Id" OtherKey="LibrarianClosedOrderId" Type="Order" />
+      <Association Name="LibraryDepartment_Librarian" Member="LibraryDepartment" ThisKey="DepartmentId" OtherKey="Id" Type="LibraryDepartment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LibraryDepartments" Member="LibraryDepartments">
+    <Type Name="LibraryDepartment">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsAbonement" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="LibraryDepartment_Book" Member="Books" ThisKey="Id" OtherKey="DepartmentId" Type="Book" />
+      <Association Name="LibraryDepartment_Librarian" Member="Librarians" ThisKey="Id" OtherKey="DepartmentId" Type="Librarian" />
+      <Association Name="LibraryDepartment_Order" Member="Orders" ThisKey="Id" OtherKey="DepartmentId" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Order">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReaderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="BookId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TimeGetBook" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LibrarianOpenOrderId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TimeReturnBook" Type="System.DateTime" DbType="DateTime" CanBeNull="false" />
+      <Column Name="LibrarianClosedOrderId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Closed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Book_Order" Member="Book" ThisKey="BookId" OtherKey="Id" Type="Book" IsForeignKey="true" />
+      <Association Name="Librarian_Order" Member="Librarian" ThisKey="LibrarianOpenOrderId" OtherKey="Id" Type="Librarian" IsForeignKey="true" />
+      <Association Name="Librarian_Order1" Member="Librarian1" ThisKey="LibrarianClosedOrderId" OtherKey="Id" Type="Librarian" IsForeignKey="true" />
+      <Association Name="LibraryDepartment_Order" Member="LibraryDepartment" ThisKey="DepartmentId" OtherKey="Id" Type="LibraryDepartment" IsForeignKey="true" />
+      <Association Name="Reader_Order" Member="Reader" ThisKey="ReaderId" OtherKey="Id" Type="Reader" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
