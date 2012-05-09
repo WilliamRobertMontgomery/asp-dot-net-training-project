@@ -1,6 +1,0 @@
-f:\учеба\ASP_EPAM\practice\hometask\Lab2\Lab2\bin\Debug\Lab2.exe.config
-f:\учеба\ASP_EPAM\practice\hometask\Lab2\Lab2\bin\Debug\Lab2.exe
-f:\учеба\ASP_EPAM\practice\hometask\Lab2\Lab2\bin\Debug\Lab2.pdb
-f:\учеба\ASP_EPAM\practice\hometask\Lab2\Lab2\obj\x86\Debug\ResolveAssemblyReference.cache
-f:\учеба\ASP_EPAM\practice\hometask\Lab2\Lab2\obj\x86\Debug\Lab2.exe
-f:\учеба\ASP_EPAM\practice\hometask\Lab2\Lab2\obj\x86\Debug\Lab2.pdb
