@@ -10,7 +10,7 @@ namespace Lab1Airport
 
     class CCashier
     {
-        public CCashier(ref CBank bank,ref CBasicReis basicReis, ref CReis reis, ref CClients clients, ref CPlains aircrafts)
+        public CCashier(ref DataAccessBank bank,ref DataAccessBasicReis basicReis, ref DataAccessReis reis, ref DataAccessClients clients, ref DataAccessPlains aircrafts)
         {
             BankEntitie = bank;
             ReisEntitie = reis;
@@ -18,11 +18,11 @@ namespace Lab1Airport
             BasicReisEntitie = basicReis;
             PlainsEntitie = aircrafts;
         }
-        private CBank BankEntitie;
-        private CReis ReisEntitie;
-        private CBasicReis BasicReisEntitie;
-        private CClients ClientsEntitie;
-        private CPlains PlainsEntitie;
+        private DataAccessBank BankEntitie;
+        private DataAccessReis ReisEntitie;
+        private DataAccessBasicReis BasicReisEntitie;
+        private DataAccessClients ClientsEntitie;
+        private DataAccessPlains PlainsEntitie;
         
         //Бронирование
         public void Reserve()

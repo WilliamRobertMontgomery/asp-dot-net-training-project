@@ -22,7 +22,7 @@ namespace Tests
             expectedBank.Ammount = ammount;
             expectedBank.Date = date;
 
-            CBank bank = new CBank();
+            DataAccessBank bank = new DataAccessBank();
             bank.AddElement(expectedBank);
             var actualBank = bank.GetAll().Last();
             Assert.AreEqual(expectedBank, actualBank);
@@ -50,7 +50,7 @@ namespace Tests
             Plains expectedPlains = new Plains();
             expectedPlains.NumberOfSeats = numberOfSeats;
 
-            CPlains plains = new CPlains();
+            DataAccessPlains plains = new DataAccessPlains();
             plains.AddElement(expectedPlains);
             var actualPLains = plains.GetAll().Last();
             Assert.AreEqual(expectedPlains, actualPLains);
@@ -77,7 +77,7 @@ namespace Tests
             Reis expectedReis = new Reis();
             expectedReis.Date = date;
 
-            CReis reis = new CReis();
+            DataAccessReis reis = new DataAccessReis();
             reis.AddElement(expectedReis);
             var actualReis = reis.GetAll().Last();
             Assert.AreEqual(expectedReis, actualReis);
@@ -104,7 +104,7 @@ namespace Tests
             BasicReis expectedBasicReis = new BasicReis();
             expectedBasicReis.Date = date;
 
-            CBasicReis basicReis = new CBasicReis();
+            DataAccessBasicReis basicReis = new DataAccessBasicReis();
             basicReis.AddElement(expectedBasicReis);
             var actualBasicReis = basicReis.GetAll().Last();
             Assert.AreEqual(expectedBasicReis, actualBasicReis);
@@ -131,7 +131,7 @@ namespace Tests
             Clients expectedClients = new Clients();
             expectedClients.BookOrBuy = bookOrBuy;
 
-            CClients basicReis = new CClients();
+            DataAccessClients basicReis = new DataAccessClients();
             basicReis.AddElement(expectedClients);
             var actualClients = basicReis.GetAll().Last();
             Assert.AreEqual(expectedClients, actualClients);

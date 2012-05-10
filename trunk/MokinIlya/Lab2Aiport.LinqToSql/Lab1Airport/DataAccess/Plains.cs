@@ -6,11 +6,11 @@ using Lab1Airport.Repository;
 
 namespace Lab1Airport
 {
-    public class CPlains:IRepository<Plains>
+    public class DataAccessPlains:IRepository<Plains>
     {
         private DBAiportDataContext _context;
 
-        public CPlains()
+        public DataAccessPlains()
         {
             _context = new DBAiportDataContext();
         }

@@ -14,18 +14,18 @@ namespace Lab1Airport
         static void Main(string[] args)
         {
             //Инициализуруем и заполняем необходимые объекты
-            CBank Bank = new CBank();
-            CBasicReis BasicReis = new CBasicReis();
-            CReis Reis = new CReis();
-            CClients Clients = new CClients();
-            CPlains Plains = new CPlains();
+            DataAccessBank Bank = new DataAccessBank();
+            DataAccessBasicReis BasicReis = new DataAccessBasicReis();
+            DataAccessReis Reis = new DataAccessReis();
+            DataAccessClients Clients = new DataAccessClients();
+            DataAccessPlains Plains = new DataAccessPlains();
 
             CCashier Cashier = new CCashier(ref Bank, ref BasicReis, ref Reis, ref Clients, ref Plains);
 
             OutMenu(Reis, Cashier);
         }
 
-        private static void OutMenu(CReis Reis, CCashier Cashier)
+        private static void OutMenu(DataAccessReis Reis, CCashier Cashier)
 {
             Console.WriteLine("МЕНЮ");
             Console.WriteLine("1 - Генерация новых рейсов");
