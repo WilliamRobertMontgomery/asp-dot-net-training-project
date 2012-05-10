@@ -6,11 +6,11 @@ using Lab1Airport.Repository;
 
 namespace Lab1Airport
 {
-    public class CClients:IRepository<Clients>
+    public class DataAccessClients:IRepository<Clients>
     {
         private DBAiportDataContext _context;
 
-        public CClients()
+        public DataAccessClients()
         {
             _context = new DBAiportDataContext();
         }
