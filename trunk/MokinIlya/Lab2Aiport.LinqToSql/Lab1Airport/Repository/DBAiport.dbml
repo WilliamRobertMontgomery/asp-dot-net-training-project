@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBAiport" Class="DBAiportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ILIAPC\SQLEXPRESS;Initial Catalog=DBAiport;Integrated Security=True" SettingsObjectName="Lab1Airport.Properties.Settings" SettingsPropertyName="DBAiportConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Clients" Member="Clients">
+    <Type Name="Clients">
+      <Column Name="CodeClient" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodeReis" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BookOrBuy" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Reis_Clients" Member="Reis" ThisKey="CodeReis" OtherKey="CodeReis" Type="Reis" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reis" Member="Reis">
+    <Type Name="Reis">
+      <Column Name="CodeReis" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CodeBasicReis" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Reis_Clients" Member="Clients" ThisKey="CodeReis" OtherKey="CodeReis" Type="Clients" />
+      <Association Name="BasicReis_Reis" Member="BasicReis" ThisKey="CodeBasicReis" OtherKey="CodeBasicReis" Type="BasicReis" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Plains" Member="Plains">
+    <Type Name="Plains">
+      <Column Name="CodePlane" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NumberOfSeats" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Plains_BasicReis" Member="BasicReis" ThisKey="CodePlane" OtherKey="CodePlain" Type="BasicReis" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BasicReis" Member="BasicReis">
+    <Type Name="BasicReis">
+      <Column Name="CodeBasicReis" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Interval" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[To]" Member="To" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
+      <Column Name="CodePlain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BasicReis_Reis" Member="Reis" ThisKey="CodeBasicReis" OtherKey="CodeBasicReis" Type="Reis" />
+      <Association Name="Plains_BasicReis" Member="Plains" ThisKey="CodePlain" OtherKey="CodePlane" Type="Plains" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bank" Member="Bank">
+    <Type Name="Bank">
+      <Column Name="Ammount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="CodePayment" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
