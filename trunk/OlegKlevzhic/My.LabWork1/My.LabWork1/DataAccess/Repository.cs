@@ -9,10 +9,9 @@ namespace My.LabWork1.Policlinic.DataAccess
 {
 	public class Repository<T> : IRepository<T> where T : EntityBase
 	{
-		private const string path = @"e:\#Worckspace\#Training\OlegKlevzhic\My.LabWork1\My.LabWork1\Data\";
 		Serializer<T> context;
 
-		public Repository()
+		public Repository(string path)
 		{
 			if (typeof(Specialization).Equals(typeof(T)))
 			{

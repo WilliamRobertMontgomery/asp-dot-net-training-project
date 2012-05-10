@@ -19,17 +19,18 @@ namespace My.LabWork1.Policlinic
 			string lastName = Console.ReadLine();
 			return new Pacient() { FirstName = firstName, LastName = lastName };
 		}
+		public static string path = @"e:\#Worckspace\#Training\OlegKlevzhic\My.LabWork1\My.LabWork1\Data\";
 
 		static void Main(string[] args)
 		{
 			
-			new Repository<Specialization>().Save(new Specialization(1, "Surgeon"));
-			new Repository<Specialization>().Save(new Specialization(2, "Therapist"));
+			/*new Repository<Specialization>(path).Save(new Specialization(1, "Surgeon"));
+			new Repository<Specialization>(path).Save(new Specialization(2, "Therapist"));
 
-			new Repository<Doctor>().Save(new Doctor(1) { FirstName = "Michael", LastName = "Jhonson", Id_Specialization = 1 });
-			new Repository<Doctor>().Save(new Doctor(2) { FirstName = "Anna", LastName = "Nicolson", Id_Specialization = 1 });
-			new Repository<Doctor>().Save(new Doctor(3) { FirstName = "Mic", LastName = "Jho", Id_Specialization = 2 });
-			new Repository<Doctor>().Save(new Doctor(4) { FirstName = "Nick", LastName = "Rone", Id_Specialization = 2 });
+			new Repository<Doctor>(path).Save(new Doctor(1) { FirstName = "Michael", LastName = "Jhonson", Id_Specialization = 1 });
+			new Repository<Doctor>(path).Save(new Doctor(2) { FirstName = "Anna", LastName = "Nicolson", Id_Specialization = 1 });
+			new Repository<Doctor>(path).Save(new Doctor(3) { FirstName = "Mic", LastName = "Jho", Id_Specialization = 2 });
+			new Repository<Doctor>(path).Save(new Doctor(4) { FirstName = "Nick", LastName = "Rone", Id_Specialization = 2 });*/
 			
 
 			Registry registry = new Registry();
@@ -60,7 +61,8 @@ namespace My.LabWork1.Policlinic
 						break;
 					}
 				}
-				var d = new Repository<Doctor>().Get(numberDoctor);
+				var d = new Repository<Doctor>(@"e:\#Worckspace\#Training\OlegKlevzhic\My.LabWork1\My.LabWork1\Data\").Get(numberDoctor);
+				Console.WriteLine("Wait please...");
 				new Timer(new TimerCallback(d.Reception), ThreadState.Running, 0, 500);
 			}
 			Console.ReadLine();
