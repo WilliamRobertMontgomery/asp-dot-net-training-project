@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Smiles</title>
+    <meta charset="utf-8">
+    <link type="text/css" href="css/lab-three.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="js/jquery.tmpl.js"></script>
+    <script type="text/javascript" src="js/news-template.js"></script>
+    <script id="articleTemplate" type="text/x-jquery-tmpl">
+        <div class="article">
+            <div class="header">
+                <div class="carcass">
+                <button class="close">&times;</button>
+                    <h2>${title}</h2>
+                </div>
+            </div>
+            <div class="body">
+                <div class="carcass">
+                    <p>${info}</p>
+                    <img src="pic/${picture}" class=""/>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="carcass">
+                    <p>${title}</p>
+                </div>
+            </div>
+        </div>
+    </script>
+</head>
+<body>
+    <div id="news">
+    </div>
+</body>
+</html>
