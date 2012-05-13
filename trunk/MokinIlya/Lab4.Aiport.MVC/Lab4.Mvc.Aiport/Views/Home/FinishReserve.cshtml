@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Lab4.Mvc.Aiport.Models.Clients>
+@{
+    ViewBag.Title = "FinishReserve";
+}
+<style type="text/css">
+    select
+    {
+        display: inline-block;
+    }
+</style>
+@using (Html.BeginForm())
+{
+    <h2>
+        Завершить бронирование для клиента с номером 
+        <select name="code" size="1">
+            @foreach (var item in Model)
+            {
+                if (!(bool)item.BookOrBuy)
+                {
+                <option value = @item.CodeClient >
+                    @Html.DisplayFor(modelItem => item.CodeClient)
+                </option>
+                }
+            }
+        </select>
+        <br />
+    </h2>
+    <input type="submit" value="Завершить" />
+    @ViewBag.Message
+} 
+    
+

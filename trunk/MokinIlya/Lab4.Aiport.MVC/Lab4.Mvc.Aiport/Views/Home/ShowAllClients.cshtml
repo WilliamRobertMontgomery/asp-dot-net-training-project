@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Lab4.Mvc.Aiport.Models.Clients>
+@{
+    ViewBag.Title = "ShowAllClients";
+}
+<h2>
+    ShowAllClients</h2>
+<table>
+    <tr>
+        <th>
+            CodeClient
+        </th>
+        <th>
+            CodeReis
+        </th>
+        <th>
+            BookOrBuy
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodeClient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodeReis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookOrBuy)
+            </td>
+        </tr>
+    }
+</table>
