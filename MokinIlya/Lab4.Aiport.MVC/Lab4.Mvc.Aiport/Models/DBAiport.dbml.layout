@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.5" name="DBAiport">
+  <DataContextMoniker Name="/DBAiportDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1ecd278e-bddc-4052-ad73-951f56dcb1c0" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBAiportDataContext/Bank" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5dc53849-1799-4268-993c-3896c1f206ef" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="764ceb7f-991d-4765-9a9e-24a150f6cd1b" absoluteBounds="6.25, 1.25, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/DBAiportDataContext/Reis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf38b0af-9d9b-4c53-b890-150f321fc785" absoluteBounds="6.265, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4059303-d1d1-465e-ba25-0d009ae94445" absoluteBounds="3.5, 0.875, 2, 1.9631982421874998">
+      <DataClassMoniker Name="/DBAiportDataContext/BasicReis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60faec28-b5ca-4f4e-b1e3-a4d6533ba91a" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2338a5b4-567e-45d2-9ec8-9467c6d4267d" absoluteBounds="9, 1.25, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/DBAiportDataContext/Clients" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c6f443d-5fbe-4257-8e12-ff7fb0e439a9" absoluteBounds="9.015, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f337472-f4b8-433b-b4e4-7bdeb69a005f" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/DBAiportDataContext/Plains" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a70867e5-89e6-4716-bb01-37375f7a8b6c" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.94314697265625); (6.25 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBAiportDataContext/BasicReis/BasicReis_Reis" />
+      <nodes>
+        <classShapeMoniker Id="b4059303-d1d1-465e-ba25-0d009ae94445" />
+        <classShapeMoniker Id="764ceb7f-991d-4765-9a9e-24a150f6cd1b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 1.94314697265625); (9 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBAiportDataContext/Reis/Reis_Clients" />
+      <nodes>
+        <classShapeMoniker Id="764ceb7f-991d-4765-9a9e-24a150f6cd1b" />
+        <classShapeMoniker Id="2338a5b4-567e-45d2-9ec8-9467c6d4267d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBAiportDataContext/Plains/Plains_BasicReis" />
+      <nodes>
+        <classShapeMoniker Id="7f337472-f4b8-433b-b4e4-7bdeb69a005f" />
+        <classShapeMoniker Id="b4059303-d1d1-465e-ba25-0d009ae94445" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

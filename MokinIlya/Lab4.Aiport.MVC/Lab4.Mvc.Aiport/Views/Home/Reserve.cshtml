@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Lab4.Mvc.Aiport.Models.BasicReis>
+@{
+    ViewBag.Title = "Sell";
+}
+
+<style type ="text/css">
+    
+select 
+{
+    dysplay:inline-block;
+}
+</style>
+
+@using (Html.BeginForm())
+{
+<h2>
+    Бронировать билет в 
+<select name="destination" size = "1"> 
+    @foreach (var item in Model)
+    {
+        <option value = @item.To >
+            @Html.DisplayFor(modelItem => item.To)
+        </option>
+    }
+</select>
+<br />
+Текущая дата @Html.TextBox("nowTime") формат ввода: dd/mm/yy
+    </h2>
+    <input type="submit" value="Бронировать" />
+    
+    @ViewBag.Message
+}

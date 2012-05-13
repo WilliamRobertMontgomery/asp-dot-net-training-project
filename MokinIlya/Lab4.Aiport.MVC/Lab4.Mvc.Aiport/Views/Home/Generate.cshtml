@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Generate";
+}
+<h2>
+</h2>
+@using (Html.BeginForm())
+{
+    <p>Текущая дата @Html.TextBox("t") формат ввода: dd/mm/yy<br />
+    Генерировать на указанное число дней @Html.TextBox("d") <br />
+    <input type="submit" value="Генерировать" /></p>
+    
+    @ViewBag.Message
+}
