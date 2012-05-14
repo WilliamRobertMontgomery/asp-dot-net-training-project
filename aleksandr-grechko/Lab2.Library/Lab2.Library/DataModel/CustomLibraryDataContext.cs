@@ -13,9 +13,9 @@ namespace Lab2.Library.DataModel
 {
     public class CustomLibraryDataContext : DataContext
     {
-		private static readonly string attachDbFileName = ConfigurationSettings.AppSettings["FullPathDbFilename"];
+		private static readonly string attachDbFileName = ConfigurationManager.AppSettings["FullPathDbFilename"];
 
-		private static readonly string dataSource = ConfigurationSettings.AppSettings["DataSource"];
+		private static readonly string dataSource = ConfigurationManager.AppSettings["DataSource"];
 
         private static readonly SqlConnectionStringBuilder connectionStringBuilder = new SqlConnectionStringBuilder
         {
