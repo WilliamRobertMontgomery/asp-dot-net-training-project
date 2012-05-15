@@ -1,0 +1,5 @@
+D:\Программирование\Epam\DOT.net\HomeWorks\My.Lab4\My.Lab4\My.Lab4\obj\Debug\ResolveAssemblyReference.cache
+D:\Программирование\Epam\DOT.net\HomeWorks\My.Lab4\My.Lab4\My.Lab4\obj\Debug\My.Lab4.pdb
+D:\Программирование\Epam\DOT.net\HomeWorks\My.Lab4\My.Lab4\My.Lab4\bin\My.Lab4.dll
+D:\Программирование\Epam\DOT.net\HomeWorks\My.Lab4\My.Lab4\My.Lab4\bin\My.Lab4.pdb
+D:\Программирование\Epam\DOT.net\HomeWorks\My.Lab4\My.Lab4\My.Lab4\obj\Debug\My.Lab4.dll
