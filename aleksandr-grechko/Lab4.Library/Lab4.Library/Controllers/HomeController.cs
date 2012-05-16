@@ -10,9 +10,9 @@ namespace Lab4.Library.Controllers
     public class HomeController : Controller
     {
 
-		private LibraryClass _library;
+		private ILibraryClass _library;
 
-		public HomeController(LibraryClass library)
+		public HomeController(ILibraryClass library)
 		{
 			_library = library;
 		}

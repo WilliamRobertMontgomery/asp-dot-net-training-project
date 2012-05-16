@@ -7,7 +7,7 @@ using Lab4.Library.Models;
 
 namespace Lab4.Library.BusinessLogic
 {
-	public class LibraryClass
+	public class LibraryClass : ILibraryClass
 	{
 		private Repository repository;
 
@@ -120,6 +120,5 @@ namespace Lab4.Library.BusinessLogic
 			activeReaders.Remove(reader);
 			return true;
 		}
-
 	}
 }
