@@ -1,0 +1,8 @@
+F:\учеба\ASP_EPAM\practice\hometask\Lab4\Lab4\bin\Lab4.dll
+F:\учеба\ASP_EPAM\practice\hometask\Lab4\Lab4\bin\Lab4.pdb
+F:\учеба\ASP_EPAM\practice\hometask\Lab4\Lab4\bin\EntityFramework.dll
+F:\учеба\ASP_EPAM\practice\hometask\Lab4\Lab4\bin\nunit.framework.dll
+F:\учеба\ASP_EPAM\practice\hometask\Lab4\Lab4\bin\EntityFramework.xml
+F:\учеба\ASP_EPAM\practice\hometask\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+F:\учеба\ASP_EPAM\practice\hometask\Lab4\Lab4\obj\Debug\Lab4.dll
+F:\учеба\ASP_EPAM\practice\hometask\Lab4\Lab4\obj\Debug\Lab4.pdb
