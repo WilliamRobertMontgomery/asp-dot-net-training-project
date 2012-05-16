@@ -13,9 +13,9 @@ namespace Lab4.Library.Controllers
     public class LibraryController : Controller
     {
 
-		private LibraryClass _library;
+		private ILibraryClass _library;
 
-		public LibraryController(LibraryClass library)
+		public LibraryController(ILibraryClass library)
 		{
 			_library = library;
 		}
@@ -89,7 +89,6 @@ namespace Lab4.Library.Controllers
 		[Authorize]
 		public ActionResult Order(Guid id)
 		{
-
 			Book book = _library.GetAllBooks().SingleOrDefault(d => d.Id == id);
 
 			Reader reader = _library.GetReader(User.Identity.Name);

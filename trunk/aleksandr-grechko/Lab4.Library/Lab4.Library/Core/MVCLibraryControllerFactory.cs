@@ -9,9 +9,9 @@ namespace Lab4.Library.Core
 {
 	public class MVCLibraryControllerFactory : DefaultControllerFactory
 	{
-		LibraryClass _library;
+		ILibraryClass _library;
 
-		public MVCLibraryControllerFactory(LibraryClass library)
+		public MVCLibraryControllerFactory(ILibraryClass library)
 		{
 			_library = library;
 		}

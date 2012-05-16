@@ -33,7 +33,7 @@ namespace Lab4.Library
 
 			RegisterRoutes(RouteTable.Routes);
 
-			LibraryClass library = new LibraryClass(new Repository(new MSSQLRepositoryFactory()));
+			ILibraryClass library = new LibraryClass(new Repository(new MSSQLRepositoryFactory()));
 
 			ControllerBuilder.Current.SetControllerFactory(new MVCLibraryControllerFactory(library));
 

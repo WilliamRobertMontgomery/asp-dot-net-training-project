@@ -19,9 +19,9 @@ namespace Lab4.Library.Controllers
 
 		public IFormsAuthenticationService FormsService { get; set; }
 
-		private LibraryClass _library;
+		private ILibraryClass _library;
 
-		public AccountController(LibraryClass library)
+		public AccountController(ILibraryClass library)
 		{
 			_library = library;
 		}
@@ -39,7 +39,7 @@ namespace Lab4.Library.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult LogOn(LogOnModel model, string returnUrl)
+		public ActionResult LogOn(LogOnModel model)
 		{
 			if (ModelState.IsValid)
 			{
@@ -47,28 +47,18 @@ namespace Lab4.Library.Controllers
 
 				if (reader != null)
 				{
-					if (!_library.AuthorizationReader(reader))
+					if (_library.AuthorizationReader(reader))
 					{
-						ModelState.AddModelError("", "Пользователь с таким именем уже работает в системе.");
-						return View();
-					}
-
-					FormsService.SignIn(model.UserName, model.RememberMe);
-					if (!String.IsNullOrEmpty(returnUrl))
-					{
-						return Redirect(returnUrl);
-					}
-					else
-					{
+						FormsService.SignIn(model.UserName, model.RememberMe);
 						return RedirectToAction("Index", "Home");
 					}
+					ModelState.AddModelError("", "Пользователь с таким именем уже работает в системе.");
 				}
 				else
 				{
 					ModelState.AddModelError("", "Введено несуществующее имя читателя.");
 				}
 			}
-
 			return View();
 		}
 
@@ -97,17 +87,16 @@ namespace Lab4.Library.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				
-				if (_library.GetReader(model.UserName) != null)
+				if (_library.GetReader(model.UserName) == null)
 				{
-					ModelState.AddModelError("", "Пользователь с таким именем уже зарегистрирован в системе.");
-					return View(model);
-				}
-				Reader reader = _library.AddReader(model.UserName, model.Address);
-				_library.AuthorizationReader(reader);
+					Reader reader = _library.AddReader(model.UserName, model.Address);
+					_library.AuthorizationReader(reader);
 
-				FormsService.SignIn(model.UserName, false /* createPersistentCookie */);
-				return RedirectToAction("Index", "Home");
+					FormsService.SignIn(model.UserName, false /* createPersistentCookie */);
+					return RedirectToAction("Index", "Home");
+				}
+
+				ModelState.AddModelError("", "Пользователь с таким именем уже зарегистрирован в системе.");
 			}
 
 			return View(model);
