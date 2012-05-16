@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Lab4.Product>
+
+@{
+    ViewBag.Title = "Buy";
+}
+
+<h2>Buy</h2>
+
+
+<table>
+    <tr>
+        <th>
+            name
+        </th>
+        <th>
+            address
+        </th>
+        <th>
+            status
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+           
+            @Html.ActionLink("Buy", "Buy", new { id=item.id })
+            
+        </td>
+    </tr>
+}
+
+</table>
