@@ -1,0 +1,64 @@
+﻿body
+{
+	background-color: #CCCCFF;		
+}
+
+header, nav, section, article, aside, footer 
+{
+   display:block;
+}
+
+header
+{
+	text-align: center;
+}
+
+nav 
+{
+	width: 200px;
+	height: 400px;
+	float: Left;
+	background-color: #CCFFFF;	
+}
+
+nav a.opened
+{
+	font-weight: bold;
+}
+
+aside 
+{
+	width: 200px;
+	height: 400px;
+	float: right;
+	background-color: #CCFFFF;
+}
+
+section 
+{
+	margin-left: 220px;		
+	margin-right: 220px;
+	background-color: #FFFFCC;
+}
+
+article,
+section > div
+{
+	margin: 10px;
+	padding: 10px;
+	background-color: #FFCCCC;
+}
+
+.close
+{
+	float: right;
+	font-weight: bold;
+	cursor: pointer;	
+}
+
+footer
+{
+	text-align: center;
+	clear: both;
+}
+
