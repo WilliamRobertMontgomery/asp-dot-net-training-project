@@ -1,0 +1,68 @@
+﻿body
+{
+    font-family: Calibri;
+    min-width: 1200px;
+    position: relative;
+    display: block;
+    background-color: Gray;
+    padding: 30px;
+    margin: 0px;
+}
+
+header
+{
+    margin: 10px;
+    padding: 10px;
+    dysplay: block;
+    background-color: White;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+
+nav
+{
+    background-color: White;
+    display: block;
+    width: 200px;
+    float: left;
+    min-height: 200px;
+    margin: 0px 10px 10px 10px;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+
+content
+{
+    margin: 10px 10px 10px 240px;
+    padding: 10px;
+    width: auto;
+    display: block;
+    background-color: White;
+    min-height: 400px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+footer
+{
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    background-color: White;
+    order-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    min-height: 100px;
+}
+
+a
+{
+    color: Black;
+}
+a:hover
+{
+    color: Green;
+}

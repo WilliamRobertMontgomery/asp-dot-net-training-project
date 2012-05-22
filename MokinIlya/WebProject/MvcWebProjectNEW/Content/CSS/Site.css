@@ -1,0 +1,234 @@
+﻿body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: #e0e2ea;
+    display:block;
+    width: 100%;
+    min-width: 960px;
+}
+wrapperForTopBlocks
+{
+    position:relative;
+    display:block;
+    position: relative;
+    width: 960px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #e0e2ea;
+    
+    margin: 0px auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+header
+{
+    position:relative;
+    width: 100%;
+    margin: 0px auto;
+    padding:0px;
+    text-align: center;
+    background-color: White;
+    border-radius: 0px 0px 20px 20px;
+    -webkit-border-radius: 0px 0px 20px 20px;
+    -moz-border-radius: 0px 0px 20px 20px;
+    
+    -moz-box-shadow: 0 15px 5px gray;
+    -webkit-box-shadow: 0 15px 5px gray;
+    box-shadow: 0 0 15px 5px gray;
+}
+header img
+{
+    top: 0;
+    left: 0;
+    height: 150px;
+}
+
+topnav
+{
+    position: relative;
+    display:block;
+    margin:0px;
+    width: 100%;
+    text-align: center;
+    background-color: Gray;
+    border-bottom:3px solid black;   
+}
+topnav a
+{
+    display: inline-block;
+    background-color: Gray;
+    margin: 0px 3px;
+    padding: 10px 3px;
+    color: Black;
+    width: 200px;
+    text-align: center;
+    font-family: Calibri;
+    color: White;
+    font-weight: bold;
+    text-decoration: underline;
+}
+topnav a:hover
+{
+    background-color: Black;
+    text-decoration: none;
+}
+nav
+{
+    position: relative;
+    width: 190px;
+    display: inline-block;
+    left: 0px;
+    height: 100%;
+    float: left;
+    border: 1px solid #e7e6e4;
+    margin-top: 10px;
+}
+
+nav a
+{
+    display: block;
+    background-color: #be9974;
+    margin: 0px 2px 2px 2px;
+    padding: 5px 3px 5px 3px;
+    color: Black;
+    /*border: 1px solid transparent;*/
+    
+    font-family:Calibri;
+    color:White;
+    font-weight:bold;
+    text-decoration:none;
+    text-shadow: black 2px 2px 4px;
+    
+    -moz-box-shadow: 0 15px 5px gray;
+    -webkit-box-shadow: 0 15px 5px gray;
+    box-shadow: 0 0 15px 5px gray;
+    
+    border-radius: 0 20px 0 0;
+    -webkit-border-radius: 0 20px 0 0;
+    -moz-border-radius: 0 20px 0 0;
+}
+nav a:hover
+{
+    border-color: Black;
+    -moz-box-shadow: 0 15px 5px white;
+    -webkit-box-shadow: 0 15px 5px white;
+    
+    box-shadow: 0 0 15px 5px white;
+    -moz-box-shadow: 0 0 15px 5px white;
+    -webkit-box-shadow: 0 0 15px 5px white;
+}
+
+nav a:active
+{
+    background-color:#a76d11;
+}
+
+
+img
+{
+    border: 0px;
+    padding:0px;
+    margin:0px;
+}
+
+content
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 555px;
+    font-family: Calibri;
+    display: inline-block;
+    background-color: White;
+    border: 1px solid #e7e6e4;
+    margin: 10px;
+    padding: 5px;
+    min-height: 600px;
+    overflow:hidden;
+    
+    -moz-box-shadow: 0 15px 5px gray;
+    -webkit-box-shadow: 0 15px 5px gray;
+    box-shadow: 0 0 15px 5px gray;
+    
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+}
+content h1
+{
+    font-size: 20pt;
+    font-family: Arial;
+    font-weight:bold;
+    border-bottom: 2px solid black;
+    color: #c8711b;
+    margin: 0px;
+    padding: 0px;
+}
+aside
+{
+    background-color:White;
+    display: inline-block;
+    position: relative;
+    width: 175px;
+    float: right;
+    border: 1px solid #e7e6e4;
+    margin: 10px 0px;
+    padding-top: 10px;
+    overflow:hidden;
+    
+    -moz-box-shadow: 0 15px 5px gray;
+    -webkit-box-shadow: 0 15px 5px gray;
+    box-shadow: 0 0 15px 5px gray;
+    
+    border-radius: 10px 0 0 0;
+    -webkit-border-radius: 10px 0 0 0;
+    -moz-border-radius: 10px 0 0 0;
+}
+
+footer
+{
+    height: 100px;
+    margin: 15px 0px 0px 0px;
+    padding: 20px;
+    background: Gray;
+    font-family: Calibri;
+    z-index: 20;
+    
+    -moz-box-shadow: 0 15px 5px gray;
+    -webkit-box-shadow: 0 15px 5px gray;
+    box-shadow: 0 0 15px 5px gray;
+    
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+}
+
+authorization
+{
+    position:absolute;
+    top:50px;
+    right:0px;
+    display:block;
+    background-color:Green;
+    font-family:Calibri;
+    color:White;
+    padding:5px;
+    text-align:right;
+    
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+}
+
+authorization a
+{
+    color:White;
+}
+
+authorization a:hover
+{
+    color:#e7e7e7;
+}

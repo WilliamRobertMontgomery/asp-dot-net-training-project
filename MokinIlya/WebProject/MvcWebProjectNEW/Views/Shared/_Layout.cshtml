@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.js")"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/Site.css")" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <wrapperfortopblocks>
+       
+        <header>
+            <topnav>
+                <a href="#">СЗЧ</a><a href="#">Камаз</a><a href="#">Популярное</a>
+            </topnav>
+            <img src="/Content/images/logo.png" alt="Логотип Весенний" />
+            @Html.Partial("_LogOnPartial")
+        </header>
+        <nav>
+            @Html.ActionLink("Главная", "Index", "Home", new { Id = "Index" }, null) 
+            @Html.ActionLink("О компании", "Index", "Home", new {Id = "About" }, null) 
+        </nav>
+        <content>
+            @RenderBody()
+        </content>
+        <aside>
+            <img src="/Content/images/right.png" alt="Рекламная панель" />
+        </aside>
+    </wrapperfortopblocks>
+    <footer>
+            <b>Контакты</b><br />
+            td@vesenni.ru<br />
+            тел/факс (4232) 29-99-31 (многоканальный);
+            <br />
+            (4232) 30-20-93<br />
+    </footer>
+</body>
+</html>

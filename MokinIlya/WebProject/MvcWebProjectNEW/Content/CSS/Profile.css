@@ -1,0 +1,10 @@
+﻿input#letterTitle
+{
+    width:500px;
+}
+
+textarea#letterContent
+{
+    width:500px;
+    height:200px;
+}
