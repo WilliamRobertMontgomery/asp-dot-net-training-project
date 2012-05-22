@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Lab4.Models.EditAgent>
+
+@{
+    ViewBag.Title = "ShowAgents";
+}
+
+<h2>Список агентов</h2>
+
+<p>
+    @Html.ActionLink("Добавить Агента", "AddAgent")
+</p>
+<table>
+    <tr>        
+        <th>
+            agentName
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>        
+        <td>
+            @Html.DisplayFor(modelItem => item.agentName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { agentId = item.agentId }) |
+            @Html.ActionLink("Delete", "Delete", new { agentId = item.agentId })
+        </td>
+    </tr>
+}
+
+</table>

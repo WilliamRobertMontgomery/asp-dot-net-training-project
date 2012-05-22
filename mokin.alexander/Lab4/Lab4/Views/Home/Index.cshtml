@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    @Html.ActionLink("Составить контракт", "MakeContract")<br />
+    @Html.ActionLink("Агенты", "Index", "Agent") <br />
+    @Html.ActionLink("Строители", "Index", "Builder")<br />
+     @Html.ActionLink("Список заключенных контрактов", "ShowContracts")<br />
+</p>

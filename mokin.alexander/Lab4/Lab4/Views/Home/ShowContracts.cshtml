@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Lab4.Models.ShowContractModel>
+
+@{
+    ViewBag.Title = "ShowContracts";
+}
+
+<h2>Список заключенных контактов</h2>
+
+<p>
+    @Html.ActionLink("Create New", "MakeContract")
+</p>
+<table>
+    <tr>
+        <th>
+            clientName
+        </th>
+        <th>
+            builderName
+        </th>
+        <th>
+            agentName
+        </th>
+        <th>
+            projectName
+        </th>
+        <th>
+            projectDescription
+        </th>
+        <th>
+            projectDeadLine
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.clientName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.builderName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.agentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.projectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.projectDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.projectDeadLine)
+        </td>
+        <td>            
+            @Html.ActionLink("Delete", "Delete", new { contractId = item.ContractId })
+        </td>
+    </tr>
+}
+
+</table>
