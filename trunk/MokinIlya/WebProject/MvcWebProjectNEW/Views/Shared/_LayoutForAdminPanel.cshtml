@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/AdminPanel.css")" />
+</head>
+
+<body>
+    <header>
+    @Html.Partial("_LogOnPartial")
+    </header>
+    <nav>
+        <a href=@Url.Action("index/")>К списку задач</a>
+    </nav>
+    <content>
+    @RenderBody()
+    </content>
+    <footer>
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MvcWebProjectNEW.Models.VesenniMaterial>
+
+@{
+    ViewBag.Title = "Весь материал";
+    Layout = "~/Views/Shared/_LayoutForAdminPanel.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/CSS/AdminPanel_ForTables.css")" />
+
+<h2>Редактирование материалов</h2>
+
+<p>
+    @Html.ActionLink("Создать", "CreateMaterials")
+</p>
+<table>
+    <tr>
+        <th>
+            Просмотров
+        </th>
+        <th>
+            Заголовок
+        </th>
+        <th>
+            Автор
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Visits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TitleTag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspnetUser.UserName)
+        </td>
+        <td>  
+            @Html.ActionLink("Edit", "EditMaterial", "Admin", new { Id = item.ContentId}, null)  
+            @Html.ActionLink("Delete", "DeleteMaterial", "Admin", new { Id = item.ContentId}, null)          
+        </td>
+    </tr>
+}
+
+</table>

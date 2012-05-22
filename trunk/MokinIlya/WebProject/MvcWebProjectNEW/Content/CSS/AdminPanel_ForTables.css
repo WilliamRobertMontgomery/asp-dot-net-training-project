@@ -1,0 +1,31 @@
+﻿table
+{
+    padding:0px;
+    margin:0px;
+    border-spacing:0px;
+    text-align:left;
+}
+
+table th
+{
+    background-color:Gray;
+    color:White;
+    font-weight:bold;
+}
+
+td
+{
+    min-width:200px;
+    padding:2px;
+}
+
+tr:nth-child(2n+1)
+{
+    background-color:#efeeed;
+}
+
+a img
+{
+    border:0px;
+    margin:0px 5px;
+}
