@@ -26,7 +26,7 @@ namespace Lab1.Entities
         public override bool Equals(Object obj)
         {
             Project project = (Project)obj;
-            return project.id == project.id && project.name == project.name && project.deadLine == deadLine;
+            return project.id == project.id && project.name == project.name && project.deadLine.Equals(deadLine);
         }
 
         public override int GetHashCode()
