@@ -13,7 +13,7 @@ namespace Lab1
     {
         static void Main(string[] args)
         {
-            //CreateBase();
+            CreateBase();
 
             Timer timer = new Timer(new TimerCallback(Program.RealTimeTest), null, 0, 2000);
             Console.ReadLine();
