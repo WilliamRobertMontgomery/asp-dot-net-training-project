@@ -1,0 +1,75 @@
+﻿@model Lab4.Models.MakeContractModel
+
+@{
+    ViewBag.Title = "MakeContract";
+}
+
+<h2>Составление контракта</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Составить контракт</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.clientName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.clientName)
+            @Html.ValidationMessageFor(model => model.clientName)
+        </div>
+
+        <div class="editor-label">
+            <label for = "builderName">Выберите Строителя</label>
+        </div>
+         
+        <div class="editor-field">
+        <select  name = "builderName" >
+        @foreach (var item in ViewBag.Builders)
+        {
+            <option>@item.name</option>
+        }
+        </select>
+        </div>  
+        <div class="editor-label">
+        <label for = "agentName">Выберите Агента</label>
+        </div>
+         
+        <div class="editor-field">
+        <select name = "agentName">
+        @foreach (var item in ViewBag.Agents)
+        {
+            <option>@item.name</option>
+        }
+        </select>
+        </div>  
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.projectName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.projectName)
+            @Html.ValidationMessageFor(model => model.projectName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.projectDescription)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.projectDescription)
+            @Html.ValidationMessageFor(model => model.projectDescription)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

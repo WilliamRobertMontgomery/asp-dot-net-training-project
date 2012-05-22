@@ -1,0 +1,7 @@
+E:\aspTrening\Lab4\Lab4\bin\Lab4.dll
+E:\aspTrening\Lab4\Lab4\bin\Lab4.pdb
+E:\aspTrening\Lab4\Lab4\bin\EntityFramework.dll
+E:\aspTrening\Lab4\Lab4\bin\EntityFramework.xml
+E:\aspTrening\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+E:\aspTrening\Lab4\Lab4\obj\Debug\Lab4.dll
+E:\aspTrening\Lab4\Lab4\obj\Debug\Lab4.pdb

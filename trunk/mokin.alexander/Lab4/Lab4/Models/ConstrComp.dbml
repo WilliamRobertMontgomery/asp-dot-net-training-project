@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ConstructionCompany" Class="ConstrCompDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\ConstructionCompany.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ConstructionCompanyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Agents" Member="Agents">
+    <Type Name="Agents">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Agents_Contracts" Member="Contracts" ThisKey="id" OtherKey="agentId" Type="Contracts" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Builders" Member="Builders">
+    <Type Name="Builders">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Builders_Contracts" Member="Contracts" ThisKey="id" OtherKey="builderId" Type="Contracts" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clients" Member="Clients">
+    <Type Name="Clients">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Clients_Contracts" Member="Contracts" ThisKey="id" OtherKey="clientId" Type="Contracts" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contracts" Member="Contracts">
+    <Type Name="Contracts">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="clientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="agentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="builderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="projectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Agents_Contracts" Member="Agents" ThisKey="agentId" OtherKey="id" Type="Agents" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Builders_Contracts" Member="Builders" ThisKey="builderId" OtherKey="id" Type="Builders" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Clients_Contracts" Member="Clients" ThisKey="clientId" OtherKey="id" Type="Clients" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Projects_Contracts" Member="Projects" ThisKey="projectId" OtherKey="id" Type="Projects" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Projects" Member="Projects">
+    <Type Name="Projects">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="deadline" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Projects_Contracts" Member="Contracts" ThisKey="id" OtherKey="projectId" Type="Contracts" />
+    </Type>
+  </Table>
+</Database>
