@@ -48,7 +48,7 @@ namespace Lab1.Entities
     #endregion
 		
 		public ConstructionCompanyDataContext() : 
-				base(global::Lab1.Properties.Settings.Default.ConstructionCompanyConnectionString, mappingSource)
+				base(global::Lab1.Properties.Settings.Default.ConstructionCompanyConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

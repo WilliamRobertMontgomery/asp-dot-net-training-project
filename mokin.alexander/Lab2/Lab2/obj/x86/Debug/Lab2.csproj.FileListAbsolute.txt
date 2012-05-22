@@ -10,3 +10,5 @@ E:\aspTrening\Lab2\Lab2\obj\x86\Debug\Lab1.pdb
 E:\aspTrening\Lab2\Lab2\bin\Debug\Lab1.exe
 E:\aspTrening\Lab2\Lab2\bin\Debug\Lab1.pdb
 E:\aspTrening\Lab2\Lab2\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\aspTrening\Lab2\Lab2\bin\Debug\DataAccess\ConstructionCompany.mdf
+E:\aspTrening\Lab2\Lab2\bin\Debug\DataAccess\ConstructionCompany_log.ldf
