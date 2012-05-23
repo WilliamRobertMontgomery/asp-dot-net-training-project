@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Cinema" Class="CinemaDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=Cinema;Integrated Security=True" SettingsObjectName="LabTwo.Cinema.Properties.Settings" SettingsPropertyName="CinemaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Cashier" Member="Cashiers">
+    <Type Name="Cashier">
+      <Column Name="CashierID" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Cashier_Sale" Member="Orders" ThisKey="CashierID" OtherKey="CashierID" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Visitor" Member="Visitors">
+    <Type Name="Visitor">
+      <Column Name="VisitorID" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PassportNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Visitor_Sale" Member="Orders" ThisKey="VisitorID" OtherKey="VisitorID" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Film" Member="Films">
+    <Type Name="Film">
+      <Column Name="FilmID" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Genre" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Film_Sale" Member="Orders" ThisKey="FilmID" OtherKey="FilmID" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sale" Member="Orders">
+    <Type Name="Order">
+      <Column Name="OrderID" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FilmID" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="VisitorID" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CashierID" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DataSale" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Sale_Seat" Member="Seats" ThisKey="OrderID" OtherKey="OrderID" Type="Seat" />
+      <Association Name="Cashier_Sale" Member="Cashier" ThisKey="CashierID" OtherKey="CashierID" Type="Cashier" IsForeignKey="true" />
+      <Association Name="Film_Sale" Member="Film" ThisKey="FilmID" OtherKey="FilmID" Type="Film" IsForeignKey="true" />
+      <Association Name="Visitor_Sale" Member="Visitor" ThisKey="VisitorID" OtherKey="VisitorID" Type="Visitor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Seat" Member="Seats">
+    <Type Name="Seat">
+      <Column Name="OrderID" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SeatNumber" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Sale_Seat" Member="Order" ThisKey="OrderID" OtherKey="OrderID" Type="Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
