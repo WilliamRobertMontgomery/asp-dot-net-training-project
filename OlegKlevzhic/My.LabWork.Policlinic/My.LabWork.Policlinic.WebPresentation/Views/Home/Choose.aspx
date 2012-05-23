@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        Choose</h2>
+        <%:ViewData["Message"] %></h2>
     <table>
         <tr>
             <th>
@@ -21,7 +21,7 @@
            { %>
         <tr>
             <td>
-                <%: Html.ActionLink("Sign up","WriteToReception",new {id = item.Id}) %>
+                <%: Html.ActionLink("Sign up", "WriteToReception", new { id = item.Id})%>
             </td>
             <td>
                 <%: item.ToString() %>
@@ -32,7 +32,8 @@
         </tr>
         <% } %>
     </table>
+
     <p>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Back to List", "Specializations") %>
     </p>
 </asp:Content>

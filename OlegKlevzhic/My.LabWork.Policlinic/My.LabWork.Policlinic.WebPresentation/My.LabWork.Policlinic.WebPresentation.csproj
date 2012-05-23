@@ -69,6 +69,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pacient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,8 +81,9 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Views\Home\Choose.aspx" />
+    <Content Include="Views\Home\Default.aspx" />
     <Content Include="Views\Home\DetailsSpecialization.aspx" />
-    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\Specializations.aspx" />
     <Content Include="Views\Home\WriteToReception.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -104,9 +106,7 @@
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\My.LabWork.Policlinic.Library\My.LabWork.Policlinic.Library.csproj">
       <Project>{47528019-91D2-4BDF-9401-21CA4AF799B1}</Project>

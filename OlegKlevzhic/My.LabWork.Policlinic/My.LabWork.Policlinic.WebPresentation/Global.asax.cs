@@ -19,7 +19,7 @@ namespace My.LabWork.Policlinic.WebPresentation
 			routes.MapRoute(
 				"Default", // Имя маршрута
 				"{controller}/{action}/{id}", // URL-адрес с параметрами
-				new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Параметры по умолчанию
+				new { controller = "Home", action = "Default", id = UrlParameter.Optional } // Параметры по умолчанию
 			);
 
 		}
