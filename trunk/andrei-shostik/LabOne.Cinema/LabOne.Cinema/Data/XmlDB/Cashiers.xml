@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCashier xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Cashier>
+    <ID>8f4a3c6b-f069-40bc-a44b-cf4e5a3be9b0</ID>
+    <FirstName>Olga</FirstName>
+    <LastName>Drug</LastName>
+  </Cashier>
+  <Cashier>
+    <ID>84ed35ec-1f89-468a-a6fc-2c959d2a2d21</ID>
+    <FirstName>Yulia</FirstName>
+    <LastName>Pavlova</LastName>
+  </Cashier>
+</ArrayOfCashier>

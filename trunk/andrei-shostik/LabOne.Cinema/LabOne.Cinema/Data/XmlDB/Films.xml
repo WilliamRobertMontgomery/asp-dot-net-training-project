@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFilm xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Film>
+    <ID>7349b157-78ac-482f-a5f8-e3e4044b9e35</ID>
+    <Title>HI!</Title>
+    <Year>2010</Year>
+    <Genre>Comedy</Genre>
+  </Film>
+  <Film>
+    <ID>070f74dd-1489-4b4f-a44e-cf430d7090f7</ID>
+    <Title>777</Title>
+    <Year>2010</Year>
+    <Genre>Action</Genre>
+  </Film>
+  <Film>
+    <ID>4c55f98f-f2c1-4dea-82a3-f98b8d96dd78</ID>
+    <Title>The world is mine</Title>
+    <Year>1999</Year>
+    <Genre>Drama</Genre>
+  </Film>
+  <Film>
+    <ID>e1f8daf1-7423-4bef-8376-1057df06c81d</ID>
+    <Title>Brlar baarhgl... and all about zombies</Title>
+    <Year>2012</Year>
+    <Genre>Horror</Genre>
+  </Film>
+  <Film>
+    <ID>e7671b61-39bc-49b6-8f03-302c92dde1a8</ID>
+    <Title>Wow! Black king</Title>
+    <Year>2012</Year>
+    <Genre>Comedy</Genre>
+  </Film>
+  <Film>
+    <ID>41217fb3-b8d4-4a0b-a408-b11733fb5c40</ID>
+    <Title>War is war</Title>
+    <Year>2011</Year>
+    <Genre>War</Genre>
+  </Film>
+  <Film>
+    <ID>4eb23be1-1de8-4b1a-ae10-1cb80cd320ed</ID>
+    <Title>HI! 2</Title>
+    <Year>2011</Year>
+    <Genre>Comedy</Genre>
+  </Film>
+  <Film>
+    <ID>4bbc539d-c601-4e57-bf9e-023d804b0c36</ID>
+    <Title>HI! 3</Title>
+    <Year>2012</Year>
+    <Genre>Comedy</Genre>
+  </Film>
+  <Film>
+    <ID>b09815b1-caa3-401a-9573-7b2d7f0418ca</ID>
+    <Title>30000000</Title>
+    <Year>2006</Year>
+    <Genre>Historical</Genre>
+  </Film>
+  <Film>
+    <ID>7255406f-12bc-4f58-91b2-896aacfe2062</ID>
+    <Title>Last warrior</Title>
+    <Year>2012</Year>
+    <Genre>Fantasy</Genre>
+  </Film>
+</ArrayOfFilm>

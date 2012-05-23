@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVisitor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Visitor>
+    <ID>5be757c5-6528-4e15-83b3-303b99c15ae3</ID>
+    <FirstName>Andrei</FirstName>
+    <LastName>Andreev</LastName>
+    <PasportNumber>111111</PasportNumber>
+  </Visitor>
+  <Visitor>
+    <ID>30ec4948-21cb-4e9f-84f7-64ce6793f273</ID>
+    <FirstName>Oleg</FirstName>
+    <LastName>Olegov</LastName>
+    <PasportNumber>222222</PasportNumber>
+  </Visitor>
+  <Visitor>
+    <ID>e7c6edd0-207e-46d3-a33f-ab8a0a3df8f7</ID>
+    <FirstName>Roman</FirstName>
+    <LastName>Romanov</LastName>
+    <PasportNumber>333333</PasportNumber>
+  </Visitor>
+  <Visitor>
+    <ID>46859d03-364b-4aad-8fe2-dd06b4ec30de</ID>
+    <FirstName>Igor</FirstName>
+    <LastName>Igorev</LastName>
+    <PasportNumber>444444</PasportNumber>
+  </Visitor>
+  <Visitor>
+    <ID>45f8ecff-2ca4-4547-82ea-3fa26f835e53</ID>
+    <FirstName>Goga</FirstName>
+    <LastName>Gogov</LastName>
+    <PasportNumber>777777</PasportNumber>
+  </Visitor>
+  <Visitor>
+    <ID>666f77b1-b4db-458b-9b6a-ccfbc0a51ff6</ID>
+    <FirstName>Stepan</FirstName>
+    <LastName>Stepanov</LastName>
+    <PasportNumber>444444</PasportNumber>
+  </Visitor>
+</ArrayOfVisitor>
