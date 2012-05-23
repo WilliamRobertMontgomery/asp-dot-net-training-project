@@ -18,7 +18,7 @@ namespace My.LabWork.Policlinic.Test
 		public void GreetingTest()
 		{
 			Pacient thePacient = new Pacient("FirstName", "LastName");
-			Assert.AreEqual(registry.Greeting(thePacient), "Hello,Pacient: FirstName LastName!");
+			Assert.AreEqual(registry.Greeting(thePacient), "Hello,FirstName LastName!");
 		}
 
 		[Test]
@@ -31,6 +31,33 @@ namespace My.LabWork.Policlinic.Test
 		public void GetTimeSpecializationTest()
 		{
 			Assert.AreEqual(registry.GetTimeSpecialization(1), DateTime.Now.AddMinutes(2));
+		}
+
+		[Test]
+		public void GetDoctorTest()
+		{
+			Assert.AreEqual(new Doctor("Anna", "Nicolson", 2) { Id = 2 }, registry.GetDoctor(2));
+		}
+
+		[Test]
+		public void WriteToReceptionTest()
+		{
+			var tmp = DateTime.Now;
+			var actual = new Record(2, 1, tmp);
+			var expected = registry.WriteToReceptionDoctor(2, new Pacient("FirstName", "LastName") { Id = 1 }).Time = tmp;
+			Assert.AreEqual(actual, expected);
+		}
+
+		[Test]
+		public void GetSpecializationTest()
+		{
+			Assert.AreEqual(registry.GetSpecialization(1), new Specialization() { Id = 1, NameSpecialization = "Surgeon" });
+		}
+
+		[Test]
+		public void GetSpecializationsTest()
+		{
+			Assert.AreEqual(registry.GetSpecializations(), new List<Specialization>() { new Specialization() { Id = 1, NameSpecialization = "Surgeon" }, new Specialization() { Id = 2, NameSpecialization = "Therapist" } });
 		}
 	}
 }

@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="../../Content/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">
+            </div>
+        </div>
+        <!-- end #header -->
+        <div id="menu">
+            <ul>
+                <li>
+                    <%Html.RenderPartial("LogOnUserControl"); %></li>
+            </ul>
+        </div>
+        <!-- end #menu -->
+        <div id="page">
+            <div id="page-bgtop">
+                <div id="page-bgbtm">
+                    <div id="content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+                    <!-- end #content -->
+                    <div id="nav">
+                        <%Html.RenderPartial("NavigationControl"); %>
+                    </div>
+                    <!-- end #sidebar -->
+                    <div style="clear: both;">
+                        &nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <!-- end #page -->
+    </div>
+    <div id="footer">
+        <p>
+            Oleg Klevzhic 2012 (c).</p>
+    </div>
+    <!-- end #footer -->
+</body>
+</html>

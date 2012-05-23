@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        WriterToReception</h2>
+        <%:ViewData["Message"] %></h2>
     <fieldset>
         <legend>Fields</legend>
         <div class="display-label">
@@ -13,6 +13,6 @@
     </fieldset>
     <p>
         |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Back to List", "Specializations")%>
     </p>
 </asp:Content>
