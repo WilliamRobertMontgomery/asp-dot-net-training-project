@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CinemaDataClasses">
+  <DataContextMoniker Name="/CinemaDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5774fbb7-0a83-4e31-ace6-6185c1719a78" absoluteBounds="0.75, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CinemaDataClassesDataContext/Cashier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="622a86b5-2782-48f4-a17d-fa8280aaa575" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="49cd1f63-d0e3-4b5b-a6ab-34310a45a7a7" absoluteBounds="0.75, 6.5, 2, 1.5785953776041675">
+      <DataClassMoniker Name="/CinemaDataClassesDataContext/Visitor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3cd567bf-6ece-4ca3-85ba-0497138019e6" absoluteBounds="0.765, 6.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b9cd284-77b9-4104-8202-460312d942a6" absoluteBounds="0.75, 4.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CinemaDataClassesDataContext/Film" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87faa2bc-9a47-4074-a8c8-4f57ddc71449" absoluteBounds="0.765, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b25d392-929b-4e8a-885f-0dd99e9ddc2a" absoluteBounds="3.875, 3, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CinemaDataClassesDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8f84ea7-1ba6-4479-89be-a95665a924d4" absoluteBounds="3.89, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d019a6c5-e9fd-464a-a1dc-535644152ec3" absoluteBounds="6.75, 3.375, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/CinemaDataClassesDataContext/Seat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4540fab-eefe-4ec0-8dbb-96cb9aa73789" absoluteBounds="6.765, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.81814697265625); (4.875 : 1.81814697265625); (4.875 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CinemaDataClassesDataContext/Cashier/Cashier_Sale" />
+      <nodes>
+        <classShapeMoniker Id="5774fbb7-0a83-4e31-ace6-6185c1719a78" />
+        <classShapeMoniker Id="8b25d392-929b-4e8a-885f-0dd99e9ddc2a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.44794840494792); (3.875 : 4.44794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CinemaDataClassesDataContext/Film/Film_Sale" />
+      <nodes>
+        <classShapeMoniker Id="3b9cd284-77b9-4104-8202-460312d942a6" />
+        <classShapeMoniker Id="8b25d392-929b-4e8a-885f-0dd99e9ddc2a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.28929768880208); (4.875 : 7.28929768880208); (4.875 : 4.77089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CinemaDataClassesDataContext/Visitor/Visitor_Sale" />
+      <nodes>
+        <classShapeMoniker Id="49cd1f63-d0e3-4b5b-a6ab-34310a45a7a7" />
+        <classShapeMoniker Id="8b25d392-929b-4e8a-885f-0dd99e9ddc2a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 3.97199625651042); (6.75 : 3.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CinemaDataClassesDataContext/Order/Sale_Seat" />
+      <nodes>
+        <classShapeMoniker Id="8b25d392-929b-4e8a-885f-0dd99e9ddc2a" />
+        <classShapeMoniker Id="d019a6c5-e9fd-464a-a1dc-535644152ec3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
