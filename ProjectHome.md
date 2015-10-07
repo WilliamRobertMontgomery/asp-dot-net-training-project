@@ -1,0 +1,1 @@
+This project was created as a source code repository for tasks and projects of students attending ASP.Net training course
